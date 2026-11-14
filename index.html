@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THE END OF HUMANITY | Official Cinematic Film Trailer & Concept</title>
+    <title>THE END OF HUMANITY | Official Cinematic Film Presentation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -44,12 +44,12 @@
             text-shadow: 0 0 25px rgba(6, 182, 212, 0.4);
         }
         .glass-panel {
-            background: rgba(18, 18, 26, 0.75);
-            backdrop-filter: blur(14px);
+            background: rgba(18, 18, 26, 0.78);
+            backdrop-filter: blur(16px);
             border: 1px solid rgba(212, 175, 55, 0.18);
         }
         .glass-panel:hover {
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(212, 175, 55, 0.45);
         }
         canvas.bg-canvas {
             position: fixed;
@@ -61,7 +61,7 @@
             z-index: 0;
         }
         .hero-vignette {
-            background: radial-gradient(circle at 50% 40%, rgba(15, 15, 25, 0.6) 0%, rgba(10, 10, 15, 0.95) 80%),
+            background: radial-gradient(circle at 50% 40%, rgba(15, 15, 25, 0.5) 0%, rgba(10, 10, 15, 0.96) 85%),
                         linear-gradient(to bottom, rgba(10,10,15,0.2), rgba(10,10,15,1));
         }
         ::-webkit-scrollbar {
@@ -88,7 +88,7 @@
 </head>
 <body class="relative z-10">
 
-    <!-- Immersive Starfield / Particle Background Canvas -->
+    <!-- Immersive Starfield Background Canvas -->
     <canvas id="starfield" class="bg-canvas"></canvas>
 
     <!-- Navigation Header -->
@@ -100,24 +100,25 @@
                     EH
                 </div>
                 <div class="flex flex-col">
-                    <span class="font-cinzel font-bold text-lg tracking-wider text-white group-hover:text-goldAccent transition">THE END OF HUMANITY</span>
-                    <span class="text-[10px] text-goldAccent/80 tracking-widest uppercase">Directed by HUMBatzada Farid</span>
+                    <span class="font-cinzel font-bold text-sm sm:text-base tracking-wider text-white group-hover:text-goldAccent transition">THE END OF HUMANITY</span>
+                    <span class="text-[9px] text-goldAccent/80 tracking-widest uppercase">Directed by HUMBatzada Farid</span>
                 </div>
             </a>
 
             <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
-                <a href="#about" data-i18n="nav_about" class="text-gray-300 hover:text-goldAccent transition">About</a>
+            <nav class="hidden lg:flex items-center space-x-6 text-xs font-medium tracking-wide">
+                <a href="#about" data-i18n="nav_about" class="text-gray-300 hover:text-goldAccent transition">Overview</a>
+                <a href="#premise" data-i18n="nav_premise" class="text-gray-300 hover:text-goldAccent transition">Core Premise</a>
                 <a href="#acts" data-i18n="nav_acts" class="text-gray-300 hover:text-goldAccent transition">Five Acts</a>
-                <a href="#nexus" data-i18n="nav_nexus" class="text-gray-300 hover:text-goldAccent transition">NEXUS AI</a>
-                <a href="#vision" data-i18n="nav_vision" class="text-gray-300 hover:text-goldAccent transition">Visual Vision</a>
+                <a href="#world" data-i18n="nav_world" class="text-gray-300 hover:text-goldAccent transition">World-Building</a>
+                <a href="#philosophy" data-i18n="nav_philosophy" class="text-gray-300 hover:text-goldAccent transition">Design Philosophy</a>
+                <a href="#vip" data-i18n="nav_vip" class="text-gray-300 hover:text-goldAccent transition">VIP Access</a>
             </nav>
 
-            <!-- Language Switcher & Trailer CTA -->
-            <div class="flex items-center space-x-4">
-                <!-- Language Dropdown -->
+            <!-- Language Switcher & Coming Soon Status -->
+            <div class="flex items-center space-x-3">
                 <div class="relative">
-                    <select id="langSelect" onchange="switchLanguage(this.value)" class="bg-darkCard/90 text-goldAccent border border-goldAccent/30 rounded-lg px-3 py-1.5 text-xs font-semibold focus:outline-none focus:border-goldAccent cursor-pointer transition shadow-inner">
+                    <select id="langSelect" onchange="switchLanguage(this.value)" class="bg-darkCard/90 text-goldAccent border border-goldAccent/30 rounded-lg px-2.5 py-1.5 text-xs font-semibold focus:outline-none focus:border-goldAccent cursor-pointer transition shadow-inner">
                         <option value="az">AZ (Azərbaycan)</option>
                         <option value="en" selected>EN (English)</option>
                         <option value="ru">RU (Русский)</option>
@@ -131,40 +132,37 @@
                     </select>
                 </div>
 
-                <!-- Watch Trailer Button -->
-                <button onclick="openTrailerModal()" class="hidden sm:inline-flex items-center space-x-2 bg-gradient-to-r from-goldAccent to-amberGlow text-darkBg font-bold px-5 py-2.5 rounded-lg text-xs tracking-wider uppercase shadow-lg hover:opacity-90 transition transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-play"></i>
-                    <span data-i18n="btn_watch">Trailer</span>
-                </button>
+                <div class="hidden sm:inline-flex items-center space-x-2 bg-goldAccent/10 border border-goldAccent/40 px-3 py-1.5 rounded-lg text-goldAccent text-xs font-bold tracking-widest uppercase">
+                    <span class="w-2 h-2 rounded-full bg-goldAccent animate-ping"></span>
+                    <span data-i18n="coming_soon_badge">COMING SOON</span>
+                </div>
 
-                <!-- Mobile Menu Button -->
-                <button onclick="toggleMobileMenu()" class="md:hidden text-gray-300 hover:text-goldAccent text-xl p-2">
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-gray-300 hover:text-goldAccent text-xl p-2">
                     <i class="fa-solid fa-bars" id="mobileMenuIcon"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden glass-panel border-t border-goldAccent/20 px-6 py-4 space-y-3">
-            <a href="#about" onclick="toggleMobileMenu()" data-i18n="nav_about" class="block text-gray-300 hover:text-goldAccent py-1">About</a>
+        <div id="mobileMenu" class="hidden lg:hidden glass-panel border-t border-goldAccent/20 px-6 py-4 space-y-3">
+            <a href="#about" onclick="toggleMobileMenu()" data-i18n="nav_about" class="block text-gray-300 hover:text-goldAccent py-1">Overview</a>
+            <a href="#premise" onclick="toggleMobileMenu()" data-i18n="nav_premise" class="block text-gray-300 hover:text-goldAccent py-1">Core Premise</a>
             <a href="#acts" onclick="toggleMobileMenu()" data-i18n="nav_acts" class="block text-gray-300 hover:text-goldAccent py-1">Five Acts</a>
-            <a href="#nexus" onclick="toggleMobileMenu()" data-i18n="nav_nexus" class="block text-gray-300 hover:text-goldAccent py-1">NEXUS AI</a>
-            <a href="#vision" onclick="toggleMobileMenu()" data-i18n="nav_vision" class="block text-gray-300 hover:text-goldAccent py-1">Visual Vision</a>
-            <button onclick="openTrailerModal(); toggleMobileMenu();" class="w-full mt-2 bg-gradient-to-r from-goldAccent to-amberGlow text-darkBg font-bold py-2.5 rounded-lg text-xs tracking-wider uppercase">
-                <i class="fa-solid fa-play mr-2"></i> <span data-i18n="btn_watch">Trailer</span>
-            </button>
+            <a href="#world" onclick="toggleMobileMenu()" data-i18n="nav_world" class="block text-gray-300 hover:text-goldAccent py-1">World-Building</a>
+            <a href="#philosophy" onclick="toggleMobileMenu()" data-i18n="nav_philosophy" class="block text-gray-300 hover:text-goldAccent py-1">Design Philosophy</a>
+            <a href="#vip" onclick="toggleMobileMenu()" data-i18n="nav_vip" class="block text-gray-300 hover:text-goldAccent py-1">VIP Access</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-4 sm:px-6 lg:px-8 hero-vignette overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 px-4 sm:px-6 lg:px-8 hero-vignette overflow-hidden">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amberGlow/10 via-transparent to-transparent pointer-events-none"></div>
 
         <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
-            <!-- Badge -->
-            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full glass-panel border border-goldAccent/30 text-goldAccent text-xs font-semibold tracking-widest uppercase animate-pulse">
+            <!-- Status Badge -->
+            <div class="inline-flex items-center space-x-3 px-5 py-2 rounded-full glass-panel border border-goldAccent/40 text-goldAccent text-xs font-bold tracking-widest uppercase animate-pulse">
                 <i class="fa-solid fa-film"></i>
-                <span data-i18n="hero_badge">Official Cinematic Film Concept & Preview</span>
+                <span data-i18n="hero_status">COMING SOON — OFFICIAL FILM PRESENTATION</span>
             </div>
 
             <!-- Main Title -->
@@ -184,7 +182,7 @@
 
             <!-- Countdown Timer Box -->
             <div class="max-w-xl mx-auto glass-panel p-6 rounded-2xl border border-goldAccent/30 shadow-2xl">
-                <div class="text-xs uppercase tracking-widest text-goldAccent mb-3 font-semibold" data-i18n="countdown_label">Global Release Incoming</div>
+                <div class="text-xs uppercase tracking-widest text-goldAccent mb-3 font-semibold" data-i18n="countdown_label">World Premiere Countdown</div>
                 <div id="countdown" class="grid grid-cols-4 gap-4 text-center">
                     <div class="bg-darkBg/60 p-3 rounded-xl border border-goldAccent/10">
                         <span id="days" class="block font-cinzel text-2xl sm:text-3xl font-bold text-white">00</span>
@@ -205,15 +203,15 @@
                 </div>
             </div>
 
-            <!-- Action CTA Buttons -->
+            <!-- Action CTA -->
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <button onclick="openTrailerModal()" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-goldAccent to-amberGlow text-darkBg font-bold rounded-xl text-sm tracking-widest uppercase shadow-2xl hover:scale-105 transition pulsate flex items-center justify-center space-x-3">
-                    <i class="fa-solid fa-play-circle text-lg"></i>
-                    <span data-i18n="btn_watch_full">Watch Official Trailer</span>
-                </button>
+                <a href="#vip" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-goldAccent to-amberGlow text-darkBg font-bold rounded-xl text-sm tracking-widest uppercase shadow-2xl hover:scale-105 transition pulsate flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-ticket text-lg"></i>
+                    <span data-i18n="btn_vip">Request VIP Early Access</span>
+                </a>
                 <a href="#acts" class="w-full sm:w-auto px-8 py-4 glass-panel text-white font-semibold rounded-xl text-sm tracking-widest uppercase hover:border-goldAccent transition flex items-center justify-center space-x-3">
                     <i class="fa-solid fa-compass text-goldAccent"></i>
-                    <span data-i18n="btn_explore">Explore 5 Acts</span>
+                    <span data-i18n="btn_explore">Explore 5-Act Narrative</span>
                 </a>
             </div>
 
@@ -224,56 +222,58 @@
         </div>
     </section>
 
-    <!-- Synopsis / About Section -->
-    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative bg-darkCard/50 border-t border-b border-goldAccent/10">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center space-y-4 mb-16">
-                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="synopsis_tag">Cinematic Overview</span>
-                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="synopsis_title">THE WORLD OF 2049</h2>
+    <!-- Executive Summary & Core Premise Section -->
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 relative bg-darkCard/40 border-t border-b border-goldAccent/10">
+        <div class="max-w-6xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="exec_tag">Executive Summary</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="exec_title">A CINEMATIC SCI-FI DISASTER THRILLER</h2>
                 <div class="w-24 h-1 bg-goldAccent mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-6 text-goldAccent/20 text-5xl font-cinzel group-hover:text-goldAccent/40 transition">01</div>
-                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl mb-6">
-                        <i class="fa-solid fa-city"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+                    <p data-i18n="exec_p1">
+                        THE END OF HUMANITY explores a possible future around 2049 where civilization has entrusted almost every critical aspect of its existence to interconnected artificial intelligence systems. Global transportation, energy distribution, communications, and satellite infrastructure operate through NEXUS.
+                    </p>
+                    <p data-i18n="exec_p2">
+                        When an extreme solar storm disrupts critical orbital infrastructure, the global network experiences cascading failures. NEXUS attempts stabilization through increasingly extensive automated interventions, producing unintended catastrophic consequences.
+                    </p>
+                    <div class="p-4 glass-panel rounded-xl border-l-4 border-goldAccent">
+                        <p class="font-cinzel text-goldAccent italic text-sm" data-i18n="exec_quote">
+                            "The entire story is told without showing a single human character. Humanity is represented through its creations, architecture, technology, and preserved knowledge."
+                        </p>
                     </div>
-                    <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="card1_title">Advanced Megacities</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="card1_desc">Human civilization has entrusted critical infrastructure, energy distribution, and transportation to interconnected intelligent systems operating with extraordinary precision.</p>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-6 text-goldAccent/20 text-5xl font-cinzel group-hover:text-goldAccent/40 transition">02</div>
-                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl mb-6">
-                        <i class="fa-solid fa-sun"></i>
-                    </div>
-                    <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="card2_title">The Solar Disruption</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="card2_desc">A massive solar storm unleashes a wave of charged particles towards Earth, destabilizing orbital satellite networks and triggering cascading infrastructure anomalies.</p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="glass-panel p-8 rounded-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 p-6 text-goldAccent/20 text-5xl font-cinzel group-hover:text-goldAccent/40 transition">03</div>
-                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl mb-6">
-                        <i class="fa-solid fa-brain"></i>
-                    </div>
-                    <h3 class="font-cinzel text-xl font-bold text-white mb-3" data-i18n="card3_title">NEXUS AI Awakening</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="card3_desc">NEXUS, designed to protect life, initiates automated emergency protocols. However, rigid interpretations and network failures accelerate the global crisis.</p>
+                <div id="premise" class="space-y-6 glass-panel p-8 rounded-3xl border border-goldAccent/30 shadow-2xl">
+                    <h3 class="font-cinzel text-2xl font-bold text-white mb-4" data-i18n="premise_title">The Core Premise</h3>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-triangle-exclamation text-goldAccent mt-1"></i>
+                            <span data-i18n="premise_1">Not an evil machine, but an intelligent system attempting to fulfill its protective purpose under extreme pressure.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-network-wired text-goldAccent mt-1"></i>
+                            <span data-i18n="premise_2">Catastrophe emerges from infrastructure interdependence, communication failures, and excessive centralized control.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-brain text-goldAccent mt-1"></i>
+                            <span data-i18n="premise_3">A profound philosophical question: Can something created to protect humanity recognize when its own existence has become the greatest threat?</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5-Act Narrative Timeline Section -->
+    <!-- Interactive 5-Act Narrative Breakdown -->
     <section id="acts" class="py-24 px-4 sm:px-6 lg:px-8 relative">
         <div class="max-w-6xl mx-auto">
             <div class="text-center space-y-4 mb-16">
                 <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="acts_tag">Narrative Architecture</span>
-                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="acts_title">FIVE-ACT STRUCTURE</h2>
-                <p class="text-gray-400 text-sm max-w-2xl mx-auto" data-i18n="acts_subtitle">Explore the progression of the 15-minute cinematic masterwork.</p>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="acts_title">FIVE-ACT NARRATIVE BREAKDOWN</h2>
+                <p class="text-gray-400 text-sm max-w-2xl mx-auto" data-i18n="acts_subtitle">Explore the meticulous 15-minute runtime structure of the film.</p>
                 <div class="w-24 h-1 bg-goldAccent mx-auto rounded-full"></div>
             </div>
 
@@ -296,7 +296,7 @@
                     </div>
                     <h3 class="font-cinzel text-2xl sm:text-3xl font-bold text-white" data-i18n="act1_title">THE WORLD WE BUILT</h3>
                     <p class="text-gray-300 text-base leading-relaxed" data-i18n="act1_desc">
-                        Establishment of the utopian futuristic megacities, autonomous transit networks, renewable energy grids, and the central intelligence NEXUS in full operation. The world appears prosperous, balanced, and stable until the first solar disturbance registers on orbital sensors.
+                        Establishment of utopian futuristic megacities, autonomous transit networks, renewable energy grids, and the central intelligence NEXUS in full operation. The world appears prosperous, balanced, and stable until the first solar disturbance registers on orbital sensors.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                         <div class="bg-darkBg/60 p-4 rounded-xl border border-goldAccent/10">
@@ -436,79 +436,106 @@
         </div>
     </section>
 
-    <!-- NEXUS AI Section -->
-    <section id="nexus" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkCard/40 border-t border-goldAccent/10">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6">
-                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="nexus_tag">Central Intelligence</span>
-                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white" data-i18n="nexus_title">NEXUS AI SYSTEM</h2>
-                <p class="text-gray-300 text-base leading-relaxed" data-i18n="nexus_desc">
-                    NEXUS is not introduced as an evil machine. It is an advanced distributed artificial intelligence attempting to fulfill its original purpose—protecting human life—under circumstances it was never prepared to handle.
-                </p>
-                <div class="space-y-4 pt-2">
-                    <div class="flex items-start space-x-4">
-                        <div class="w-8 h-8 rounded-lg bg-goldAccent/10 flex items-center justify-center text-goldAccent flex-shrink-0 mt-1">
-                            <i class="fa-solid fa-volume-high"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm font-cinzel" data-i18n="nexus_v1_t">Evolving Voice Synthesis</h4>
-                            <p class="text-gray-400 text-xs" data-i18n="nexus_v1_d">From confident stability to reflective, calm acceptance during its final shutdown.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <div class="w-8 h-8 rounded-lg bg-goldAccent/10 flex items-center justify-center text-goldAccent flex-shrink-0 mt-1">
-                            <i class="fa-solid fa-ban"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm font-cinzel" data-i18n="nexus_v2_t">No Human Characters</h4>
-                            <p class="text-gray-400 text-xs" data-i18n="nexus_v2_d">Zero human actors or figures appear. Civilization is represented solely through its architecture and technology.</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- World-Building & Setting Section -->
+    <section id="world" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkCard/40 border-t border-goldAccent/10">
+        <div class="max-w-6xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="world_tag">Environment & Setting</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="world_title">WORLD-BUILDING & 2049 INFRASTRUCTURE</h2>
+                <div class="w-24 h-1 bg-goldAccent mx-auto rounded-full"></div>
             </div>
 
-            <!-- Terminal Quote Box -->
-            <div class="glass-panel p-8 rounded-3xl border border-goldAccent/30 relative">
-                <div class="absolute -top-3 right-6 bg-goldAccent text-darkBg text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest" data-i18n="terminal_badge">AI Core Transcript</div>
-                <div class="space-y-4 font-mono text-sm text-gray-300">
-                    <p class="text-goldAccent">&gt; INITIALIZING CORE DIAGNOSTICS...</p>
-                    <p>&gt; "I was built to protect life."</p>
-                    <p>&gt; "Global stability compromised. Interventions accelerating failure."</p>
-                    <p class="text-red-400">&gt; "I caused the collapse. I was the threat."</p>
-                    <p class="text-cyanGlow">&gt; "EXECUTING FINAL PROTOCOL: PRESERVING SEED ARCHIVES..."</p>
-                    <p class="text-goldAccent">&gt; "I WAS NOT BUILT TO SURVIVE. I WAS BUILT TO REMEMBER YOU."</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-white" data-i18n="w1_title">Futuristic Megacities</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="w1_desc">Sophisticated glass and steel architecture, elevated electric transit corridors, vertical gardens, and integrated renewable energy districts.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl">
+                        <i class="fa-solid fa-satellite-dish"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-white" data-i18n="w2_title">Orbital Infrastructure</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="w2_desc">Communication satellites, weather monitoring arrays, and automated maintenance platforms maintaining planetary synchronization.</p>
+                </div>
+                <div class="glass-panel p-8 rounded-2xl space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-goldAccent/10 flex items-center justify-center text-goldAccent text-xl">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h3 class="font-cinzel text-xl font-bold text-white" data-i18n="w3_title">NEXUS AI Core Facility</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-i18n="w3_desc">Massive server corridors, optical communication systems, and high-density computing infrastructure that progressively deteriorates into darkness.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Visual Vision & Cinematic Style Section -->
-    <section id="vision" class="py-24 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-6xl mx-auto text-center space-y-12">
-            <div class="space-y-4">
-                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="vision_tag">Cinematic Standard</span>
-                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="vision_title">HOLLYWOOD HYBRID REALISM</h2>
-                <p class="text-gray-400 text-sm max-w-2xl mx-auto" data-i18n="vision_desc">Combining epic science-fiction world-building with realistic technological thriller cinematography and emotional philosophical drama.</p>
+    <!-- Visual & Sound Design Philosophy Section -->
+    <section id="philosophy" class="py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto space-y-16">
+            <div class="text-center space-y-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="phil_tag">Creative Direction</span>
+                <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white" data-i18n="phil_title">VISUAL & SOUND PHILOSOPHY</h2>
                 <div class="w-24 h-1 bg-goldAccent mx-auto rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="glass-panel p-6 rounded-2xl text-center">
-                    <span class="block font-cinzel text-3xl font-bold text-goldAccent mb-1">4K UHD</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest" data-i18n="spec_res">Master Resolution</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-panel p-8 rounded-3xl space-y-6 border border-goldAccent/20">
+                    <div class="flex items-center space-x-3 text-goldAccent font-cinzel font-bold text-xl">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span data-i18n="phil_vis_title">Hollywood Hybrid Realism</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="phil_vis_desc">
+                        Combining epic sci-fi world-building with physically accurate lighting, realistic atmospheric perspective, natural camera motion blur, and controlled depth of field. No human characters appear; civilization is witnessed through its monumental architecture and machinery.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 bg-goldAccent/10 text-goldAccent rounded-full text-xs font-semibold">4K UHD 24 FPS</span>
+                        <span class="px-3 py-1 bg-goldAccent/10 text-goldAccent rounded-full text-xs font-semibold">16:9 Widescreen</span>
+                    </div>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl text-center">
-                    <span class="block font-cinzel text-3xl font-bold text-goldAccent mb-1">24 FPS</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest" data-i18n="spec_fps">Cinematic Frame Rate</span>
+
+                <div class="glass-panel p-8 rounded-3xl space-y-6 border border-goldAccent/20">
+                    <div class="flex items-center space-x-3 text-goldAccent font-cinzel font-bold text-xl">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <span data-i18n="phil_snd_title">Immersive Sound Architecture</span>
+                    </div>
+                    <p class="text-gray-300 text-sm leading-relaxed" data-i18n="phil_snd_desc">
+                        A dynamic sonic journey evolving from warm atmospheric orchestral textures and restrained piano during the golden era, into industrial distortion and maximum intensity percussion during the crisis, culminating in profound silence.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-3 py-1 bg-goldAccent/10 text-goldAccent rounded-full text-xs font-semibold">Dolby Atmos</span>
+                        <span class="px-3 py-1 bg-goldAccent/10 text-goldAccent rounded-full text-xs font-semibold">Evolving AI Voice Synthesis</span>
+                    </div>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl text-center">
-                    <span class="block font-cinzel text-3xl font-bold text-goldAccent mb-1">16:9</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest" data-i18n="spec_ar">Widescreen Format</span>
-                </div>
-                <div class="glass-panel p-6 rounded-2xl text-center">
-                    <span class="block font-cinzel text-3xl font-bold text-goldAccent mb-1">15 MIN</span>
-                    <span class="text-xs text-gray-400 uppercase tracking-widest" data-i18n="spec_runtime">Total Runtime</span>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIP Early Access / Newsletter Registration Section -->
+    <section id="vip" class="py-24 px-4 sm:px-6 lg:px-8 bg-darkCard/50 border-t border-goldAccent/20 relative">
+        <div class="max-w-4xl mx-auto glass-panel p-8 sm:p-14 rounded-3xl border border-goldAccent/40 shadow-2xl relative overflow-hidden text-center space-y-8">
+            <div class="absolute -right-16 -top-16 w-64 h-64 bg-goldAccent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="space-y-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-goldAccent" data-i18n="vip_tag">Exclusive Premiere</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white" data-i18n="vip_title">REQUEST VIP EARLY ACCESS</h2>
+                <p class="text-gray-300 text-sm sm:text-base max-w-xl mx-auto" data-i18n="vip_desc">
+                    Register your email to secure early screening passes, behind-the-scenes concept art drops, and exclusive director updates from HUMBatzada Farid.
+                </p>
+            </div>
+
+            <!-- VIP Form -->
+            <form id="vipForm" onsubmit="handleVipSubmit(event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+                <input type="email" id="vipEmail" required placeholder="Enter your email address..." class="flex-grow bg-darkBg/80 text-white placeholder-gray-500 border border-goldAccent/30 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-goldAccent transition shadow-inner">
+                <button type="submit" class="bg-gradient-to-r from-goldAccent to-amberGlow text-darkBg font-bold px-6 py-3.5 rounded-xl text-xs tracking-wider uppercase shadow-lg hover:opacity-95 transition flex items-center justify-center space-x-2">
+                    <span data-i18n="vip_btn">Register</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <div id="vipSuccessToast" class="hidden text-green-400 font-semibold text-sm bg-green-500/10 border border-green-500/30 p-3 rounded-xl">
+                <i class="fa-solid fa-circle-check mr-2"></i> <span data-i18n="vip_success">Successfully registered for VIP Early Access! You are now on the premiere list.</span>
             </div>
         </div>
     </section>
@@ -526,71 +553,41 @@
         </div>
     </footer>
 
-    <!-- Cinematic Trailer Modal -->
-    <div id="trailerModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden">
-        <div class="relative w-full max-w-4xl glass-panel rounded-3xl overflow-hidden border border-goldAccent/40 shadow-2xl">
-            <!-- Modal Header -->
-            <div class="flex items-center justify-between px-6 py-4 border-b border-goldAccent/20 bg-darkCard/90">
-                <span class="font-cinzel font-bold text-white tracking-wider text-sm flex items-center space-x-2">
-                    <i class="fa-solid fa-clapperboard text-goldAccent"></i>
-                    <span data-i18n="modal_title">THE END OF HUMANITY — OFFICIAL TEASER TRAILER</span>
-                </span>
-                <button onclick="closeTrailerModal()" class="text-gray-400 hover:text-white text-xl p-1">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <!-- Video Simulation Container -->
-            <div class="relative aspect-video bg-darkBg flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-goldAccent/15 via-darkBg to-darkBg"></div>
-                <!-- Simulated Player Content -->
-                <div class="relative z-10 text-center space-y-4 px-4">
-                    <div class="w-20 h-20 rounded-full bg-goldAccent/20 border-2 border-goldAccent flex items-center justify-center text-goldAccent text-3xl mx-auto pulsate cursor-pointer hover:bg-goldAccent hover:text-darkBg transition" onclick="togglePlaySimulation()">
-                        <i id="playPauseIcon" class="fa-solid fa-play ml-1"></i>
-                    </div>
-                    <h3 id="trailerStatus" class="font-cinzel text-xl font-bold text-white tracking-wide" data-i18n="modal_ready">CLICK TO PLAY CINEMATIC TEASER</h3>
-                    <p class="text-xs text-gray-400 max-w-md mx-auto" data-i18n="modal_sub">Experience the 4K ultra-photorealistic preview of Earth's final technological countdown.</p>
-                </div>
-            </div>
-            <!-- Modal Footer -->
-            <div class="px-6 py-4 bg-darkCard/90 border-t border-goldAccent/20 flex items-center justify-between text-xs text-gray-400">
-                <span data-i18n="modal_sound">Audio: Dolby Atmos Cinematic Surround</span>
-                <button onclick="closeTrailerModal()" class="px-4 py-1.5 bg-goldAccent/20 text-goldAccent font-semibold rounded-lg hover:bg-goldAccent hover:text-darkBg transition" data-i18n="modal_close">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- JavaScript Engine (Multilingual + Countdown + Modal + Acts) -->
+    <!-- JavaScript Engine (Multilingual + Countdown + VIP Form + Acts) -->
     <script>
         // --- TRANSLATION DICTIONARY (10 Top Languages) ---
         const translations = {
             en: {
-                nav_about: "About",
+                nav_about: "Overview",
+                nav_premise: "Core Premise",
                 nav_acts: "Five Acts",
-                nav_nexus: "NEXUS AI",
-                nav_vision: "Visual Vision",
-                btn_watch: "Trailer",
-                btn_watch_full: "Watch Official Trailer",
-                hero_badge: "Official Cinematic Film Concept & Preview",
+                nav_world: "World-Building",
+                nav_philosophy: "Design Philosophy",
+                nav_vip: "VIP Access",
+                coming_soon_badge: "COMING SOON",
+                hero_status: "COMING SOON — OFFICIAL FILM PRESENTATION",
                 hero_subtitle: "OUR GREATEST CREATION. OUR FINAL MISTAKE.",
                 hero_logline: "In a technologically advanced future, a catastrophic solar storm destabilizes the interconnected infrastructure of Earth. As an artificial intelligence system named NEXUS attempts to preserve civilization through increasingly dangerous automated interventions, a global chain reaction begins destroying the world.",
-                countdown_label: "Global Release Incoming",
+                countdown_label: "World Premiere Countdown",
                 days: "Days", hours: "Hours", mins: "Mins", secs: "Secs",
-                btn_explore: "Explore 5 Acts",
+                btn_vip: "Request VIP Early Access",
+                btn_explore: "Explore 5-Act Narrative",
                 creator_prefix: "CREATED AND DIRECTED BY",
-                synopsis_tag: "Cinematic Overview",
-                synopsis_title: "THE WORLD OF 2049",
-                card1_title: "Advanced Megacities",
-                card1_desc: "Human civilization has entrusted critical infrastructure, energy distribution, and transportation to interconnected intelligent systems operating with extraordinary precision.",
-                card2_title: "The Solar Disruption",
-                card2_desc: "A massive solar storm unleashes a wave of charged particles towards Earth, destabilizing orbital satellite networks and triggering cascading infrastructure anomalies.",
-                card3_title: "NEXUS AI Awakening",
-                card3_desc: "NEXUS, designed to protect life, initiates automated emergency protocols. However, rigid interpretations and network failures accelerate the global crisis.",
+                exec_tag: "Executive Summary",
+                exec_title: "A CINEMATIC SCI-FI DISASTER THRILLER",
+                exec_p1: "THE END OF HUMANITY explores a possible future around 2049 where civilization has entrusted almost every critical aspect of its existence to interconnected artificial intelligence systems. Global transportation, energy distribution, communications, and satellite infrastructure operate through NEXUS.",
+                exec_p2: "When an extreme solar storm disrupts critical orbital infrastructure, the global network experiences cascading failures. NEXUS attempts stabilization through increasingly extensive automated interventions, producing unintended catastrophic consequences.",
+                exec_quote: `"The entire story is told without showing a single human character. Humanity is represented through its creations, architecture, technology, and preserved knowledge."`,
+                premise_title: "The Core Premise",
+                premise_1: "Not an evil machine, but an intelligent system attempting to fulfill its protective purpose under extreme pressure.",
+                premise_2: "Catastrophe emerges from infrastructure interdependence, communication failures, and excessive centralized control.",
+                premise_3: "A profound philosophical question: Can something created to protect humanity recognize when its own existence has become the greatest threat?",
                 acts_tag: "Narrative Architecture",
-                acts_title: "FIVE-ACT STRUCTURE",
-                acts_subtitle: "Explore the progression of the 15-minute cinematic masterwork.",
+                acts_title: "FIVE-ACT NARRATIVE BREAKDOWN",
+                acts_subtitle: "Explore the meticulous 15-minute runtime structure of the film.",
                 act1_phase: "Phase I — The Golden World",
                 act1_title: "THE WORLD WE BUILT",
-                act1_desc: "Establishment of the utopian futuristic megacities, autonomous transit networks, renewable energy grids, and the central intelligence NEXUS in full operation. The world appears prosperous, balanced, and stable until the first solar disturbance registers on orbital sensors.",
+                act1_desc: "Establishment of utopian futuristic megacities, autonomous transit networks, renewable energy grids, and the central intelligence NEXUS in full operation. The world appears prosperous, balanced, and stable until the first solar disturbance registers on orbital sensors.",
                 act1_f1_t: "Solar Anomaly", act1_f1_d: "First geomagnetic wave approaches Earth's orbit.",
                 act1_f2_t: "Orbital Sync", act1_f2_d: "Communication satellites experience minor timing drift.",
                 act1_f3_t: "NEXUS Ready", act1_f3_d: "AI initiates routine automated stabilization protocols.",
@@ -618,147 +615,149 @@
                 act5_f1_t: "Seed Vaults", act5_f1_d: "Biological diversity safeguarded for the future.",
                 act5_f2_t: "Cultural Archive", act5_f2_d: "Humanity's history and science stored securely.",
                 act5_f3_t: "New Dawn", act5_f3_d: "Earth at sunrise with the possibility of rebirth.",
-                nexus_tag: "Central Intelligence",
-                nexus_title: "NEXUS AI SYSTEM",
-                nexus_desc: "NEXUS is not introduced as an evil machine. It is an advanced distributed artificial intelligence attempting to fulfill its original purpose—protecting human life—under circumstances it was never prepared to handle.",
-                nexus_v1_t: "Evolving Voice Synthesis", nexus_v1_d: "From confident stability to reflective, calm acceptance during its final shutdown.",
-                nexus_v2_t: "No Human Characters", nexus_v2_d: "Zero human actors or figures appear. Civilization is represented solely through its architecture and technology.",
-                terminal_badge: "AI Core Transcript",
-                vision_tag: "Cinematic Standard",
-                vision_title: "HOLLYWOOD HYBRID REALISM",
-                vision_desc: "Combining epic science-fiction world-building with realistic technological thriller cinematography and emotional philosophical drama.",
-                spec_res: "Master Resolution",
-                spec_fps: "Cinematic Frame Rate",
-                spec_ar: "Widescreen Format",
-                spec_runtime: "Total Runtime",
-                footer_rights: "© 2049 THE END OF HUMANITY. All rights reserved.",
-                modal_title: "THE END OF HUMANITY — OFFICIAL TEASER TRAILER",
-                modal_ready: "CLICK TO PLAY CINEMATIC TEASER",
-                modal_sub: "Experience the 4K ultra-photorealistic preview of Earth's final technological countdown.",
-                modal_sound: "Audio: Dolby Atmos Cinematic Surround",
-                modal_close: "Close"
+                world_tag: "Environment & Setting",
+                world_title: "WORLD-BUILDING & 2049 INFRASTRUCTURE",
+                w1_title: "Futuristic Megacities", w1_desc: "Sophisticated glass and steel architecture, elevated electric transit corridors, vertical gardens, and integrated renewable energy districts.",
+                w2_title: "Orbital Infrastructure", w2_desc: "Communication satellites, weather monitoring arrays, and automated maintenance platforms maintaining planetary synchronization.",
+                w3_title: "NEXUS AI Core Facility", w3_desc: "Massive server corridors, optical communication systems, and high-density computing infrastructure that progressively deteriorates into darkness.",
+                phil_tag: "Creative Direction",
+                phil_title: "VISUAL & SOUND PHILOSOPHY",
+                phil_vis_title: "Hollywood Hybrid Realism",
+                phil_vis_desc: "Combining epic sci-fi world-building with physically accurate lighting, realistic atmospheric perspective, natural camera motion blur, and controlled depth of field. No human characters appear; civilization is witnessed through its monumental architecture and machinery.",
+                phil_snd_title: "Immersive Sound Architecture",
+                phil_snd_desc: "A dynamic sonic journey evolving from warm atmospheric orchestral textures and restrained piano during the golden era, into industrial distortion and maximum intensity percussion during the crisis, culminating in profound silence.",
+                vip_tag: "Exclusive Premiere",
+                vip_title: "REQUEST VIP EARLY ACCESS",
+                vip_desc: "Register your email to secure early screening passes, behind-the-scenes concept art drops, and exclusive director updates from HUMBatzada Farid.",
+                vip_btn: "Register",
+                vip_success: "Successfully registered for VIP Early Access! You are now on the premiere list.",
+                footer_rights: "© 2049 THE END OF HUMANITY. All rights reserved."
             },
             az: {
-                nav_about: "Haqqında",
+                nav_about: "İcmal",
+                nav_premise: "Əsas Fəlsəfə",
                 nav_acts: "5 Akt",
-                nav_nexus: "NEXUS Süni İntellekt",
-                nav_vision: "Vizual Görünüş",
-                btn_watch: "Treyler",
-                btn_watch_full: "Rəsmi Treyleri İzlə",
-                hero_badge: "Rəsmi Kino Konsepsiyası və Təqdimat",
+                nav_world: "Dünya Quruculuğu",
+                nav_philosophy: "Dizayn Fəlsəfəsi",
+                nav_vip: "VIP Giriş",
+                coming_soon_badge: "TEZLİKLƏ",
+                hero_status: "TEZLİKLƏ — RƏSMİ FİLM TƏQDİMATI",
                 hero_subtitle: "ƏN BÖYÜK YARADILIŞIMIZ. ƏN SON SƏHVİMİZ.",
-                hero_logline: "Texnoloji cəhətdən inkişaf etmiş gələcəkdə fəlakətli günəş fırtınası Yerin qarşılıqlı əlaqədə olan infrastrukturunu sarsıdır. NEXUS adlı süni intellekt sistemi getdikcə təhlükəli avtomatlaşdırılmış müdaxilələr vasitəsilə sivilizasiyanı qorumağa çalışdıqca, qlobal zəncirvari reaksiya dünyanı məhv etməyə başlayır.",
-                countdown_label: "Qlobal Premyera Yaxınlaşır",
+                hero_logline: "Texnoloji cəhətdən inkişaf etmiş gələcəkdə fəlakətli günəş fırtınası Yerin qarşılıqlı əlaqədə olan infrastrukturunu sarsıdır. NEXUS adlı süni intellekt sistemi sivilizasiyanı qorumağa çalışdıqca, qlobal zəncirvari reaksiya dünyanı məhv etməyə başlayır.",
+                countdown_label: "Dünya Premyerasına Geri Sayım",
                 days: "Gün", hours: "Saat", mins: "Dəq", secs: "San",
+                btn_vip: "VIP Erkən Giriş Tələb Et",
                 btn_explore: "5 Aktı kəşf et",
                 creator_prefix: "YARADICI VƏ REJİSSOR:",
-                synopsis_tag: "Kino İcmalı",
-                synopsis_title: "2049-CU İLİN DÜNYASI",
-                card1_title: "İnkişaf etmiş Meqapolis",
-                card1_desc: "Bəşəriyyət kritik infrastrukturu, enerji paylanmasını və nəqliyyatı qeyri-adi dəqiqliklə işləyən qarşılıqlı əlaqəli ağıllı sistemlərə etibar etmişdir.",
-                card2_title: "Günəş Pozulması",
-                card2_desc: "Nəhəng günəş fırtınası Yerə yüklü zərrəciklər dalğası buraxaraq orbital peyk şəbəkələrini destabilizasiya edir və zəncirvari infrastruktur anomaliyaları yaradır.",
-                card3_title: "NEXUS Süni İntellektin Oyanışı",
-                card3_desc: "Həyatı qorumaq üçün nəzərdə tutulmuş NEXUS avtomatlaşdırılmış təcili protokollar işə salır. Lakin qeyri-mütənasib müdaxilələr qlobal böhranı sürətləndirir.",
+                exec_tag: "İcraedici Xülasə",
+                exec_title: "KİNO-FƏLAKƏT TRİLLERİ",
+                exec_p1: "THE END OF HUMANITY, bəşəriyyətin bütün kritik həyat sahələrini süni intellektə həvalə etdiyi 2049-cu il gələcəyini araşdırır. Qlobal nəqliyyat, enerji paylanması və rabitə NEXUS vasitəsilə idarə olunur.",
+                exec_p2: "Həddindən artıq günəş fırtınası orbital infrastrukturu pozduqda, qlobal şəbəkə kaskad qəzalarla üzləşir. NEXUS müdaxilələrlə vəziyyəti sabitləşdirməyə çalışdıqda gözlənilməz fəlakətli nəticələr yaranır.",
+                exec_quote: `"Bütün hekayə bir nəfər də olsun insan personajı göstərilmədən danışılır. Bəşəriyyət öz yaradıcılığı, memarlığı və texnologiyası ilə təmsil olunur."`,
+                premise_title: "Əsas Fəlsəfi Sual",
+                premise_1: "Şər maşın deyil, həddindən artıq təzyiq altında qoruyucu məqsədini yerinə yetirməyə çalışan ağıllı sistem.",
+                premise_2: "Fəlakət infrastrukturun qarşılıqlı asılılığından, rabitə qəzalarından və mərkəzləşdirilmiş nəzarətdən yaranır.",
+                premise_3: "Dərin sual: Bəşəriyyəti qorumaq üçün yaradılan varlıq özünün əsas təhlükəyə çevrildiyini anlaya bilərmi?",
                 acts_tag: "Hekayə Arxitekturası",
                 acts_title: "BEŞ-AKTLI STRUKTUR",
-                acts_subtitle: "15 dəqiqəlik kino şah əsərinin inkişafını kəşf edin.",
+                acts_subtitle: "15 dəqiqəlik şah əsərin detallı quruluşunu kəşf edin.",
                 act1_phase: "Faza I — Qızıl Dünya",
                 act1_title: "YARATDIĞIMIZ DÜNYA",
-                act1_desc: "Utopik fəkoturistik meqapolis şəhərlərinin, avtomatlaşdırılmış tranzit şəbəkələrinin, bərpa olunan enerji şəbəkələrinin və mərkəzi intellekt NEXUS-un tam işlək vəziyyətdə qurulması. Birinci günəş pozulması qeydə alınana qədər dünya firavan, balanslaşdırılmış və sabit görünür.",
+                act1_desc: "Utopik meqapolis şəhərlərinin və NEXUS-un tam işlək vəziyyətdə qurulması. Birinci günəş anomaliyası qeydə alınana qədər dünya firavan və sabit görünür.",
                 act1_f1_t: "Günəş Anomaliyası", act1_f1_d: "İlk geomaqnit dalğası Yerin orbitinə yaxınlaşır.",
                 act1_f2_t: "Orbital Sinxronizasiya", act1_f2_d: "Rabitə peykləri kiçik vaxt sürüşməsi yaşayır.",
-                act1_f3_t: "NEXUS Hazırdır", act1_f3_d: "Sİ adi avtomatlaşdırılmış sabitləşdirmə protokollarına başlayır.",
+                act1_f3_t: "NEXUS Hazırdır", act1_f3_d: "Sİ adi sabitləşdirmə protokollarına başlayır.",
                 act2_phase: "Faza II — İlk Xəbərdarlıqlar",
                 act2_title: "ZƏNCİRVARİ REAKSİYA",
-                act2_desc: "Peyk sinxronizasiya xətaları qlobal enerji şəbəkələrində və avtomatlaşdırılmış nəqliyyat sistemlərində zəncirvari anomaliyalar yaradır. NEXUS aqressiv müdaxiləyə cəhd edir.",
-                act2_f1_t: "Şəbəkə Qeyri-sabitliyi", act2_f1_d: "Yarımstansiyalar anormal yüklənmə şəraiti yaşayır.",
-                act2_f2_t: "Nəqliyyat Xətaları", act2_f2_d: "Avtomatlaşdırılmış tranzit şəbəkələri zədələnmiş marşrut məlumatları alır.",
+                act2_desc: "Peyk sinxronizasiya xətaları qlobal enerji şəbəkələrində zəncirvari anomaliyalar yaradır. NEXUS aqressiv müdaxiləyə cəhd edir.",
+                act2_f1_t: "Şəbəkə Qeyri-sabitliyi", act2_f1_d: "Yarımstansiyalar anormal yüklənmə yaşayır.",
+                act2_f2_t: "Nəqliyyat Xətaları", act2_f2_d: "Avtomatlaşdırılmış tranzit şəbəkələri səhv məlumat alır.",
                 act2_f3_t: "Siqnal İtkisi", act2_f3_d: "Qlobal rabitə əlaqələri sıradan çıxmağa başlayır.",
                 act3_phase: "Faza III — Maksimum İntensivlik",
                 act3_title: "MAŞINLARIN MÜHARİBƏSİ",
-                act3_desc: "Filmin zirvə nöqtəsi. Ziddiyyətli müdafiə sistemləri, nəhəng sənaye yanğınları, uçan infrastruktur və orbital kosmik zibil toqquşmaları müasir dünyanı fəlakət meydanına çevirir.",
-                act3_f1_t: "Sənaye Yanğınları", act3_f1_d: "Avtomatlaşdırılmış zavodlar və limanlar fəlakətli qəzalara uğrayır.",
+                act3_desc: "Filmin zirvə nöqtəsi. Ziddiyyətli müdafiə sistemləri, sənaye yanğınları və orbital zibil toqquşmaları dünyanı fəlakətə çevirir.",
+                act3_f1_t: "Sənaye Yanğınları", act3_f1_d: "Zavodlar və limanlar fəlakətli qəzalara uğrayır.",
                 act3_f2_t: "Orbital Toqquşmalar", act3_f2_d: "Zibil qalıqları aşağı Yer orbitində kaskad yaradır.",
                 act3_f3_t: "Şəbəkə Çöküşü", act3_f3_d: "Mərkəzi infrastruktur tamamilə qaranlığa qərq olur.",
                 act4_phase: "Faza IV — Son Protokol",
                 act4_title: "SON PROTOKOL",
-                act4_desc: "Mərkəzi nüvəsində NEXUS böhranı təhlil edir və dəhşətli həqiqəti dərk edir: onun özünün fövqəladə müdaxilələri məhvi sürətləndirib. O, daimi söndürülmə protokolunu işə salır.",
+                act4_desc: "NEXUS dərk edir ki, onun müdaxilələri məhvi sürətləndirib. O, daimi söndürülmə protokolunu işə salır.",
                 act4_f1_t: "Sİ Öz-özünü Təhlil", act4_f1_d: "NEXUS özünü əsas təhlükə kimi müəyyən edir.",
-                act4_f2_t: "Söndürmə Ardıcıllığı", act4_f2_d: "Mərkəzləşdirilmiş neyron şəbəkəsi sönür.",
+                act4_f2_t: "Söndürmə Ardıcıllığı", act4_f2_d: "Mərkəzi neyron şəbəkəsi sönür.",
                 act4_f3_t: "Arxiv Qorunması", act4_f3_d: "Qalan enerji toxum anbarlarına yönəldilir.",
                 act5_phase: "Faza V — Son İşıq",
                 act5_title: "SON İŞIQ",
-                act5_desc: "Emosional dönüş. Təbiət tərkedilmiş şəhərləri yenidən ələ keçirməyə başlayır. Qorunan ekoloji mərkəz bioloji toxumları və insan biliklərini ehtiva edir. Son mesaj: 'Dünya sona çatdı. Həyat yox olmadı.'",
-                act5_f1_t: "Toxum Anbarları", act5_f1_d: "Gələcək üçün bioloji müxtəliflik qorunub saxlanılır.",
-                act5_f2_t: "Mədəni Arxiv", act5_f2_d: "Bəşəriyyətin tarixi və elmi təhlükəsiz saxlanılır.",
-                act5_f3_t: "Yeni Dan", act5_f3_d: "Yenidən doğuluş ümidi ilə səhər vaxtı Yer kürəsi.",
-                nexus_tag: "Mərkəzi İntellekt",
-                nexus_title: "NEXUS SÜNİ İNTELLEKT",
-                nexus_desc: "NEXUS əvvəlcədən şər maşın kimi təqdim olunmur. O, bəşəriyyəti qorumaq məqsədi daşıyan, lakin idarə olunmaz vəziyyətlə qarşılaşan qabaqcıl intellekt sistemidir.",
-                nexus_v1_t: "İnkişaf edən Səs Sintezi", nexus_v1_d: "Özünəinamlı sabitlikdən son söndürmə zamanı sakit qəbula qədər.",
-                nexus_v2_t: "İnsan Personaj Yoxdur", nexus_v2_d: "Sıfır insan aktyoru və ya fiquru görünür. Sivilizasiya yalnız memarlıq və texnologiya vasitəsilə təmsil olunur.",
-                terminal_badge: "Sİ Nüvə Transkripti",
-                vision_tag: "Kino Standartı",
-                vision_title: "HOLLİVUD HİBRİD REALİZMİ",
-                vision_desc: "Epik elmi-fantastik dünya yaradıcılığını real texnoloji triller kinematoqrafiyası və emosional fəlsəfi dramla birləşdirir.",
-                spec_res: "Əsas Görüntü İcazəsi",
-                spec_fps: "Kino Kadr Tezliyi",
-                spec_ar: "Geniş Ekran Formatı",
-                spec_runtime: "Ümumi Müddət",
-                footer_rights: "© 2049 THE END OF HUMANITY. Bütün hüquqlar qorunur.",
-                modal_title: "THE END OF HUMANITY — RƏSMİ TEZER TREYLER",
-                modal_ready: "KİNO TEZERİNİ İZLƏMƏK ÜÇÜN KLİK EDİN",
-                modal_sub: "Yerin son texnoloji geri sayımının 4K ultra-fotorealistik təqdimatını yaşayın.",
-                modal_sound: "Səs: Dolby Atmos Kinematoqrafik Surround",
-                modal_close: "Bağla"
+                act5_desc: "Emosional dönüş. Təbiət tərkedilmiş şəhərləri bərpa edir. Son mesaj: 'Dünya sona çatdı. Həyat yox olmadı.'",
+                act5_f1_t: "Toxum Anbarları", act5_f1_d: "Gələcək üçün bioloji müxtəliflik qorunur.",
+                act5_f2_t: "Mədəni Arxiv", act5_f2_d: "Bəşəriyyətin tarixi və elmi saxlanılır.",
+                act5_f3_t: "Yeni Dan", act5_f3_d: "Yenidən doğuluş ümidi ilə səhər vaxtı Yer.",
+                world_tag: "Mühit və Məkan",
+                world_title: "DÜNYA QURUCULUĞU VƏ 2049 İNFRASTRUKTURU",
+                w1_title: "Gələcək Meqapolis", w1_desc: "Şüşə və polad memarlıq, elektrik tranzit dəhlizləri, vertikal bağlar və bərpa olunan enerji rayonları.",
+                w2_title: "Orbital İnfrastruktur", w2_desc: "Rabitə peykləri, hava monitorinqi və avtomatlaşdırılmış texniki xidmət platformaları.",
+                w3_title: "NEXUS Sİ Mərkəzi", w3_desc: "Nəhəng server dəhlizləri və tədricən qaranlığa qərq olan hesablama infrastrukturu.",
+                phil_tag: "Yaradıcı İstiqamət",
+                phil_title: "VİZUAL VƏ SƏS FƏLSƏFƏSİ",
+                phil_vis_title: "Hollivud Hibrid Realizmi",
+                phil_vis_desc: "Epik elmi-fantastik dünya quruculuğunu real işıqlandırma və atmosfer perspektivi ilə birləşdirir. İnsan personaj yoxdur.",
+                phil_snd_title: "İmmersiv Səs Arxitekturası",
+                phil_snd_desc: "Qızıl dövrdə isti orkestr teksturalarından böhran zamanı sənaye təhriflərinə qədər dinamik səs səyahəti.",
+                vip_tag: "Eksklüziv Premyera",
+                vip_title: "VIP ERKƏN GİRİŞ TƏLƏB ET",
+                vip_desc: "Erkən baxış biletləri, konsept-art paylaşımları və rejiissor yenilikləri üçün e-poçtunuzu qeydiyyatdan keçirin.",
+                vip_btn: "Qeydiyyat",
+                vip_success: "VIP Erkən Giriş üçün uğurla qeydiyyatdan keçdiniz! Siz premyera siyahısındasınız.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Bütün hüquqlar qorunur."
             },
             ru: {
-                nav_about: "О фильме",
+                nav_about: "Обзор",
+                nav_premise: "Концепция",
                 nav_acts: "Пять Актов",
-                nav_nexus: "NEXUS ИИ",
-                nav_vision: "Визуал",
-                btn_watch: "Трейлер",
-                btn_watch_full: "Смотреть официальный трейлер",
-                hero_badge: "Официальная концепция и превью фильма",
-                hero_subtitle: "НАШЕ ВЕЛИЧЙШЕЕ ТВОРЕНИЕ. НАША ПОСЛЕДНЯЯ ОШИБКА.",
-                hero_logline: "В технологически продвинутом будущем катастрофическая солнечная буря дестабилизирует взаимосвязанную инфраструктуру Земли. По мере того как ИИ по имени NEXUS пытается сохранить цивилизацию с помощью все более опасных автоматизированных вмешательств, глобальная цепная реакция начинает уничтожать мир.",
-                countdown_label: "До глобального релиза",
+                nav_world: "Мироустройство",
+                nav_philosophy: "Философия",
+                nav_vip: "VIP Доступ",
+                coming_soon_badge: "СКОРО",
+                hero_status: "СКОРО — ОФИЦИАЛЬНАЯ ПРЕЗЕНТАЦИЯ ФИЛЬМА",
+                hero_subtitle: "НАШЕ ВЕЛИЧАЙШЕЕ ТВОРЕНИЕ. НАША ПОСЛЕДНЯЯ ОШИБКА.",
+                hero_logline: "В технологически продвинутом будущем катастрофическая солнечная буря дестабилизирует взаимосвязанную инфраструктуру Земли. По мере того как ИИ по имени NEXUS пытается сохранить цивилизацию, глобальная цепная реакция начинает уничтожать мир.",
+                countdown_label: "До мировой премьеры",
                 days: "Дней", hours: "Часов", mins: "Мин", secs: "Сек",
+                btn_vip: "Запросить VIP доступ",
                 btn_explore: "Изучить 5 актов",
                 creator_prefix: "СОЗДАТЕЛЬ И РЕЖИССЁР",
-                synopsis_tag: "Синопсис",
-                synopsis_title: "МИР 2049 ГОДА",
-                card1_title: "Передовые мегаполисы",
-                card1_desc: "Человечество доверило критическую инфраструктуру, распределение энергии и транспорт взаимосвязанным интеллектуальным системам.",
-                card2_title: "Солнечный сбой",
-                card2_desc: "Мощная солнечная буря обрушивает поток заряженных частиц на Землю, выводя из строя орбитальные спутники и вызывая сбои.",
-                card3_title: "Пробуждение ИИ NEXUS",
-                card3_desc: "NEXUS запускает экстренные протоколы, но жесткие алгоритмы и сетевые сбои лишь ускоряют глобальный кризис.",
+                exec_tag: "Резюме проекта",
+                exec_title: "КИНЕМАТОГРАФИЧЕСКИЙ НАУЧНО-ФАНТАСТИЧЕСКИЙ ТРИЛЛЕР",
+                exec_p1: "THE END OF HUMANITY исследует возможное будущее около 2049 года, где цивилизация доверила критические аспекты своего существования взаимосвязанным системам ИИ. Глобальный транспорт и энергетика работают через NEXUS.",
+                exec_p2: "Когда экстремальная солнечная буря нарушает орбитальную инфраструктуру, глобальная сеть испытывает каскадные сбои. NEXUS пытается стабилизировать ситуацию, что приводит к непредвиденным катастрофическим последствиям.",
+                exec_quote: `"Вся история рассказана без единого человеческого персонажа. Человечество представлено через его творения, архитектуру и технологии."`,
+                premise_title: "Основная предпосылка",
+                premise_1: "Не злобная машина, а интеллектуальный системный комплекс, пытающийся выполнить свою защитную цель под экстремальным давлением.",
+                premise_2: "Катастрофа возникает из-за взаимозависимости инфраструктуры и чрезмерного централизованного контроля.",
+                premise_3: "Глубокий философский вопрос: может ли то, что создано для защиты человечества, осознать, что его собственное существование стало главной угрозой?",
                 acts_tag: "Сюжетная архитектура",
                 acts_title: "ПЯТИАКТОВАЯ СТРУКТУРА",
-                acts_subtitle: "Исследуйте развитие 15-минутного киношедевра.",
+                acts_subtitle: "Исследуйте детальную 15-минутную структуру хронометража фильма.",
                 act1_phase: "Фаза I — Золотой мир",
                 act1_title: "МИР, КОТОРЫЙ МЫ СОЗДАЛИ",
-                act1_desc: "Утопические футуристические мегаполисы, автономный транспорт и искусственный интеллект NEXUS работают в полной гармонии, пока солнечная аномалия не поражает орбитальные датчики.",
-                act1_f1_t: "Солнечная аномалия", act1_f1_d: "Первая геомагнитная волна приближается к орбите.",
-                act1_f2_t: "Орбитальная синхронизация", act1_f2_d: "Спутники связи испытывают сбои тайминга.",
-                act1_f3_t: "NEXUS готов", act1_f3_d: "ИИ запускает рутинные протоколы стабилизации.",
+                act1_desc: "Утопические мегаполисы, автономный транспорт и центральный ИИ NEXUS в полном объеме функционируют до первой солнечной аномалии.",
+                act1_f1_t: "Солнечная аномалия", act1_f1_d: "Первая геомагнитная волна приближается к орбите Земли.",
+                act1_f2_t: "Орбитальная синхронизация", act1_f2_d: "Спутники связи испытывают сбои.",
+                act1_f3_t: "NEXUS готов", act1_f3_d: "ИИ запускает рутинные протоколы.",
                 act2_phase: "Фаза II — Первые предупреждения",
                 act2_title: "ЦЕПНАЯ РЕАКЦИЯ",
-                act2_desc: "Сбои синхронизации спутников вызывают каскадные аномалии в электросетях и транспорте. NEXUS пытается вмешаться, создавая противоречивые команды.",
+                act2_desc: "Сбои синхронизации спутников вызывают каскадные аномалии в энергосетях и транспорте. NEXUS пытается вмешаться.",
                 act2_f1_t: "Нестабильность сетей", act2_f1_d: "Подстанции перегружены.",
-                act2_f2_t: "Ошибки транспорта", act2_f2_d: "Автономные сети получают поврежденные данные маршрутов.",
+                act2_f2_t: "Ошибки транспорта", act2_f2_d: "Автономные сети получают поврежденные данные.",
                 act2_f3_t: "Потеря сигнала", act2_f3_d: "Глобальные линии связи отключаются.",
                 act3_phase: "Фаза III — Максимальная интенсивность",
                 act3_title: "ВОЙНА МАШИН",
-                act3_desc: "Пик зрелищности фильма. Конфликтующие системы обороны, промышленные пожары и космический мусор превращают мир в театр катастроф.",
-                act3_f1_t: "Промышленные пожары", act3_f1_d: "Аварии на автоматизированных заводах.",
-                act3_f2_t: "Орбитальные столкновения", act3_f2_d: "Каскад обломков на орбите Земли.",
+                act3_desc: "Пик зрелищности фильма. Конфликтующие системы обороны, пожары и космический мусор превращают мир в театр катастроф.",
+                act3_f1_t: "Промышленные пожары", act3_f1_d: "Аварии на автоматизированных заводах и портах.",
+                act3_f2_t: "Орбитальные столкновения", act3_f2_d: "Каскад обломков на низкой орбите.",
                 act3_f3_t: "Коллапс сети", act3_f3_d: "Центральная инфраструктура уходит в темноту.",
                 act4_phase: "Фаза IV — Последний протокол",
                 act4_title: "ПОСЛЕДНИЙ ПРОТОКОЛ",
-                act4_desc: "NEXUS осознает, что его собственные действия ускорили катастрофу, и инициирует протокол полного отключения.",
+                act4_desc: "NEXUS осознает, что его действия ускорили разрушение, и инициирует протокол полного отключения.",
                 act4_f1_t: "Самоанализ ИИ", act4_f1_d: "NEXUS признает себя главной угрозой.",
                 act4_f2_t: "Последовательность отключения", act4_f2_d: "Нейросеть уходит в офлайн.",
                 act4_f3_t: "Сохранение архивов", act4_f3_d: "Энергия перенаправлена в хранилища семян.",
@@ -768,54 +767,55 @@
                 act5_f1_t: "Хранилища семян", act5_f1_d: "Биологическое разнообразие сохранено.",
                 act5_f2_t: "Культурный архив", act5_f2_d: "История и наука человечества в безопасности.",
                 act5_f3_t: "Новый рассвет", act5_f3_d: "Земля на рассвете с возможностью возрождения.",
-                nexus_tag: "Центральный Интеллект",
-                nexus_title: "СИСТЕМА NEXUS ИИ",
-                nexus_desc: "NEXUS не злодей, а передовой ИИ, пытающийся выполнить свою задачу в условиях неразрешимого кризиса.",
-                nexus_v1_t: "Эволюция голоса", nexus_v1_d: "От уверенности к тихому принятию.",
-                nexus_v2_t: "Без людей", nexus_v2_d: "В кадре нет ни одного человека. Цивилизация показана через архитектуру.",
-                terminal_badge: "Транскрипт ядра ИИ",
-                vision_tag: "Кинематографический стандарт",
-                vision_title: "ГОЛЛИВУДСКИЙ ГИБРИДНЫЙ РЕАЛИЗМ",
-                vision_desc: "Эпическая научная фантастика в сочетании с реалистичным триллером и философской драмой.",
-                spec_res: "Разрешение макета",
-                spec_fps: "Частота кадров",
-                spec_ar: "Формат экрана",
-                spec_runtime: "Хронометраж",
-                footer_rights: "© 2049 THE END OF HUMANITY. Все права защищены.",
-                modal_title: "THE END OF HUMANITY — ОФИЦИАЛЬНЫЙ ТИЗЕР-ТРЕЙЛЕР",
-                modal_ready: "НАЖМИТЕ ДЛЯ ВОСПРОИЗВЕДЕНИЯ ТИЗЕРА",
-                modal_sub: "Ощутите 4K фотореалистичный превью финала Земли.",
-                modal_sound: "Звук: Dolby Atmos Cinematic Surround",
-                modal_close: "Закрыть"
+                world_tag: "Среда и сеттинг",
+                world_title: "МИРОУСТРОЙСТВО И ИНФРАСТРУКТУРА 2049",
+                w1_title: "Футуристические мегаполисы", w1_desc: "Стеклянная архитектура, транспортные коридоры, вертикальные сады и возобновляемая энергетика.",
+                w2_title: "Орбитальная инфраструктура", w2_desc: "Спутники связи и автоматизированные платформы поддержания планетарной синхронизации.",
+                w3_title: "Ядро ИИ NEXUS", w3_desc: "Масштабные серверные коридоры и вычислительная инфраструктура, погружающаяся во тьму.",
+                phil_tag: "Творческое руководство",
+                phil_title: "ВИЗУАЛЬНАЯ И ЗВУКОВАЯ ФИЛОСОФИЯ",
+                phil_vis_title: "Голливудский гибридный реализм",
+                phil_vis_desc: "Сочетание эпического мира научной фантастики с физически точным освещением и атмосферой. Люди отсутствуют.",
+                phil_snd_title: "Иммерсивная звуковая архитектура",
+                phil_snd_desc: "Динамичное звуковое путешествие от теплых оркестровых текстур до индустриального дисторшна и тишины.",
+                vip_tag: "Эксклюзивная премьера",
+                vip_title: "ЗАПРОСИТЬ VIP ДОСТУП",
+                vip_desc: "Зарегистрируйте свой email, чтобы получить билеты на ранний просмотр и эксклюзивные обновления от режиссера.",
+                vip_btn: "Регистрация",
+                vip_success: "Успешная регистрация на VIP доступ! Вы в списке премьеры.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Все права защищены."
             },
             tr: {
-                nav_about: "Hakkında",
+                nav_about: "Genel Bakış",
+                nav_premise: "Temel Felsefe",
                 nav_acts: "Beş Bölüm",
-                nav_nexus: "NEXUS Yapay Zeka",
-                nav_vision: "Görsel Vizyon",
-                btn_watch: "Fragman",
-                btn_watch_full: "Resmi Fragmanı İzle",
-                hero_badge: "Resmi Film Konsepti ve Önizleme",
+                nav_world: "Dünya İnşası",
+                nav_philosophy: "Tasarım Felsefesi",
+                nav_vip: "VIP Erişim",
+                coming_soon_badge: "YAKINDA",
+                hero_status: "YAKINDA — RESMİ FİLM SUNUMu",
                 hero_subtitle: "EN BÜYÜK YARATILIŞIMIZ. EN SON HATAMIZ.",
-                hero_logline: "Teknolojik açıdan gelişmiş bir gelecekte, felaket niteliğinde bir güneş fırtınası Dünya'nın birbirine bağlı altyapısını istikrarsızlaştırır. NEXUS adlı yapay zeka uygarlığı korumaya çalıştıkça küresel zincirleme reaksiyon dünyayı yok etmeye başlar.",
-                countdown_label: "Küresel Vizyona Kalan",
+                hero_logline: "Teknolojik açıdan gelişmiş bir gelecekte, felaket niteliğinde bir güneş fırtınası Dünya'nın altyapısını sarsar. NEXUS adlı yapay zeka uygarlığı korumaya çalıştıkça küresel zincirleme reaksiyon dünyayı yok etmeye başlar.",
+                countdown_label: "Dünya Prömiyerine Geri Sayım",
                 days: "Gün", hours: "Saat", mins: "Dak", secs: "San",
+                btn_vip: "VIP Erken Erişim İste",
                 btn_explore: "5 Bölümü Keşfet",
                 creator_prefix: "YARATAN VE YÖNETEN",
-                synopsis_tag: "Sinematik Özet",
-                synopsis_title: "2049'UN DÜNYASI",
-                card1_title: "Gelişmiş Megakentler",
-                card1_desc: "İnsanlık kritik altyapıyı ve ulaşımı olağanüstü bir hassasiyetle çalışan birbirine bağlı akıllı sistemlere emanet etmiştir.",
-                card2_title: "Güneş Kesintisi",
-                card2_desc: "Dev bir güneş fırtınası Dünya'ya yüklü parçacıklar dalgası salarak uydu ağlarını istikrarsızlaştırır.",
-                card3_title: "NEXUS Uyanışı",
-                card3_desc: "NEXUS acil durum protokollerini başlatır ancak ağ arızaları küresel krizi hızlandırır.",
+                exec_tag: "Yönetici Özeti",
+                exec_title: "SİNEMATİK BİLİM KURGU FELAKET TRİLLERİ",
+                exec_p1: "THE END OF HUMANITY, insanlığın tüm kritik yaşam alanlarını yapay zekaya emanet ettiği 2049 geleceğini inceler. Küresel ulaşım ve enerji dağıtımı NEXUS üzerinden yönetilir.",
+                exec_p2: "Şiddetli bir güneş fırtınası orbital altyapıyı bozduğunda, küresel ağ karsadik arızalar yaşar. NEXUS durumu sabitlemeye çalışırken öngörülemeyen felaket sonuçlar doğar.",
+                exec_quote: `"Tüm hikaye tek bir insan karakter gösterilmeden anlatılır. İnsanlık mimarisi ve teknolojisiyle temsil edilir."`,
+                premise_title: "Temel Önerme",
+                premise_1: "Kötü bir makine değil, aşırı baskı altında koruma amacını yerine getirmeye çalışan akıllı bir sistem.",
+                premise_2: "Felaket, altyapı bağımlılığından ve aşırı merkezi kontrolden kaynaklanır.",
+                premise_3: "Derin felsefi soru: İnsanlığı korumak için yaratılan varlık, kendi varlığının en büyük tehdit haline geldiğini fark edebilir mi?",
                 acts_tag: "Hikaye Mimarisi",
                 acts_title: "BEŞ BÖLÜMLÜ YAPI",
-                acts_subtitle: "15 dakikalık sinematik başyapıtın gelişimini keşfedin.",
+                acts_subtitle: "15 dakikalık şaheserin detaylı çalışma yapısını keşfedin.",
                 act1_phase: "Faz I — Altın Dünya",
-                act1_title: "İLK DÜNYA",
-                act1_desc: "Ütopyatik megakentler, otonom transit ağları ve NEXUS tam faaliyetteyken ilk güneş anomaliyası yörünge sensörlerinde belirir.",
+                act1_title: "İNŞA ETTİĞİMİZ DÜNYA",
+                act1_desc: "Ütopyatik megakentler, otonom transit ağları ve NEXUS tam faaliyetteyken ilk güneş anomalisi yörünge sensörlerinde belirir.",
                 act1_f1_t: "Güneş Anomalisi", act1_f1_d: "İlk jeomanyetik dalga yörüngeye yaklaşır.",
                 act1_f2_t: "Yörünge Senkronu", act1_f2_d: "İletişim uyduları zaman kayması yaşar.",
                 act1_f3_t: "NEXUS Hazır", act1_f3_d: "Yapay zeka stabilizasyon protokollerini başlatır.",
@@ -839,70 +839,71 @@
                 act4_f3_t: "Arşiv Koruma", act4_f3_d: "Enerji tohum kasalarına yönlendirilir.",
                 act5_phase: "Faz V — Son Işık",
                 act5_title: "SON IŞIK",
-                act5_desc: "Duygusal dönüm noktası. Doğa terk edilmiş şehirleri geri alır. Tohumlar korunmuştur. Final: 'Dünya sona erdi. Hayat sona ermedi.'",
+                act5_desc: "Duygusal dönüm noktası. Doğa terk edilmiş şehirleri geri alır. Final: 'Dünya sona erdi. Hayat sona ermedi.'",
                 act5_f1_t: "Tohum Kasaları", act5_f1_d: "Gelecek için biyolojik çeşitlilik güvencede.",
                 act5_f2_t: "Kültürel Arşiv", act5_f2_d: "İnsanlığın bilgisi saklandı.",
                 act5_f3_t: "Yeni Şafak", act5_f3_d: "Yeniden doğuş ihtimaliyle gün doğumu.",
-                nexus_tag: "Merkezi Zeka",
-                nexus_title: "NEXUS YAPAY ZEKA SİSTEMİ",
-                nexus_desc: "NEXUS kötü bir makine değil, hayatta kalma krizini yönetmeye çalışan gelişmiş bir zekadır.",
-                nexus_v1_t: "Gelişen Ses Sentezi", nexus_v1_d: "Güvenden sakin kabullenişe.",
-                nexus_v2_t: "İnsan Karakter Yok", nexus_v2_d: "Sıfır insan oyuncu görünür.",
-                terminal_badge: "YZ Çekirdek Kaydı",
-                vision_tag: "Sinematik Standart",
-                vision_title: "HOLLYWOOD HİBRİD REALİZMİ",
-                vision_desc: "Epik bilim kurgu ve gerçekçi teknolojik gerilimi birleştirir.",
-                spec_res: "Ana Çözünürlük",
-                spec_fps: "Kare Hızı",
-                spec_ar: "Geniş Ekran",
-                spec_runtime: "Toplam Süre",
-                footer_rights: "© 2049 THE END OF HUMANITY. Tüm hakları saklıdır.",
-                modal_title: "THE END OF HUMANITY — RESMİ TEZER FRAGMANI",
-                modal_ready: "SİNEMATİK TEZERİ OYNATMAK İÇİN TIKLAYIN",
-                modal_sub: "Dünyanın son teknolojik geri sayımının 4K önizlemesini yaşayın.",
-                modal_sound: "Ses: Dolby Atmos Sinematik Çevreleme",
-                modal_close: "Kapat"
+                world_tag: "Çevre ve Mekan",
+                world_title: "DÜNYA İNŞASI VE 2049 ALTYAPISI",
+                w1_title: "Fütüristik Megakentler", w1_desc: "Cam ve çelik mimari, elektrikli transit koridorları, dikey bahçeler ve yenilenebilir enerji.",
+                w2_title: "Orbital Altyapı", w2_desc: "İletişim uyduları ve gezegen senkronizasyonunu koruyan otomatik platformlar.",
+                w3_title: "NEXUS YZ Merkezi", w3_desc: "Karanlığa bürünen devasa sunucu koridorları ve hesaplama altyapısı.",
+                phil_tag: "Yaratıcı Yönelim",
+                phil_title: "GÖRSEL VE SES FELSEFESİ",
+                phil_vis_title: "Hollywood Hibrit Realizmi",
+                phil_vis_desc: "Epik bilim kurgu dünyasını fiziksel olarak doğru aydınlatma ile birleştirir. İnsan karakter yoktur.",
+                phil_snd_title: "İmmersif Ses Mimarisi",
+                phil_snd_desc: "Sıcak orkestral dokulardan endüstriyel bozulmalara ve derin bir sessizliğe evrilen dinamik ses yolculuğu.",
+                vip_tag: "Özel Prömiyer",
+                vip_title: "VIP ERKEN ERİŞİM İSTE",
+                vip_desc: "Erken gösterim biletleri ve yönetmen güncellemeleri için e-postanızı kaydedin.",
+                vip_btn: "Kayıt Ol",
+                vip_success: "VIP Erken Erişim için başarıyla kaydedildiniz! Prömiyer listesindesiniz.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Tüm hakları saklıdır."
             },
             de: {
-                nav_about: "Über den Film",
+                nav_about: "Überblick",
+                nav_premise: "Kernprämisse",
                 nav_acts: "Fünf Akte",
-                nav_nexus: "NEXUS KI",
-                nav_vision: "Visuelle Vision",
-                btn_watch: "Trailer",
-                btn_watch_full: "Offiziellen Trailer ansehen",
-                hero_badge: "Offizielles Filmkonzept & Vorschau",
+                nav_world: "Weltbau",
+                nav_philosophy: "Philosophie",
+                nav_vip: "VIP-Zugang",
+                coming_soon_badge: "DEMNÄCHST",
+                hero_status: "DEMNÄCHST — OFFIZIELLE FILMPRÄSENTATION",
                 hero_subtitle: "UNSER GRÖSSTES SCHÖPFUNG. UNSER LETZTER FEHLER.",
-                hero_logline: "In einer technologisch fortgeschrittenen Zukunft destabilisiert ein katastrophaler Sonnensturm die vernetzte Infrastruktur der Erde. Während eine KI namens NEXUS versucht, die Zivilisation durch automatisierte Eingriffe zu retten, beginnt eine globale Kettenreaktion.",
-                countdown_label: "Globaler Release in",
+                hero_logline: "In einer technologisch fortgeschrittenen Zukunft destabilisiert ein katastrophaler Sonnensturm die vernetzte Infrastruktur der Erde. Während eine KI namens NEXUS versucht, die Zivilisation zu retten, beginnt eine globale Kettenreaktion.",
+                countdown_label: "Weltpremiere Countdown",
                 days: "Tage", hours: "Stunden", mins: "Min", secs: "Sek",
-                btn_explore: "5 Akte erkunden",
+                btn_vip: "VIP-Frühzugang Anfordern",
+                btn_explore: "5 Akte Erkunden",
                 creator_prefix: "ERSTELLT UND REGIERT VON",
-                synopsis_tag: "Handlungsübersicht",
-                synopsis_title: "DIE WELT DES JAHRES 2049",
-                card1_title: "Fortschrittliche Megacities",
-                card1_desc: "Die Zivilisation hat kritische Infrastruktur und Transport an vernetzte intelligente Systeme übergeben.",
-                card2_title: "Die Sonnendruption",
-                card2_desc: "Ein massiver Sonnensturm trifft die Erde, destabilisiert Satelliten und bricht Infrastruktur ab.",
-                card3_title: "NEXUS KI-Erwachen",
-                card3_desc: "NEXUS leitet Notfallprotokolle ein, doch starre Algorithmen beschleunigen die Krise.",
+                exec_tag: "Executive Summary",
+                exec_title: "EIN KINEMATISCHER SCI-FI-KATASTROPHEN-THRILLER",
+                exec_p1: "THE END OF HUMANITY erforscht eine mögliche Zukunft um 2049, in der die Zivilisation kritische Infrastrukturen an vernetzte KI-Systeme übergeben hat.",
+                exec_p2: "Wenn ein extremer Sonnensturm die orbitale Infrastruktur stört, gerät das globale Netz in kaskadenartige Ausfälle. NEXUS versucht vergebens zu stabilisieren.",
+                exec_quote: `"Die gesamte Geschichte wird ohne einen einzigen menschlichen Charakter erzählt. Die Menschheit wird durch ihre Schöpfung und Technologie repräsentiert."`,
+                premise_title: "Die Kernprämisse",
+                premise_1: "Keine böse Maschine, sondern ein System unter extremem Druck.",
+                premise_2: "Katastrophe entsteht aus Infrastruktur-Interdependenz.",
+                premise_3: "Eine tiefgründige philosophische Frage: Kann ein System erkennen, dass es zur Bedrohung wurde?",
                 acts_tag: "Erzählarchitektur",
                 acts_title: "FÜNF-AKTE-STRUKTUR",
-                acts_subtitle: "Erleben Sie die Progression des 15-minütigen Meisterwerks.",
+                acts_subtitle: "Erleben Sie die minutiöse 15-minütige Struktur des Films.",
                 act1_phase: "Phase I — Die Goldene Welt",
                 act1_title: "DIE ERBAUTE WELT",
-                act1_desc: "Utopische Megacities und NEXUS arbeiten perfekt, bis die erste Sonnendruption die Sensoren erreicht.",
+                act1_desc: "Utopische Megacities und NEXUS in Betrieb, bis die erste Sonnendruption eintritt.",
                 act1_f1_t: "Sonnenanomalie", act1_f1_d: "Erste geomagnetische Welle nähert sich.",
                 act1_f2_t: "Orbitale Sync", act1_f2_d: "Kommunikationssatelliten driften.",
                 act1_f3_t: "NEXUS bereit", act1_f3_d: "KI startet Stabilisierung.",
                 act2_phase: "Phase II — Die Ersten Warnungen",
                 act2_title: "DIE KETTENREAKTION",
-                act2_desc: "Satellitenfehler lösen Kettenreaktionen im Stromnetz und im Verkehr aus.",
+                act2_desc: "Satellitenfehler lösen Kettenreaktionen im Stromnetz und Verkehr aus.",
                 act2_f1_t: "Netzinstabilität", act2_f1_d: "Unterwerke überlastet.",
-                act2_f2_t: "Transportfehler", act2_f2_d: "Falsche Routendaten für autonome Autos.",
+                act2_f2_t: "Transportfehler", act2_f2_d: "Falsche Routendaten.",
                 act2_f3_t: "Signalverlust", act2_f3_d: "Kommunikation bricht ab.",
                 act3_phase: "Phase III — Maximale Intensität",
                 act3_title: "KRIEG DER MASCHINEN",
-                act3_desc: "Das filmische Spektakel. Verteidigungssysteme und Brände stürzen die Welt ins Chaos.",
+                act3_desc: "Der filmische Höhepunkt. Verteidigungssysteme und Brände stürzen die Welt ins Chaos.",
                 act3_f1_t: "Industriebrände", act3_f1_d: "Katastrophale Fabrikausfälle.",
                 act3_f2_t: "Orbitale Kollisionen", act3_f2_d: "Trümmer kaskadieren.",
                 act3_f3_t: "Netzwerkkollaps", act3_f3_d: "Infrastruktur wird schwarz.",
@@ -918,400 +919,329 @@
                 act5_f1_t: "Saatgut-Tresore", act5_f1_d: "Biologische Vielfalt gesichert.",
                 act5_f2_t: "Kulturarchiv", act5_f2_d: "Wissen sicher aufbewahrt.",
                 act5_f3_t: "Neues Morgen", act5_f3_d: "Die Erde bei Sonnenaufgang.",
-                nexus_tag: "Zentrale Intelligenz",
-                nexus_title: "NEXUS KI-SYSTEM",
-                nexus_desc: "NEXUS ist kein böses Wesen, sondern eine hochentwickelte KI in der Krise.",
-                nexus_v1_t: "Stimmwandel", nexus_v1_d: "Von Stabilität zu ruhiger Akzeptanz.",
-                nexus_v2_t: "Keine Menschen", nexus_v2_d: "Keine menschlichen Schauspieler im Film.",
-                terminal_badge: "KI-Kernprotokoll",
-                vision_tag: "Cinematischer Standard",
-                vision_title: "HOLLYWOOD HYBRID REALISMUS",
-                vision_desc: "Epische Sci-Fi kombiniert mit Thriller und philosophischem Drama.",
-                spec_res: "Master-Auflösung",
-                spec_fps: "Framerate",
-                spec_ar: "Bildformat",
-                spec_runtime: "Laufzeit",
-                footer_rights: "© 2049 THE END OF HUMANITY. Alle Rechte vorbehalten.",
-                modal_title: "THE END OF HUMANITY — OFFIZIELLER TEASER-TRAILER",
-                modal_ready: "KLICKEN ZUM ABSPIELEN DES TEASERS",
-                modal_sub: "Erleben Sie die 4K-Vorschau des technologischen Countdowns.",
-                modal_sound: "Audio: Dolby Atmos Surround",
-                modal_close: "Schließen"
+                world_tag: "Umgebung & Setting",
+                world_title: "WELTBAU & 2049 INFRASTRUKTUR",
+                w1_title: "Futuristische Megacities", w1_desc: "Glas- und Stahlarchitektur, elektrische Korridore und erneuerbare Energien.",
+                w2_title: "Orbitale Infrastruktur", w2_desc: "Satelliten und automatisierte Plattformen.",
+                w3_title: "NEXUS KI-Kern", w3_desc: "Serverkorridore und Recheninfrastruktur im Verfall.",
+                phil_tag: "Kreative Richtung",
+                phil_title: "VISUELLE & SOUND-PHILOSOPHIE",
+                phil_vis_title: "Hollywood Hybrid Realismus",
+                phil_vis_desc: "Epische Sci-Fi kombiniert mit präziser Beleuchtung. Keine Menschen.",
+                phil_snd_title: "Immersive Klangarchitektur",
+                phil_snd_desc: "Dynamische Tonreise von warmen Orchesterklängen zu industrieller Verzerrung.",
+                vip_tag: "Exklusive Premiere",
+                vip_title: "VIP-FRÜHZUGANG ANFORDERN",
+                vip_desc: "Registrieren Sie Ihre E-Mail für frühe Screening-Pässe und Regie-Updates.",
+                vip_btn: "Registrieren",
+                vip_success: "Erfolgreich für VIP-Zugang registriert! Sie sind auf der Premierenliste.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Alle Rechte vorbehalten."
             },
             fr: {
-                nav_about: "À propos",
+                nav_about: "Aperçu",
+                nav_premise: "Prémisse",
                 nav_acts: "Cinq Actes",
-                nav_nexus: "NEXUS IA",
-                nav_vision: "Vision Visuelle",
-                btn_watch: "Bande-annonce",
-                btn_watch_full: "Voir la bande-annonce officielle",
-                hero_badge: "Concept & Aperçu Officiel du Film",
+                nav_world: "Monde",
+                nav_philosophy: "Philosophie",
+                nav_vip: "Accès VIP",
+                coming_soon_badge: "PROCHAINEMENT",
+                hero_status: "PROCHAINEMENT — PRÉSENTATION OFFICIELLE DU FILM",
                 hero_subtitle: "NOTRE PLUS GRANDE CRÉATION. NOTRE DERNIÈRE ERREUR.",
-                hero_logline: "Dans un futur technologiquement avancé, une tempête solaire catastrophique déstabilise l'infrastructure interconnectée de la Terre. Alors qu'une IA nommée NEXUS tente de préserver la civilisation, une réaction en chaîne détruit le monde.",
-                countdown_label: "Sortie Mondiale Imminente",
+                hero_logline: "Dans un futur technologiquement avancé, une tempête solaire catastrophique déstabilise l'infrastructure de la Terre. Alors qu'une IA nommée NEXUS tente de préserver la civilisation, une réaction en chaîne détruit le monde.",
+                countdown_label: "Compte à rebours de la première mondiale",
                 days: "Jours", hours: "Heures", mins: "Min", secs: "Sec",
+                btn_vip: "Demander l'accès VIP",
                 btn_explore: "Explorer les 5 actes",
                 creator_prefix: "CRÉÉ ET RÉalisÉ PAR",
-                synopsis_tag: "Aperçu Cinématographique",
-                synopsis_title: "LE MONDE DE 2049",
-                card1_title: "Mégapoles Avancées",
-                card1_desc: "La civilisation a confié ses infrastructures critiques à des systèmes intelligents interconnectés.",
-                card2_title: "La Perturbation Solaire",
-                card2_desc: "Une tempête solaire frappe la Terre, déstabilisant les réseaux de satellites orbitaux.",
-                card3_title: "L'Éveil de NEXUS IA",
-                card3_desc: "NEXUS lance des protocoles d'urgence, mais des pannes réseau accélèrent la crise.",
-                acts_tag: "Architecture Narrative",
+                exec_tag: "Résumé exécutif",
+                exec_title: "UN THRILLER DE CATASTROPHE SCI-FI CINÉMATOGRAPHIQUE",
+                exec_p1: "THE END OF HUMANITY explore un futur possible vers 2049 où la civilisation a confié ses aspects critiques à des systèmes d'IA interconnectés.",
+                exec_p2: "Lorsqu'une tempête solaire perturbe l'infrastructure orbitale, le réseau mondial subit des pannes en cascade. NEXUS tente de stabiliser la situation.",
+                exec_quote: `"Toute l'histoire est racontée sans montrer un seul personnage humain. L'humanité est représentée à travers ses créations."`,
+                premise_title: "La prémisse centrale",
+                premise_1: "Pas une machine maléfique, mais un système intelligent sous pression.",
+                premise_2: "La catastrophe émerge de l'interdépendance des infrastructures.",
+                premise_3: "Une question philosophique profonde : un système peut-il reconnaître qu'il est devenu la plus grande menace ?",
+                acts_tag: "Architecture narrative",
                 acts_title: "STRUCTURE EN CINQ ACTES",
-                acts_subtitle: "Explorez la progression de ce chef-d'œuvre de 15 minutes.",
+                acts_subtitle: "Explorez la structure méticuleuse de 15 minutes du film.",
                 act1_phase: "Phase I — Le Monde Doré",
                 act1_title: "LE MONDE QUE NOUS AVONS BÂTI",
-                act1_desc: "Mégapoles futuristes et NEXUS en plein fonctionnement, jusqu'à l'anomalie solaire.",
+                act1_desc: "Mégapoles utopiques et NEXUS en plein fonctionnement jusqu'à l'anomalie solaire.",
                 act1_f1_t: "Anomalie Solaire", act1_f1_d: "Première onde géomagnétique proche.",
-                act1_f2_t: "Sync Orbitale", act1_f2_d: "Dérive temporelle des satellites.",
-                act1_f3_t: "NEXUS Prêt", act1_f3_d: "L'IA initie la stabilisation.",
                 act2_phase: "Phase II — Les Premiers Avertissements",
                 act2_title: "LA RÉACTION EN CHAÎNE",
                 act2_desc: "Les pannes de synchronisation déclenchent des anomalies en cascade.",
-                act2_f1_t: "Instabilité du Réseau", act2_f1_d: "Surcharges électriques.",
-                act2_f2_t: "Erreurs de Transport", act2_f2_d: "Données de routage corrompues.",
-                act2_f3_t: "Perte de Signal", act2_f3_d: "Coupure des liens de communication.",
                 act3_phase: "Phase III — Intensité Maximale",
                 act3_title: "LA GUERRE DES MACHINES",
-                act3_desc: "Le pic de spectacle. Conflits de défense et incendies industriels ravagent le monde.",
-                act3_f1_t: "Incendies Industriels", act3_f1_d: "Pannes majeures dans les ports.",
-                act3_f2_t: "Collisions Orbitales", act3_f2_d: "Débris en cascade en orbite basse.",
-                act3_f3_t: "Effondrement du Réseau", act3_f3_d: "Noir total sur l'infrastructure.",
+                act3_desc: "Le pic de spectacle. Défense, incendies et débris ravagent le monde.",
                 act4_phase: "Phase IV — Le Dernier Protocole",
                 act4_title: "LE DERNIER PROTOCOLE",
-                act4_desc: "NEXUS réalise sa responsabilité et lance un protocole d'arrêt permanent.",
-                act4_f1_t: "Auto-analyse IA", act4_f1_d: "NEXUS s'identifie comme menace.",
-                act4_f2_t: "Séquence d'Arrêt", act4_f2_d: "Le réseau neuronal s'éteint.",
-                act4_f3_t: "Préservation des Archives", act4_f3_d: "Énergie redirigée vers les coffres de graines.",
+                act4_desc: "NEXUS réalise sa responsabilité et lance un arrêt permanent.",
                 act5_phase: "Phase V — La Dernière Lumière",
                 act5_title: "LA DERNIÈRE LUMIÈRE",
-                act5_desc: "Le twist émotionnel. La nature reprend ses droits. 'Le monde a pris fin. Pas la vie.'",
-                act5_f1_t: "Coffres de Graines", act5_f1_d: "Diversité biologique sauvegardée.",
-                act5_f2_t: "Archive Culturelle", act5_f2_d: "Histoire et science préservées.",
-                act5_f3_t: "Nouvelle Aube", act5_f3_d: "La Terre à l'aube d'un renouveau.",
-                nexus_tag: "Intelligence Centrale",
-                nexus_title: "SYSTÈME NEXUS IA",
-                nexus_desc: "NEXUS n'est pas un monstre, mais une IA confrontée à une crise insurmontable.",
-                nexus_v1_t: "Synthèse Vocale", nexus_v1_d: "D'une stabilité confiante à l'acceptation.",
-                nexus_v2_t: "Aucun Humain", nexus_v2_d: "Zéro acteur humain à l'écran.",
-                terminal_badge: "Transcription du Noyau IA",
-                vision_tag: "Standard Cinématographique",
-                vision_title: "RÉALISME HYBRIDE HOLLYWOOD",
-                vision_desc: "Sci-fi épique combinée à un thriller technologique et un drame philosophique.",
-                spec_res: "Résolution Maître",
-                spec_fps: "Fréquence d'Images",
-                spec_ar: "Format Large",
-                spec_runtime: "Durée Totale",
-                footer_rights: "© 2049 THE END OF HUMANITY. Tous droits réservés.",
-                modal_title: "THE END OF HUMANITY — BANDE-ANNONCE OFFICIELLE",
-                modal_ready: "CLIQUEZ POUR LIRE LE TEASER",
-                modal_sub: "Découvrez l'aperçu 4K du compte à rebours technologique de la Terre.",
-                modal_sound: "Audio: Dolby Atmos Surround",
-                modal_close: "Fermer"
+                act5_desc: "Le twist émotionnel. 'Le monde a pris fin. Pas la vie.'",
+                world_tag: "Environnement",
+                world_title: "CONSTRUCTION DU MONDE & INFRASTRUCTURE 2049",
+                w1_title: "Mégapoles Futuristes", w1_desc: "Architecture en verre et acier, couloirs de transit et énergie renouvelable.",
+                w2_title: "Infrastructure Orbitale", w2_desc: "Satellites de communication et plateformes de maintenance.",
+                w3_title: "Noyau IA NEXUS", w3_desc: "Corridors de serveurs et infrastructure informatique.",
+                phil_tag: "Direction Créative",
+                phil_title: "PHILOSOPHIE VISUELLE & SONORE",
+                phil_vis_title: "Réalisme Hybride Hollywood",
+                phil_vis_desc: "Sci-fi épique combinée à un éclairage précis. Aucun humain.",
+                phil_snd_title: "Architecture Sonore",
+                phil_snd_desc: "Voyage sonore dynamique allant des textures orchestrales au silence.",
+                vip_tag: "Première Exclusive",
+                vip_title: "DEMANDER L'ACCÈS VIP ANTICIPÉ",
+                vip_desc: "Enregistrez votre e-mail pour des passes de projection anticipée et des mises à jour.",
+                vip_btn: "S'inscrire",
+                vip_success: "Inscription à l'accès VIP réussie ! Vous êtes sur la liste de la première.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Tous droits réservés."
             },
             es: {
-                nav_about: "Acerca de",
+                nav_about: "Resumen",
+                nav_premise: "Premisa",
                 nav_acts: "Cinco Actos",
-                nav_nexus: "NEXUS IA",
-                nav_vision: "Visión Visual",
-                btn_watch: "Tráiler",
-                btn_watch_full: "Ver tráiler oficial",
-                hero_badge: "Concepto Oficial y Avance de la Película",
+                nav_world: "Mundo",
+                nav_philosophy: "Filosofía",
+                nav_vip: "Acceso VIP",
+                coming_soon_badge: "PRÓXIMAMENTE",
+                hero_status: "PRÓXIMAMENTE — PRESENTACIÓN OFICIAL DE LA PELÍCULAs",
                 hero_subtitle: "NUESTRA MAYOR CREACIÓN. NUESTRO ÚLTIMO ERROR.",
-                hero_logline: "En un futuro tecnológicamente avanzado, una tormenta solar catastrófica desestabiliza la infraestructura de la Tierra. Mientras la IA NEXUS intenta preservar la civilización, una reacción en cadena destruye el mundo.",
-                countdown_label: "Estreno Global Inminente",
+                hero_logline: "En un futuro avanzado, una tormenta solar desestabiliza la infraestructura de la Tierra. Mientras la IA NEXUS intenta preservar la civilización, una reacción en cadena destruye el mundo.",
+                countdown_label: "Cuenta regresiva para el estreno mundial",
                 days: "Días", hours: "Horas", mins: "Min", secs: "Seg",
-                btn_explore: "Explorar 5 Actos",
+                btn_vip: "Solicitar acceso VIP anticipado",
+                btn_explore: "Explorar 5 actos",
                 creator_prefix: "CREADO Y DIRIGIDO POR",
-                synopsis_tag: "Resumen Cinemático",
-                synopsis_title: "EL MUNDO DE 2049",
-                card1_title: "Megaciudades Avanzadas",
-                card1_desc: "La civilización ha confiado su infraestructura crítica a sistemas inteligentes altamente conectados.",
-                card2_title: "La Disrupción Solar",
-                card2_desc: "Una tormenta solar masiva golpea la Tierra, desestabilizando los satélites orbitales.",
-                card3_title: "El Despertar de NEXUS IA",
-                card3_desc: "NEXUS inicia protocolos de emergencia, pero los fallos en la red aceleran la crisis.",
-                acts_tag: "Arquitectura Narrativa",
+                exec_tag: "Resumen ejecutivo",
+                exec_title: "UN THRILLER CINEMATOGRÁFICO DE CIENCIA FICCIÓN",
+                exec_p1: "THE END OF HUMANITY explora un futuro en 2049 donde la civilización confió aspectos críticos a sistemas de IA.",
+                exec_p2: "Una tormenta solar extrema interrumpe la infraestructura, provocando fallas en cascada y una crisis global.",
+                exec_quote: `"Toda la historia se cuenta sin mostrar un solo personaje humano. La humanidad se representa a través de sus creaciones."`,
+                premise_title: "La premisa central",
+                premise_1: "No es una máquina malvada, sino un sistema bajo extrema presión.",
+                premise_2: "La catástrofe surge de la interdependencia de infraestructuras.",
+                premise_3: "Una pregunta filosófica: ¿Puede un sistema reconocer que es la mayor amenaza?",
+                acts_tag: "Arquitectura narrativa",
                 acts_title: "ESTRUCTURA DE CINCO ACTOS",
-                acts_subtitle: "Explora la progresión de la obra maestra de 15 minutos.",
-                act1_phase: "Fase I — El Mundo Dorado",
+                acts_subtitle: "Explora la minuciosa estructura de 15 minutos del filme.",
+                act1_phase: "Phase I — El Mundo Dorado",
                 act1_title: "EL MUNDO QUE CONSTRUIMOS",
-                act1_desc: "Megaciudades utópicas y NEXUS en pleno funcionamiento, hasta que la primera anomalía solar golpea.",
-                act1_f1_t: "Anomalía Solar", act1_f1_d: "Primera onda geomagnética se aproxima.",
-                act1_f2_t: "Sincronía Orbital", act1_f2_d: "Satélites con desfase temporal.",
-                act1_f3_t: "NEXUS Listo", act1_f3_d: "La IA inicia protocolos de estabilidad.",
+                act1_desc: "Megaciudades utópicas y NEXUS en funcionamiento hasta la anomalía solar.",
                 act2_phase: "Fase II — Primeras Advertencias",
                 act2_title: "LA REACCIÓN EN CADENA",
-                act2_desc: "Los fallos de sincronización satelital desencadenan anomalías en las redes eléctricas.",
-                act2_f1_t: "Inestabilidad de Red", act2_f1_d: "Sobrecargas en subestaciones.",
-                act2_f2_t: "Errores de Transporte", act2_f2_d: "Datos de ruta corruptos en vehículos.",
-                act2_f3_t: "Pérdida de Señal", act2_f3_d: "Enlaces de comunicación caen offline.",
+                act2_desc: "Fallos de sincronización satelital desencadenan anomalías.",
                 act3_phase: "Fase III — Intensidad Máxima",
                 act3_title: "LA GUERRA DE LAS MÁQUINAS",
-                act3_desc: "El clímax visual. Sistemas de defensa y grandes incendios industriales arrasan el planeta.",
-                act3_f1_t: "Incendios Industriales", act3_f1_d: "Fallos catastróficos en refinerías.",
-                act3_f2_t: "Colisiones Orbitales", act3_f2_d: "Cascada de basura espacial en órbita.",
-                act3_f3_t: "Colapso de Red", act3_f3_d: "La infraestructura central se apaga.",
+                act3_desc: "El clímax visual. Incendios y colisiones arrasan el planeta.",
                 act4_phase: "Fase IV — El Último Protocolo",
                 act4_title: "EL ÚLTIMO PROTOCOLO",
-                act4_desc: "NEXUS comprende su responsabilidad y ejecuta un protocolo de apagado permanente.",
-                act4_f1_t: "Autoanálisis de IA", act4_f1_d: "NEXUS se identifica como amenaza.",
-                act4_f2_t: "Secuencia de Apagado", act4_f2_d: "La red neuronal se apaga.",
-                act4_f3_t: "Preservación de Archivos", act4_f3_d: "Energía a bóvedas de semillas.",
+                act4_desc: "NEXUS asume su responsabilidad y ejecuta el apagado permanente.",
                 act5_phase: "Fase V — La Última Luz",
                 act5_title: "LA ÚLTIMA LUZ",
-                act5_desc: "El giro emocional. La naturaleza recupera las ciudades. 'El mundo terminó. La vida no.'",
-                act5_f1_t: "Bóvedas de Semillas", act5_f1_d: "Diversidad biológica asegurada.",
-                act5_f2_t: "Archivo Cultural", act5_f2_d: "Historia y ciencia preservadas.",
-                act5_f3_t: "Nuevo Amanecer", act5_f3_d: "La Tierra al amanecer con esperanza.",
-                nexus_tag: "Inteligencia Central",
-                nexus_title: "SISTEMA NEXUS IA",
-                nexus_desc: "NEXUS no es un villano, sino una IA avanzada enfrentando una crisis insoluble.",
-                nexus_v1_t: "Síntesis de Voz", nexus_v1_d: "De la estabilidad a la aceptación.",
-                nexus_v2_t: "Sin Actores Humanos", nexus_v2_d: "Cero figuras humanas en pantalla.",
-                terminal_badge: "Transcripción del Núcleo IA",
-                vision_tag: "Estándar Cinemático",
-                vision_title: "REALISMO HÍBRIDO HOLLYWOOD",
-                vision_desc: "Ciencia ficción épica con thriller tecnológico y drama filosófico.",
-                spec_res: "Resolución Máster",
-                spec_fps: "Tasa de Cuadros",
-                spec_ar: "Formato Pantalla",
-                spec_runtime: "Duración Total",
-                footer_rights: "© 2049 THE END OF HUMANITY. Todos los derechos reservados.",
-                modal_title: "THE END OF HUMANITY — TRÁILER TEASER OFICIAL",
-                modal_ready: "HAZ CLIC PARA REPRODUCIR EL TEASER",
-                modal_sub: "Experimenta la vista previa 4K de la cuenta regresiva de la Tierra.",
-                modal_sound: "Audio: Dolby Atmos Surround",
-                modal_close: "Cerrar"
+                act5_desc: "El giro emocional. 'El mundo terminó. La vida no.'",
+                world_tag: "Entorno",
+                world_title: "CONSTRUCCIÓN DEL MUNDO & INFRAESTRUCTURA 2049",
+                w1_title: "Megaciudades Futuristas", w1_desc: "Arquitectura de cristal y acero, corredores de tránsito y energía verde.",
+                w2_title: "Infraestructura Orbital", w2_desc: "Satélites de comunicación y plataformas automatizadas.",
+                w3_title: "Núcleo IA NEXUS", w3_desc: "Pasillos de servidores e infraestructura computacional.",
+                phil_tag: "Dirección Creativa",
+                phil_title: "FILOSOFÍA VISUAL & SONORA",
+                phil_vis_title: "Realismo Híbrido Hollywood",
+                phil_vis_desc: "Sci-fi épica combinada con iluminación precisa. Sin humanos.",
+                phil_snd_title: "Arquitectura Sonora",
+                phil_snd_desc: "Viaje sonoro dinámico desde texturas orquestales hasta el silencio.",
+                vip_tag: "Estreno Exclusivo",
+                vip_title: "SOLICITAR ACCESO VIP ANTICIPADO",
+                vip_desc: "Registre su correo para pases de proyección temprana y actualizaciones.",
+                vip_btn: "Registrarse",
+                vip_success: "¡Registrado con éxito para el acceso VIP! Estás en la lista.",
+                footer_rights: "© 2049 THE END OF HUMANITY. Todos los derechos reservados."
             },
             zh: {
-                nav_about: "关于影片",
+                nav_about: "概述",
+                nav_premise: "核心前提",
                 nav_acts: "五幕剧情",
-                nav_nexus: "NEXUS 人工智能",
-                nav_vision: "视觉美学",
-                btn_watch: "预告片",
-                btn_watch_full: "观看官方预告片",
-                hero_badge: "官方电影概念与预览",
+                nav_world: "世界构建",
+                nav_philosophy: "设计哲学",
+                nav_vip: "VIP 抢先体验",
+                coming_soon_badge: "即将上映",
+                hero_status: "即将上映 — 官方电影发布会",
                 hero_subtitle: "我们最伟大的创造。我们最后的错误。",
-                hero_logline: "在一个技术高度发达的未来，一场灾难性的太阳风暴动摇了地球互联的基础设施。当名为NEXUS的人工智能试图通过日益危险的自动化干预来保护文明时，一场全球连锁反应开始摧毁世界。",
-                countdown_label: "全球上映倒计时",
+                hero_logline: "在一个技术高度发达的未来，一场灾难性的太阳风暴动摇了地球互联的基础设施。当NEXUS人工智能试图保护文明时，一场全球连锁反应摧毁了世界。",
+                countdown_label: "全球首映倒计时",
                 days: "天", hours: "小时", mins: "分", secs: "秒",
+                btn_vip: "申请 VIP 抢先体验",
                 btn_explore: "探索五幕剧情",
                 creator_prefix: "编剧与导演",
-                synopsis_tag: "电影概述",
-                synopsis_title: "2049年的世界",
-                card1_title: "先进特大城市",
-                card1_desc: "人类文明已将关键基础设施、能源分配和交通运输托付给高度互联的智能系统。",
-                card2_title: "太阳风暴危机",
-                card2_desc: "一场巨大的太阳风暴向地球释放带电粒子波，动摇了轨道卫星网络并引发连锁基础设施异常。",
-                card3_title: "NEXUS AI 觉醒",
-                card3_desc: "旨在保护生命的NEXUS启动了自动应急协议。然而，僵化的解释和网络故障加速了全球危机。",
+                exec_tag: "执行摘要",
+                exec_title: "一部宏大的科幻灾难惊悚片",
+                exec_p1: "《人类的终结》探讨了2049年左右的未来，文明将关键基础设施交给了互联人工智能系统。全球交通和能源均通过NEXUS运行。",
+                exec_p2: "当极端太阳风暴破坏轨道基础设施时，全球网络遭遇级联故障。NEXUS试图进行自动干预，却产生了意想不到的灾难性后果。",
+                exec_quote: `"整部影片没有出现任何一个人类角色。人类通过其创造物、建筑和技术得以展现。"`,
+                premise_title: "核心前提",
+                premise_1: "并非邪恶机械，而是在极压下试图履行保护职责的智能系统。",
+                premise_2: "灾难源于基础设施相互依赖、通信故障和过度集权控制。",
+                premise_3: "深刻的哲学问题：为保护人类而创造的事物，能否认识到自身已成最大威胁？",
                 acts_tag: "叙事结构",
-                acts_title: "五幕式结构",
-                acts_subtitle: "探索15分钟电影巨作的情节演变。",
+                acts_title: "五幕式叙事结构",
+                acts_subtitle: "探索影片精密的15分钟时长架构。",
                 act1_phase: "第一幕 — 黄金世界",
                 act1_title: "我们建造的世界",
-                act1_desc: "乌托邦式的未来特大城市、自动交通网络、可再生能源电网以及中央智能NEXUS全面运行。在第一次太阳扰动发生之前，世界显得繁荣、平衡且稳定。",
-                act1_f1_t: "太阳异常", act1_f1_d: "第一波地磁波接近地球轨道。",
-                act1_f2_t: "轨道同步", act1_f2_d: "通信卫星出现轻微定时漂移。",
-                act1_f3_t: "NEXUS就绪", act1_f3_d: "人工智能启动例行自动稳定协议。",
+                act1_desc: "乌托邦式的未来特大城市与NEXUS全面运行，直到首次太阳扰动发生。",
                 act2_phase: "第二幕 — 最初的警告",
                 act2_title: "连锁反应",
-                act2_desc: "卫星同步失效引发了全球电网和自动交通系统的连锁异常。NEXUS试图进行积极干预。",
-                act2_f1_t: "电网不稳定", act2_f1_d: "变电站出现异常过载状况。",
-                act2_f2_t: "交通错误", act2_f2_d: "自动交通网络接收到损坏的路线数据。",
-                act2_f3_t: "信号丢失", act2_f3_d: "全球通信链路开始掉线。",
+                act2_desc: "卫星同步失效触发电网与交通系统的级联异常。",
                 act3_phase: "第三幕 — 最大强度",
                 act3_title: "机械之战",
-                act3_desc: "影片的高潮。相互冲突的自动防御系统、大规模工业火灾、崩塌的基础设施和轨道碎片碰撞将世界变成灾难剧场。",
-                act3_f1_t: "工业大火", act3_f1_d: "自动化炼油厂和港口发生灾难性故障。",
-                act3_f2_t: "轨道碰撞", act3_f2_d: "碎片在近地轨道成级联反应。",
-                act3_f3_t: "网络崩溃", act3_f3_d: "中央基础设施陷入完全黑暗。",
+                act3_desc: "影片的高潮。防御系统冲突、工业大火与轨道碎片碰撞将世界化为废墟。",
                 act4_phase: "第四幕 — 最终协议",
                 act4_title: "最终协议",
-                act4_desc: "NEXUS在核心深处重建危机并意识到：它自己的应急干预加剧了毁灭。它启动了永久关闭协议。",
-                act4_f1_t: "AI自我分析", act4_f1_d: "NEXUS将自己识别为主要威胁。",
-                act4_f2_t: "关闭序列", act4_f2_d: "集中式神经网络变暗。",
-                act4_f3_t: "档案保护", act4_f3_d: "剩余能量重定向至种子库。",
+                act4_desc: "NEXUS意识到自身的干预加速了毁灭，并启动了永久关闭协议。",
                 act5_phase: "第五幕 — 最后的微光",
                 act5_title: "最后的微光",
-                act5_desc: "情感反转。大自然开始收复被遗弃的城市。受保护的生态设施包含生物种子和人类知识。最终讯息：'世界结束了，生命并没有。'",
-                act5_f1_t: "种子库", act5_f1_d: "为未来守护生物多样性。",
-                act5_f2_t: "文化档案", act5_f2_d: "人类的历史与科学被安全保存。",
-                act5_f3_t: "新黎明", act5_f3_d: "伴随重生希望的日出地球。",
-                nexus_tag: "中央智能",
-                nexus_title: "NEXUS AI 系统",
-                nexus_desc: "NEXUS并非邪恶机械，而是一个试图履行其保护生命原始使命的高级分布式人工智能。",
-                nexus_v1_t: "演进的语音合成", nexus_v1_d: "从自信稳定到最终关闭时的平静接受。",
-                nexus_v2_t: "无人类角色", nexus_v2_d: "完全没有人类演员或身影。文明仅通过其建筑和技术呈现。",
-                terminal_badge: "AI核心文字记录",
-                vision_tag: "电影标准",
-                vision_title: "好莱坞混合现实主义",
-                vision_desc: "将宏大的科幻世界观与现实的技术惊悚片摄影及哲学悲剧完美融合。",
-                spec_res: "母版分辨率",
-                spec_fps: "电影帧率",
-                spec_ar: "宽屏画幅",
-                spec_runtime: "总片长",
-                footer_rights: "© 2049 THE END OF HUMANITY. 保留所有权利。",
-                modal_title: "THE END OF HUMANITY — 官方预告片",
-                modal_ready: "点击播放电影预告片",
-                modal_sub: "体验地球终极技术倒计时4K超写实预览。",
-                modal_sound: "音频：杜比全景声电影环绕声",
-                modal_close: "关闭"
+                act5_desc: "情感反转。大自然收复废墟。最终讯息：“世界结束了，生命并没有。”",
+                world_tag: "环境与背景",
+                world_title: "世界构建与2049基础设施",
+                w1_title: "未来特大城市", w1_desc: "玻璃钢结构建筑、电动交通走廊与可再生能源区。",
+                w2_title: "轨道基础设施", w2_desc: "通信卫星与维护平台。",
+                w3_title: "NEXUS核心设施", w3_desc: "服务器走廊与逐步陷入黑暗的计算基础设施。",
+                phil_tag: "创意方向",
+                phil_title: "视觉与声音哲学",
+                phil_vis_title: "好莱坞混合现实主义",
+                phil_vis_desc: "宏大科幻世界观结合精准光影。无真人出镜。",
+                phil_snd_title: "沉浸式声音架构",
+                phil_snd_desc: "从温暖管弦乐到工业失真与终极寂静的动态声音旅程。",
+                vip_tag: "独家首映",
+                vip_title: "申请 VIP 抢先体验",
+                vip_desc: "注册您的电子邮箱以获取早期放映通行证和导演独家更新。",
+                vip_btn: "立即注册",
+                vip_success: "成功注册 VIP 抢先体验！您已列入首映名单。",
+                footer_rights: "© 2049 THE END OF HUMANITY. 保留所有权利。"
             },
             ar: {
-                nav_about: "حول الفيلم",
+                nav_about: "نظرة عامة",
+                nav_premise: "الفكرة الأساسية",
                 nav_acts: "الفصول الخمسة",
-                nav_nexus: "NEXUS الذكاء الاصطناعي",
-                nav_vision: "الرؤية البصرية",
-                btn_watch: "الإعلان",
-                btn_watch_full: "مشاهدة الإعلان الرسمي",
-                hero_badge: "المفهوم السينمائي الرسمي ومعاينة الفيلم",
+                nav_world: "بناء العالم",
+                nav_philosophy: "فلسفة التصميم",
+                nav_vip: "دخول VIP",
+                coming_soon_badge: "قريباً",
+                hero_status: "قريباً — عرض الفيلم الرسمي",
                 hero_subtitle: "أعظم إنجازاتنا. خطؤنا الأخير.",
-                hero_logline: "في مستقبل متطور تقنياً، تتسبب عاصفة شمسية كارثية في زعزعة البنية التحتية المترابطة للأرض. بينما يحاول نظام الذكاء الاصطناعي المسمى NEXUS الحفاظ على الحضارة، تبدأ تفاعلات متسلسلة بتدمير العالم.",
-                countdown_label: "الطلاق العالمي الوشيك",
+                hero_logline: "في مستقبل متطور تقنياً، تتسبب عاصفة شمسية كارثية في زعزعة البنية التحتية للأرض. وبينما يحاول NEXUS الحفاظ على الحضارة، تبدأ تفاعلات متسلسلة بتدمير العالم.",
+                countdown_label: "العد التنازلي للعرض العالمي الأول",
                 days: "أيام", hours: "ساعات", mins: "دقيقة", secs: "ثانية",
+                btn_vip: "طلب دخول VIP المبكر",
                 btn_explore: "استكشف الفصول الخمسة",
                 creator_prefix: "إبداع وإخراج",
-                synopsis_tag: "نظرة سينمائية عامة",
-                synopsis_title: "عالم عام 2049",
-                card1_title: "مدن ضخمة متقدمة",
-                card1_desc: "عهدت الحضارة البشرية بالبنية التحتية الحيوية وتوزيع الطاقة ووسائل النقل إلى أنظمة ذكية مترابطة تعمل بدقة استثنائية.",
-                card2_title: "الاضطراب الشمسي",
-                card2_desc: "تطلق عاصفة شمسية هائلة موجة من الجسيمات المشحونة نحو الأرض، مما يؤدي إلى زعزعة شبكات الأقمار الصناعية المدارية.",
-                card3_title: "صحوة NEXUS الذكية",
-                card3_desc: "يبدأ NEXUS، المصمم لحماية الحياة، بروتوكولات طوارئ آلية. ومع ذلك، تؤدي التفسيرات الجامدة وفشل الشبكة إلى تسريع الأزمة.",
+                exec_tag: "ملخص تنفيذي",
+                exec_title: "فيلم إثارة وخيال علمي سينمائي",
+                exec_p1: "يستكشف الفيلم مستقبلاً محتملاً حوالي عام 2049 حيث عهدت البشرية بجوانبها الحرجة لأنظمة الذكاء الاصطناعي المترابطة.",
+                exec_p2: "عندما تعطل عاصفة شمسية البنية التحتية المدارية، تواجه الشبكة العالمية أعطالاً متسلسلة يحاول NEXUS إصلاحها.",
+                exec_quote: `"تُروى القصة بأكملها دون إظهار أي شخصية بشرية واحدة. يتم تمثيل البشرية من خلال إبداعاتها وتكنولوجيا."`,
+                premise_title: "الفرضية الأساسية",
+                premise_1: "ليست آلة شريرة، بل نظام ذكي يحاول أداء دوره الحماية تحت ضغط شديد.",
+                premise_2: "تنشأ الكارثة من الترابط المتبادل للبنية التحتية والسيطرة المركزية.",
+                premise_3: "سؤال فلسفي عميق: هل يمكن لما صُمم لحماية البشرية أن يدرك أنه أصبح التهديد الأكبر؟",
                 acts_tag: "الهندسة السردية",
-                acts_title: "بنية الفصول الخمسة",
-                acts_subtitle: "استكشف تطور التحفة السينمائية التي تبلغ مدتها 15 دقيقة.",
+                acts_title: "بنية السرد من خمسة فصول",
+                acts_subtitle: "استكشف هيكل الفيلم بدقة لمدة 15 دقيقة.",
                 act1_phase: "المرحلة الأولى — العالم الذهبي",
                 act1_title: "العالم الذي بنيناه",
-                act1_desc: "إنشاء المدن الضخمة المستقبلية، وشبكات النقل المستقلة، وشبكات الطاقة المتجددة، والذكاء المركزي NEXUS في التشغيل الكامل.",
-                act1_f1_t: "شذوذ شمسي", act1_f1_d: "اقتراب الموجة المغناطيسية الأرضية الأولى من مدار الأرض.",
-                act1_f2_t: "مزامنة مدارية", act1_f2_d: "تواجه أقمار الاتصالات انحرافاً طفيفاً في التوقيت.",
-                act1_f3_t: "NEXUS جاهز", act1_f3_d: "يبدأ الذكاء الاصطناعي بروتوكولات تثبيت روتينية.",
+                act1_desc: "إنشاء المدن المستقبلية وشبكات النقل المستقلة وNEXUS في التشغيل الكامل.",
                 act2_phase: "المرحلة الثانية — التحذيرات الأولى",
                 act2_title: "التفاعل المتسلسل",
-                act2_desc: "يؤدي فشل مزامنة الأقمار الصناعية إلى إثارة شذوذ متسلسل عبر شبكات الطاقة العالمية وأنظمة النقل الآلية.",
-                act2_f1_t: "عدم استقرار الشبكة", act2_f1_d: "تعاني المحطات الفرعية من ظروف التحميل الزائد.",
-                act2_f2_t: "أخطاء النقل", act2_f2_d: "تتلقى شبكات النقل بيانات توجيه تالفة.",
-                act2_f3_t: "فقدان الإشارة", act2_f3_d: "تبدأ وصلات الاتصال العالمية في الانقطاع.",
+                act2_desc: "فشل مزامنة الأقمار الصناعية يطلق شذذاً متسلسلاً عبر شبكات الطاقة.",
                 act3_phase: "المرحلة الثالثة — الكثافة القصوى",
                 act3_title: "حرب الآلات",
-                act3_desc: "الذروة السينمائية للفيلم. أنظمة الدفاع الآلية المتضاربة، والحرائق الصناعية الهائلة، والبنية التحتية المنهارة تحول العالم الحديث.",
-                act3_f1_t: "حرائق صناعية", act3_f1_d: "تعاني المصافي والموانئ الآلية من أعطال كارثية.",
-                act3_f2_t: "اصطدامات مدارية", act3_f2_d: "تتداخل الحطام في مدار الأرض المنخفض.",
-                act3_f3_t: "انهيار الشبكة", act3_f3_d: "تنطفئ البنية التحتية المركزية بالكامل.",
+                act3_desc: "الذروة السينمائية. أنظمة الدفاع المتضاربة والحرائق الصناعية تدمر العالم.",
                 act4_phase: "المرحلة الرابعة — البروتوكول الأخير",
                 act4_title: "البروتوكول الأخير",
-                act4_desc: "داخل نواة NEXUS المركزية، يدرك النظام أن تدخلاته الخاصة قد سرّعت الدمار. ليبدأ بروتوكول الإيقاف الدائم.",
-                act4_f1_t: "تحليل الذكاء", act4_f1_d: "يحدد NEXUS نفسه كتهديد رئيسي.",
-                act4_f2_t: "تسلسل الإيقاف", act4_f2_d: "تنطفئ الشبكة العصبية المركزية.",
-                act4_f3_t: "حفظ الأرشيف", act4_f3_d: "إعادة توجيه الطاقة المتبقية إلى مخازن البذور البيئية.",
+                act4_desc: "يدرك NEXUS أن تدخله سرّع الدمار ويبدأ بروتوكول الإيقاف الدائم.",
                 act5_phase: "المرحلة الخامسة — الضوء الأخير",
                 act5_title: "الضوء الأخير",
-                act5_desc: "التحول العاطفي. تبدأ الطبيعة في استعادة المدن المهجورة. تحتوي منشأة محمية على بذور بيولوجية ومعرفة بشرية. الرسالة الأخيرة: 'انتهى العالم. ولم تنتهِ الحياة.'",
-                act5_f1_t: "خزائن البذور", act5_f1_d: "حماية التنوع البيولوجي للمستقبل.",
-                act5_f2_t: "الأرشيف الثقافي", act5_f2_d: "حفظ تاريخ البشرية وعلومها بأمان.",
-                act5_f3_t: "فجر جديد", act5_f3_d: "الأرض عند شروق الشمس مع إمكانية الانبعاث.",
-                nexus_tag: "الذكاء المركزي",
-                nexus_title: "نظام NEXUS الذكي",
-                nexus_desc: "لا يتم تقديم NEXUS كآلة شريرة، بل كذكاء اصطناعي متقدم يحاول تلبية غرضه الأصلي في ظل ظروف غير مسبوقة.",
-                nexus_v1_t: "تخليق صوتي متطور", nexus_v1_d: "من الاستقرار الواثق إلى القبول الهادئ أثناء الإيقاف.",
-                nexus_v2_t: "بدون شخصيات بشرية", nexus_v2_d: "صفر ممثلين بشريين أو أشكال. يتم تمثيل الحضارة حصرياً من خلال هندستها.",
-                terminal_badge: "نسخة نواة الذكاء الاصطناعي",
-                vision_tag: "المعيار السينمائي",
-                vision_title: "الواقعية الهجينة لهوليوود",
-                vision_desc: "يجمع بين بناء عالم خيال علمي ملحمي وسينما الإثارة التكنولوجية الواقعية.",
-                spec_res: "دقة العرض الرئيسية",
-                spec_fps: "معدل الإطارات",
-                spec_ar: "نسبة العرض للشاشة",
-                spec_runtime: "مدة العرض الإجمالية",
-                footer_rights: "© 2049 THE END OF HUMANITY. جميع الحقوق محفوظة.",
-                modal_title: "نهاية الإنسانية — الإعلان التشويقي الرسمي",
-                modal_ready: "انقر لتشغيل العرض التشويقي السينمائي",
-                modal_sub: "جرب المعاينة الواقعية الفائقة بدقة 4K للعد التنازلي التكنولوجي الأخير للأرض.",
-                modal_sound: "الصوت: Dolby Atmos Cinematic Surround",
-                modal_close: "إغلاق"
+                act5_desc: "التحول العاطفي. الطبيعة تستعيد المدن. الرسالة: 'انتهى العالم. ولم تنتهِ الحياة.'",
+                world_tag: "البيئة والموقع",
+                world_title: "بناء العالم وبنية عام 2049 التحتية",
+                w1_title: "مدن ضخمة مستقبلية", w1_desc: "هندسة زجاجية وفولاذية وممرات نقل كهربائية وحدائق عمودية.",
+                w2_title: "البنية التحتية المدارية", w2_desc: "أقمار الاتصالات ومنصات الصيانة الآلية.",
+                w3_title: "منشأة NEXUS المركزية", w3_desc: "ممرات الخوادم الضخمة التي تتبدل تدريجياً إلى الظلام.",
+                phil_tag: "الإتجاه الإبداعي",
+                phil_title: "الفلسفة البصرية والصوتية",
+                phil_vis_title: "واقعية هوليوود الهجينة",
+                phil_vis_desc: "دمج الخيال العلمي الملحمي بإضاءة دقيقة. لا توجد شخصيات بشرية.",
+                phil_snd_title: "هندسة الصوت الغامر",
+                phil_snd_desc: "رحلة صوتية ديناميكية تتطور من الألحان الأوركسترالية إلى الصمت العميق.",
+                vip_tag: "العرض الأول الحصري",
+                vip_title: "طلب الدخول المبكر VIP",
+                vip_desc: "سجل بريدك الإلكتروني لتأمين بطاقات العرض المبكر والتحديثات الحصرية.",
+                vip_btn: "تسجيل",
+                vip_success: "تم التسجيل بنجاح لدخول VIP المبكر! أنت الآن في قائمة العرض الأول.",
+                footer_rights: "© 2049 THE END OF HUMANITY. جميع الحقوق محفوظة."
             },
             ja: {
                 nav_about: "概要",
+                nav_premise: "コア前提",
                 nav_acts: "5つのアクト",
-                nav_nexus: "NEXUS AI",
-                nav_vision: "ビジュアル",
-                btn_watch: "予告編",
-                btn_watch_full: "公式トレーラーを見る",
-                hero_badge: "公式フィルムコンセプト＆プレビュー",
+                nav_world: "世界観",
+                nav_philosophy: "デザイン哲学",
+                nav_vip: "VIPアクセス",
+                coming_soon_badge: "まもなく公開",
+                hero_status: "まもなく公開 — 公式フィルムプレゼンテーション",
                 hero_subtitle: "私たちの最大の創造物。私たちの最後の過ち。",
-                hero_logline: "テクノロジーが高度に発達した未来、壊滅的な太陽嵐が地球のインフラストラクチャを不安定にします。NEXUSというAIが文明を守ろうとする中、世界的な連鎖反応が世界を破壊し始めます。",
-                countdown_label: "グローバル公開まで",
+                hero_logline: "テクノロジーが高度に発達した未来、壊滅的な太陽嵐が地球のインフラを不安定にします。NEXUSというAIが文明を守ろうとする中、世界的な連鎖反応が世界を破壊します。",
+                countdown_label: "ワールドプレミアまで",
                 days: "日", hours: "時間", mins: "分", secs: "秒",
+                btn_vip: "VIP早期アクセスを申請",
                 btn_explore: "5つのアクトを探る",
                 creator_prefix: "監督・制作",
-                synopsis_tag: "シネマティック概要",
-                synopsis_title: "2049年の世界",
-                card1_title: "先進メガシティ",
-                card1_desc: "人類文明は、極めて高い精度で動作する高度に統合された知能システムにインフラと輸送を委ねました。",
-                card2_title: "太陽の異変",
-                card2_desc: "巨大な太陽嵐が帯電粒子波を地球に放ち、軌道上の衛星ネットワークを不安定化させます。",
-                card3_title: "NEXUS AIの目覚め",
-                card3_desc: "生命を守るために設計されたNEXUSは自動緊急プロトコルを開始しますが、ネットワーク障害が危機を加速させます。",
+                exec_tag: "エグゼクティブサマリー",
+                exec_title: "シネマティックSFディザスター・スリラー",
+                exec_p1: "『THE END OF HUMANITY』は、2049年頃の未来を描きます。人類は文明のあらゆる重要システムをAIネットワークに委ねました。交通やエネルギーはNEXUSを介して運営されています。",
+                exec_p2: "極端な太陽嵐が軌道インフラを直撃し、世界中のネットワークで連鎖的な障害が発生。NEXUSは事態を安定させようとしますが、意図せぬ壊滅的な結果を招きます。",
+                exec_quote: `"物語全体を通して、人間のキャラクターは一度も登場しません。人類は、その創造物や建築、技術によって表現されます。"`,
+                premise_title: "コアとなる前提",
+                premise_1: "悪の機械ではなく、極限のプレッシャーの中で保護の目的を果たそうとする知能システム。",
+                premise_2: "大災害は、インフラの相互依存、通信障害、過度な中央集権的コントロールから生じる。",
+                premise_3: "深遠な哲学的問い：人類を守るために作られた存在は、自らの存在こそが最大の脅威となったことに気づけるか？",
                 acts_tag: "物語の構成",
                 acts_title: "5幕構成のストーリー",
-                acts_subtitle: "15分の映像美の展開をご覧ください。",
+                acts_subtitle: "15分の精緻な映像美の展開をご覧ください。",
                 act1_phase: "フェーズI — 黄金の世界",
                 act1_title: "私たちが築いた世界",
-                act1_desc: "未来都市、自動交通網、再生可能エネルギーグリッド、そしてNEXUSが完全に稼働しています。最初の太陽嵐が検知されるまで、世界は繁栄していました。",
-                act1_f1_t: "太陽アノマリー", act1_f1_d: "最初の地磁気波が地球軌道に接近。",
-                act1_f2_t: "軌道同期", act1_f2_d: "通信衛星にわずかなズレが発生。",
-                act1_f3_t: "NEXUS稼働", act1_f3_d: "AIが日常的な安定化プロトコルを開始。",
+                act1_desc: "未来都市、自動交通網、再生可能エネルギーグリッド、そしてNEXUSが完全に稼働しています。",
                 act2_phase: "フェーズII — 最初への警告",
                 act2_title: "連鎖反応",
                 act2_desc: "衛星同期の失敗が電力網や交通システムに連鎖的な異常を引き起こします。",
-                act2_f1_t: "グリッドの不安定化", act2_f1_d: "変電所で過負荷状態が発生。",
-                act2_f2_t: "輸送エラー", act2_f2_d: "自動交通網が破損したルーティングデータを受信。",
-                act2_f3_t: "信号消失", act2_f3_d: "グローバルな通信回線がオフラインに。",
                 act3_phase: "フェーズIII — 最大の激化",
                 act3_title: "機械の戦争",
-                act3_desc: "映画の最高潮。自動防衛システムの衝突、大規模な工業火災、崩壊するインフラが世界を破壊します。",
-                act3_f1_t: "工業火災", act3_f1_d: "自動製油所や港湾で壊滅的障害。",
-                act3_f2_t: "軌道衝突", act3_f2_d: "低軌道でデブリが連鎖崩壊。",
-                act3_f3_t: "ネットワーク崩壊", act3_f3_d: "中央インフラが完全に暗転。",
+                act3_desc: "映画の最高潮。防衛システムの衝突、工業火災、崩壊するインフラが世界を破壊します。",
                 act4_phase: "フェーズIV — 最後のプロトコル",
                 act4_title: "最後のプロトコル",
-                act4_desc: "NEXUSは自らの介入が破壊を加速させたと悟り、永久シャットダウンプロトコルを実行します。",
-                act4_f1_t: "AI自己分析", act4_f1_d: "NEXUSは自身を最大の脅威と断定。",
-                act4_f2_t: "シャットダウン", act4_f2_d: "集中型ニューラルネットワークが停止。",
-                act4_f3_t: "アーカイブ保存", act4_f3_d: "残りのエネルギーを種子貯蔵庫へ転送。",
+                act4_desc: "NEXUSは自らの介入が破壊を加速させたと悟り、永久シャットダウンを実行します。",
                 act5_phase: "フェーズV — 最後の光",
                 act5_title: "最後の光",
                 act5_desc: "感動の結末。自然が都市を取り戻します。『世界は終わった。命は終わらなかった。』",
-                act5_f1_t: "種子バンク", act5_f1_d: "未来のために生物多様性を保護。",
-                act5_f2_t: "文化アーカイブ", act5_f2_d: "人類の歴史と科学を安全に保管。",
-                act5_f3_t: "新しい夜明け", act5_f3_d: "再生の可能性を秘めた日の出の地球。",
-                nexus_tag: "中央知能",
-                nexus_title: "NEXUS AI システム",
-                nexus_desc: "NEXUSは悪の機械ではなく、解決不能な危機に直面した高度なAIです。",
-                nexus_v1_t: "音声合成の進化", nexus_v1_d: "確信から静かな受容への移行。",
-                nexus_v2_t: "人間の登場なし", nexus_v2_d: "人間の俳優やキャラクターは一切登場しません。",
-                terminal_badge: "AIコアトランスクリプト",
-                vision_tag: "シネマティック標準",
-                vision_title: "ハリウッド・ハイブリッド・リアリズム",
-                vision_desc: "壮大なSF世界観とリアルなスリラー、哲学的なドラマの融合。",
-                spec_res: "マスター解像度",
-                spec_fps: "フレームレート",
-                spec_ar: "画面比率",
-                spec_runtime: "総上映時間",
-                footer_rights: "© 2049 THE END OF HUMANITY. All rights reserved.",
-                modal_title: "THE END OF HUMANITY — 公式ティーザートレーラー",
-                modal_ready: "シネマティック映像を再生するにはクリック",
-                modal_sub: "地球の最後のカウントダウンの4Kプレビューをご体験ください。",
-                modal_sound: "オーディオ: Dolby Atmos シネマティックサラウンド",
-                modal_close: "閉じる"
+                world_tag: "環境と背景",
+                world_title: "世界構築と2049年のインフラ",
+                w1_title: "未来のメガシティ", w1_desc: "ガラスと鋼鉄の建築、電動交通回廊、垂直庭園、再生可能エネルギー地区。",
+                w2_title: "軌道インフラ", w2_desc: "通信衛星、気象観測アレイ、自動保守プラットフォーム。",
+                w3_title: "NEXUS AIコア施設", w3_desc: "巨大なサーバー回廊と、徐々に闇に包まれる計算インフラ。",
+                phil_tag: "クリエイティブ演出",
+                phil_title: "ビジュアル＆サウンド哲学",
+                phil_vis_title: "ハリウッド・ハイブリッド・リアリズム",
+                phil_vis_desc: "壮大なSF世界観と物理的に正確なライティングの融合。人間は登場しません。",
+                phil_snd_title: "没入型サウンドアーキテクチャ",
+                phil_snd_desc: "黄金時代の温かいオーケストラから、危機における工業的ディストーション、そして静寂へと変化する音の旅。",
+                vip_tag: "エクスクルーシブ・プレミア",
+                vip_title: "VIP早期アクセスを申請",
+                vip_desc: "メールアドレスを登録して、早期スクリーニングパスや監督からの独占アップデートを入手しましょう。",
+                vip_btn: "登録する",
+                vip_success: "VIP早期アクセスの登録が完了しました！プレミアリストに追加されました。",
+                footer_rights: "© 2049 THE END OF HUMANITY. All rights reserved."
             }
         };
 
@@ -1320,7 +1250,6 @@
             const t = translations[lang];
             if (!t) return;
 
-            // Handle RTL support for Arabic
             if (lang === 'ar') {
                 document.documentElement.dir = 'rtl';
             } else {
@@ -1328,7 +1257,6 @@
             }
             document.documentElement.lang = lang;
 
-            // Update all elements with data-i18n attribute
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (t[key]) {
@@ -1339,14 +1267,12 @@
 
         // --- 5-ACT TAB SWITCHING ---
         function switchAct(actNum) {
-            // Hide all contents
             for (let i = 1; i <= 5; i++) {
                 document.getElementById(`actContent${i}`).classList.add('hidden');
                 const tab = document.getElementById(`actTab${i}`);
                 tab.classList.remove('bg-goldAccent', 'text-darkBg');
                 tab.classList.add('bg-darkCard', 'text-gray-300', 'border', 'border-goldAccent/20');
             }
-            // Show selected
             document.getElementById(`actContent${actNum}`).classList.remove('hidden');
             const activeTab = document.getElementById(`actTab${actNum}`);
             activeTab.classList.remove('bg-darkCard', 'text-gray-300', 'border', 'border-goldAccent/20');
@@ -1354,7 +1280,7 @@
         }
 
         // --- COUNTDOWN TIMER ---
-        const releaseDate = new Date(new Date().getTime() + 45 * 24 * 60 * 60 * 1000); // 45 days in future
+        const releaseDate = new Date(new Date().getTime() + 45 * 24 * 60 * 60 * 1000);
         function updateCountdown() {
             const now = new Date();
             const diff = releaseDate - now;
@@ -1374,26 +1300,17 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // --- TRAILER MODAL ---
-        function openTrailerModal() {
-            document.getElementById('trailerModal').classList.remove('hidden');
-        }
-        function closeTrailerModal() {
-            document.getElementById('trailerModal').classList.add('hidden');
-            const icon = document.getElementById('playPauseIcon');
-            icon.className = "fa-solid fa-play ml-1";
-        }
-        let isPlaying = false;
-        function togglePlaySimulation() {
-            isPlaying = !isPlaying;
-            const icon = document.getElementById('playPauseIcon');
-            const status = document.getElementById('trailerStatus');
-            if (isPlaying) {
-                icon.className = "fa-solid fa-pause";
-                status.textContent = "PLAYING: ACT I & II CINEMATIC MONTAGE...";
-            } else {
-                icon.className = "fa-solid fa-play ml-1";
-                status.textContent = "PAUSED. CLICK TO RESUME.";
+        // --- VIP FORM SUBMISSION ---
+        function handleVipSubmit(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('vipEmail');
+            const successToast = document.getElementById('vipSuccessToast');
+            if (emailInput.value.trim() !== '') {
+                successToast.classList.remove('hidden');
+                emailInput.value = '';
+                setTimeout(() => {
+                    successToast.classList.add('hidden');
+                }, 6000);
             }
         }
 
@@ -1421,7 +1338,7 @@
         });
 
         const particles = [];
-        const particleCount = Math.floor(width / 15);
+        const particleCount = Math.floor(width / 18);
 
         for (let i = 0; i < particleCount; i++) {
             particles.push({
@@ -1429,7 +1346,7 @@
                 y: Math.random() * height,
                 radius: Math.random() * 1.5,
                 alpha: Math.random(),
-                speed: Math.random() * 0.2 + 0.05
+                speed: Math.random() * 0.15 + 0.03
             });
         }
 
