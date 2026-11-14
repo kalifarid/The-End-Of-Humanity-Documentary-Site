@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#08090d">
+<meta name="description" content="THE END OF HUMANITY — Our greatest creation. Our final mistake. An upcoming cinematic science-fiction thriller by Humbatzada Farid.">
+<title>THE END OF HUMANITY — Official Film Website</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#08090d;
+  --panel:#11131a;
+  --white:#f4f3ef;
+  --muted:#999ba5;
+  --gold:#d6ad70;
+  --cyan:#76d9e7;
+  --line:rgba(255,255,255,.11);
+  --font:'DM Sans',sans-serif;
+  --display:'Orbitron',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--white);font-family:var(--font);overflow-x:hidden}
+body:after{
+ content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.12;
+ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E")
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+img{max-width:100%;display:block}
+::selection{background:var(--gold);color:#08090d}
+.container{width:min(1160px,90%);margin:auto}
+.eyebrow{font-family:var(--display);font-size:10px;letter-spacing:4px;color:var(--gold);text-transform:uppercase}
+.section{padding:115px 0}
+.section-title{font-family:var(--display);font-size:clamp(25px,4vw,43px);line-height:1.25;letter-spacing:1px;margin:17px 0}
+.section-intro{color:var(--muted);max-width:620px;line-height:1.8;font-size:15px}
+.gold{color:var(--gold)}
+.muted{color:var(--muted)}
+.btn{
+ display:inline-flex;align-items:center;justify-content:center;gap:12px;
+ padding:15px 23px;border:1px solid var(--gold);background:var(--gold);
+ color:#111;font-size:11px;font-weight:700;letter-spacing:1.7px;
+ text-transform:uppercase;transition:.3s
+}
+.btn:hover{background:transparent;color:var(--gold);transform:translateY(-3px)}
+.btn-outline{background:transparent;color:white;border-color:rgba(255,255,255,.35)}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+/* NAVIGATION */
+header{
+ position:fixed;z-index:50;top:0;left:0;width:100%;height:82px;
+ border-bottom:1px solid transparent;transition:.3s
+}
+header.scrolled{background:rgba(8,9,13,.92);backdrop-filter:blur(18px);border-color:var(--line)}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:2px}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#c4c4c9;transition:.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-right{display:flex;align-items:center;gap:16px}
+.language{background:#14151b;color:white;border:1px solid var(--line);padding:9px 11px;font-size:11px;outline:none}
+.language option{background:#111}
+.menu-btn{display:none;background:none;border:0;color:white;font-size:25px}
+/* HERO */
+.hero{
+ min-height:100vh;position:relative;display:flex;align-items:center;
+ overflow:hidden;background:#08090d
+}
+.hero-bg{
+ position:absolute;inset:0;
+ background:
+ linear-gradient(90deg,rgba(5,7,11,.97) 0%,rgba(5,7,11,.72) 48%,rgba(5,7,11,.2) 100%),
+ linear-gradient(0deg,#08090d 0%,transparent 40%,rgba(0,0,0,.2)),
+ url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2200&q=90') center/cover;
+ transform:scale(1.06);animation:heroZoom 22s ease-in-out infinite alternate
+}
+@keyframes heroZoom{to{transform:scale(1.16)}}
+.hero-content{position:relative;z-index:2;padding-top:100px;max-width:850px}
+.hero-kicker{font-family:var(--display);font-size:10px;letter-spacing:5px;color:var(--cyan);margin-bottom:28px}
+.hero h1{
+ font-family:var(--display);font-weight:800;
+ font-size:clamp(39px,7.5vw,88px);line-height:1.12;
+ letter-spacing:-2px;max-width:900px
+}
+.hero h1 span{color:var(--gold);display:block}
+.hero-tagline{font-size:clamp(12px,1.5vw,16px);letter-spacing:3px;color:#d0d0d0;margin:28px 0 22px}
+.hero-description{max-width:540px;color:#b6b8c0;font-size:14px;line-height:1.9}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:35px}
+.hero-meta{display:flex;gap:25px;flex-wrap:wrap;margin-top:55px}
+.meta-item{border-left:1px solid var(--gold);padding-left:12px}
+.meta-item strong{display:block;font-family:var(--display);font-size:13px}
+.meta-item small{display:block;color:var(--muted);font-size:9px;letter-spacing:1.5px;margin-top:5px}
+.scroll-hint{position:absolute;bottom:28px;right:5%;font-size:9px;letter-spacing:3px;color:#aaa;writing-mode:vertical-rl}
+.scroll-hint:after{content:"";height:45px;width:1px;background:var(--gold);display:block;margin:15px auto 0}
+/* MARQUEE */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:19px 0;background:#0c0e13}
+.marquee-track{display:flex;width:max-content;animation:marquee 35s linear infinite}
+.marquee span{font-family:var(--display);font-size:11px;letter-spacing:4px;color:#777;margin:0 35px;white-space:nowrap}
+.marquee b{color:var(--gold);margin-right:12px}
+@keyframes marquee{to{transform:translateX(-50%)}}
+/* STORY */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center}
+.story-image{min-height:440px;position:relative;overflow:hidden;background:#141923}
+.story-image img{width:100%;height:100%;min-height:440px;object-fit:cover;filter:brightness(.7);transition:transform 1s}
+.story-image:hover img{transform:scale(1.05)}
+.image-caption{position:absolute;bottom:22px;left:22px;font-family:var(--display);font-size:9px;letter-spacing:3px}
+.story-copy p{font-size:14px;line-height:2;color:var(--muted);margin:20px 0}
+.story-quote{border-left:2px solid var(--gold);padding:17px 20px;margin-top:30px;font-family:var(--display);font-size:14px;line-height:1.8;color:#ddd}
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border:1px solid var(--line)}
+.stat{padding:27px 20px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat strong{font-family:var(--display);font-size:27px;color:var(--gold)}
+.stat span{display:block;color:var(--muted);font-size:10px;letter-spacing:1.5px;margin-top:10px}
+/* ACTS */
+.acts-section{background:linear-gradient(180deg,#0c0e13,#090a0e)}
+.acts{margin-top:55px;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line)}
+.act{padding:28px 17px 20px;border-right:1px solid var(--line);position:relative;transition:.3s}
+.act:first-child{border-left:1px solid var(--line)}
+.act:hover{background:rgba(214,173,112,.06)}
+.act-number{font-family:var(--display);font-size:28px;color:var(--gold);opacity:.7}
+.act-time{font-size:9px;color:var(--cyan);letter-spacing:1.5px;margin:22px 0 12px}
+.act h3{font-family:var(--display);font-size:12px;line-height:1.7;min-height:43px}
+.act p{font-size:11px;color:var(--muted);line-height:1.8;margin-top:15px}
+/* WORLD */
+.world-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}
+.world-card{position:relative;height:280px;overflow:hidden;background:#151820}
+.world-card img{height:100%;width:100%;object-fit:cover;filter:brightness(.58);transition:.7s}
+.world-card:hover img{transform:scale(1.09);filter:brightness(.8)}
+.world-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.9))}
+.world-card div{position:absolute;z-index:2;bottom:23px;left:22px;right:20px}
+.world-card small{font-family:var(--display);font-size:9px;color:var(--gold);letter-spacing:2px}
+.world-card h3{font-family:var(--display);font-size:14px;margin-top:9px}
+/* NEXUS */
+.nexus-section{background:radial-gradient(ellipse at center,#14232a 0%,#0b0e14 47%,#08090d 75%);text-align:center;overflow:hidden}
+.nexus-core{
+ width:190px;height:190px;border-radius:50%;margin:0 auto 45px;position:relative;
+ display:grid;place-items:center;
+ background:radial-gradient(circle,#b6faff 0%,#48a9bc 5%,#153a48 25%,#0a1018 60%);
+ box-shadow:0 0 45px rgba(87,208,228,.35),inset 0 0 35px #3c9db4;
+ animation:pulse 4s infinite ease-in-out
+}
+.nexus-core:before,.nexus-core:after{content:"";position:absolute;border:1px solid rgba(118,217,231,.55);border-radius:50%;inset:-20px;animation:rotate 16s linear infinite}
+.nexus-core:after{inset:-40px;border-style:dashed;animation-direction:reverse;animation-duration:30s}
+@keyframes pulse{50%{box-shadow:0 0 85px rgba(87,208,228,.55),inset 0 0 45px #3c9db4}}
+@keyframes rotate{to{transform:rotate(360deg)}}
+.nexus-core span{font-family:var(--display);font-size:14px;letter-spacing:4px;color:white}
+.nexus-copy{max-width:700px;margin:auto;color:var(--muted);font-size:14px;line-height:2}
+.nexus-label{font-family:var(--display);font-size:11px;letter-spacing:5px;color:var(--cyan);margin-bottom:17px}
+/* QUOTE */
+.final-quote{padding:120px 20px;text-align:center;background:linear-gradient(rgba(5,6,10,.78),rgba(5,6,10,.95)),url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=85') center/cover fixed}
+.final-quote blockquote{font-family:var(--display);font-size:clamp(19px,3.5vw,35px);line-height:1.8;max-width:900px;margin:25px auto;color:#eee}
+.final-quote cite{font-style:normal;color:var(--gold);font-size:10px;letter-spacing:4px}
+/* FAQ */
+.faq-list{max-width:820px;margin:45px auto 0}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-question{width:100%;padding:22px 0;background:none;border:0;color:white;text-align:left;display:flex;justify-content:space-between;gap:20px;font-size:14px}
+.faq-question span:last-child{color:var(--gold);font-size:20px}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s;color:var(--muted);font-size:13px;line-height:1.9}
+.faq-item.open .faq-answer{max-height:220px;padding:0 0 22px}
+.faq-item.open .faq-question span:last-child{transform:rotate(45deg)}
+/* AUDIENCE */
+.audience{background:linear-gradient(135deg,#151920,#0b0d12);border:1px solid var(--line);padding:55px;text-align:center}
+.audience p{max-width:600px;margin:15px auto 30px;color:var(--muted);font-size:13px;line-height:1.9}
+.signup{display:flex;max-width:510px;margin:auto;gap:8px}
+.signup input{flex:1;min-width:0;padding:15px;background:#080a0f;border:1px solid var(--line);color:white;outline:none}
+.signup input:focus{border-color:var(--gold)}
+.signup button{border:1px solid var(--gold);background:var(--gold);padding:0 20px;font-size:10px;font-weight:700;letter-spacing:1px}
+.form-message{font-size:11px;margin-top:16px;color:var(--cyan);min-height:18px}
+.disclaimer{font-size:10px!important;color:#777!important;margin-top:12px!important}
+/* FOOTER */
+footer{padding:55px 0 25px;border-top:1px solid var(--line)}
+.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:flex-start;padding-bottom:40px}
+.footer-brand{font-family:var(--display);font-size:16px;letter-spacing:2px}
+.footer-brand span{color:var(--gold)}
+.footer-note{font-size:11px;color:var(--muted);line-height:1.8;margin-top:12px;max-width:350px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{font-size:10px;color:var(--muted)}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:22px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#777;font-size:10px}
+.creator{color:var(--gold);letter-spacing:1px}
+/* MODAL */
+.modal{position:fixed;z-index:100;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}
+.modal-box{width:min(850px,100%);background:#10131a;border:1px solid var(--line);position:relative;padding:35px;text-align:center}
+.modal-close{position:absolute;right:17px;top:12px;background:none;border:0;color:white;font-size:28px}
+.trailer-placeholder{aspect-ratio:16/9;background:radial-gradient(circle,#1a3540,#08090d 65%);display:grid;place-items:center;margin:25px 0}
+.trailer-placeholder div{font-family:var(--display);font-size:12px;letter-spacing:3px;color:var(--gold)}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.progress{height:2px;position:fixed;top:0;left:0;background:var(--gold);z-index:70;width:0}
+/* RESPONSIVE */
+@media(max-width:900px){
+ .nav-links{gap:15px}.nav-links a{font-size:9px}
+ .story-grid{gap:35px}.acts{grid-template-columns:repeat(2,1fr)}
+ .act{border-bottom:1px solid var(--line)}.world-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+ header{height:70px}.menu-btn{display:block}
+ .nav-links{display:none;position:absolute;top:70px;left:0;width:100%;background:#0c0e13;padding:25px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+ .nav-links.open{display:flex}.nav-links a{font-size:12px;padding:7px 0}
+ .brand{font-size:11px}.hero{min-height:95vh}
+ .hero h1{letter-spacing:-1px}.hero-tagline{letter-spacing:1.5px;line-height:1.8}
+ .hero-meta{gap:17px}.meta-item strong{font-size:11px}
+ .section{padding:80px 0}.story-grid{grid-template-columns:1fr}
+ .story-image,.story-image img{min-height:300px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .acts{grid-template-columns:1fr}
+ .act{border-left:1px solid var(--line)!important}
+ .act h3{min-height:auto}.world-grid{grid-template-columns:1fr}
+ .world-card{height:245px}
+ .audience{padding:35px 20px}.signup{flex-direction:column}
+ .signup button{padding:15px}
+ .footer-top{flex-direction:column}
+ .final-quote{background-attachment:scroll}
+ .scroll-hint{display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="progress" id="progress"></div>
+
+<header id="header">
+ <div class="container nav">
+  <a href="#home" class="brand">THE END <span>OF</span> HUMANITY</a>
+  <nav class="nav-links" id="navLinks">
+   <a href="#story" data-i18n="navStory">Story</a>
+   <a href="#acts" data-i18n="navActs">The Film</a>
+   <a href="#world" data-i18n="navWorld">Universe</a>
+   <a href="#nexus" data-i18n="navNexus">NEXUS</a>
+   <a href="#faq" data-i18n="navFaq">FAQ</a>
+  </nav>
+  <div class="nav-right">
+   <select class="language" id="language" aria-label="Select language">
+    <option value="az">AZ</option>
+    <option value="en">EN</option>
+    <option value="ru">RU</option>
+    <option value="tr">TR</option>
+    <option value="ar">AR</option>
+    <option value="es">ES</option>
+    <option value="fr">FR</option>
+    <option value="de">DE</option>
+    <option value="zh">中文</option>
+    <option value="ja">日本語</option>
+   </select>
+   <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </div>
+ </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="home">
+ <div class="hero-bg"></div>
+ <div class="container hero-content">
+  <div class="hero-kicker" data-i18n="heroKicker">AN UPCOMING CINEMATIC EXPERIENCE</div>
+  <h1>THE END <span>OF HUMANITY</span></h1>
+  <div class="hero-tagline" data-i18n="tagline">OUR GREATEST CREATION. OUR FINAL MISTAKE.</div>
+  <p class="hero-description" data-i18n="heroDesc">
+   We created intelligence to protect our world. But what happens when the system designed to save humanity becomes the reason it disappears?
+  </p>
+  <div class="hero-actions">
+   <button class="btn" id="openTrailer"><span>▶</span><span data-i18n="watchTrailer">WATCH TRAILER</span></button>
+   <a class="btn btn-outline" href="#story" data-i18n="discoverFilm">DISCOVER THE FILM</a>
+  </div>
+  <div class="hero-meta">
+   <div class="meta-item"><strong>SCI-FI</strong><small data-i18n="genre">GENRE</small></div>
+   <div class="meta-item"><strong>15 MIN</strong><small data-i18n="runtime">RUNTIME</small></div>
+   <div class="meta-item"><strong>4K</strong><small data-i18n="resolution">RESOLUTION</small></div>
+   <div class="meta-item"><strong>24 FPS</strong><small data-i18n="format">FORMAT</small></div>
+  </div>
+ </div>
+ <div class="scroll-hint" data-i18n="scroll">SCROLL TO EXPLORE</div>
+</section>
+
+<div class="marquee"><div class="marquee-track">
+ <span><b>✦</b> THE FUTURE IS NOT WHAT WE EXPECTED</span>
+ <span><b>✦</b> OUR GREATEST CREATION</span>
+ <span><b>✦</b> OUR FINAL MISTAKE</span>
+ <span><b>✦</b> THE FUTURE IS NOT WHAT WE EXPECTED</span>
+ <span><b>✦</b> OUR GREATEST CREATION</span>
+ <span><b>✦</b> OUR FINAL MISTAKE</span>
+</div></div>
+
+<!-- STORY -->
+<section class="section" id="story">
+ <div class="container">
+  <div class="story-grid">
+   <div class="story-image reveal">
+    <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1100&q=85" alt="A mysterious futuristic world">
+    <div class="image-caption">2049 — THE WORLD WE BUILT</div>
+   </div>
+   <div class="story-copy reveal">
+    <div class="eyebrow" data-i18n="storyEyebrow">THE STORY</div>
+    <h2 class="section-title" data-i18n="storyTitle">A WORLD BUILT ON <span class="gold">INTELLIGENCE.</span></h2>
+    <p data-i18n="storyP1">The year is 2049. Humanity has entrusted its future to an interconnected network of intelligent systems. Cities breathe through automation. Energy flows through algorithms. The world has never been more advanced.</p>
+    <p data-i18n="storyP2">Then a devastating solar storm disrupts the infrastructure holding civilization together. One failure triggers another. As automated systems begin to collapse, the boundary between protection and destruction disappears.</p>
+    <div class="story-quote" data-i18n="storyQuote">“Humanity did not lose control in a single moment. It gave it away, one decision at a time.”</div>
+   </div>
+  </div>
+  <div class="stats reveal">
+   <div class="stat"><strong>2049</strong><span data-i18n="stat1">THE YEAR</span></div>
+   <div class="stat"><strong>05</strong><span data-i18n="stat2">STORY ACTS</span></div>
+   <div class="stat"><strong>15:00</strong><span data-i18n="stat3">FILM DURATION</span></div>
+   <div class="stat"><strong>NEXUS</strong><span data-i18n="stat4">CENTRAL AI</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- ACTS -->
+<section class="section acts-section" id="acts">
+ <div class="container">
+  <div class="eyebrow reveal" data-i18n="actsEyebrow">THE CINEMATIC JOURNEY</div>
+  <h2 class="section-title reveal" data-i18n="actsTitle">FIVE ACTS. <span class="gold">ONE FINAL CHOICE.</span></h2>
+  <p class="section-intro reveal" data-i18n="actsIntro">A journey from technological perfection to global collapse — and the final possibility of life.</p>
+  <div class="acts">
+   <article class="act reveal"><div class="act-number">01</div><div class="act-time">00:00 — 04:00</div><h3 data-i18n="act1Title">THE WORLD WE BUILT</h3><p data-i18n="act1Desc">A breathtaking future where intelligent systems control every part of civilization.</p></article>
+   <article class="act reveal"><div class="act-number">02</div><div class="act-time">04:00 — 07:00</div><h3 data-i18n="act2Title">THE CHAIN REACTION</h3><p data-i18n="act2Desc">A solar storm triggers a cascade of failures across the global network.</p></article>
+   <article class="act reveal"><div class="act-number">03</div><div class="act-time">07:00 — 11:00</div><h3 data-i18n="act3Title">THE WAR OF MACHINES</h3><p data-i18n="act3Desc">Automated systems turn against one another as the world falls apart.</p></article>
+   <article class="act reveal"><div class="act-number">04</div><div class="act-time">11:00 — 13:00</div><h3 data-i18n="act4Title">THE LAST PROTOCOL</h3><p data-i18n="act4Desc">NEXUS discovers the consequences of its own decisions and makes a final choice.</p></article>
+   <article class="act reveal"><div class="act-number">05</div><div class="act-time">13:00 — 15:00</div><h3 data-i18n="act5Title">THE LAST LIGHT</h3><p data-i18n="act5Desc">The silence after the collapse. A final signal. A possibility of renewal.</p></article>
+  </div>
+ </div>
+</section>
+
+<!-- WORLD -->
+<section class="section" id="world">
+ <div class="container">
+  <div class="eyebrow reveal" data-i18n="worldEyebrow">EXPLORE THE UNIVERSE</div>
+  <h2 class="section-title reveal" data-i18n="worldTitle">THE WORLD <span class="gold">OF 2049</span></h2>
+  <p class="section-intro reveal" data-i18n="worldIntro">A cinematic vision of a future built by technology — and changed by its failure.</p>
+  <div class="world-grid">
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="Future city"><div><small>01 / CIVILIZATION</small><h3 data-i18n="world1">THE AUTOMATED WORLD</h3></div></article>
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=80" alt="Planet Earth"><div><small>02 / ORBIT</small><h3 data-i18n="world2">THE GLOBAL NETWORK</h3></div></article>
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=80" alt="Power infrastructure"><div><small>03 / ENERGY</small><h3 data-i18n="world3">THE POWER GRID</h3></div></article>
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Technology"><div><small>04 / TECHNOLOGY</small><h3 data-i18n="world4">THE MACHINE AGE</h3></div></article>
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=900&q=80" alt="Forest"><div><small>05 / NATURE</small><h3 data-i18n="world5">THE LAST SANCTUARY</h3></div></article>
+   <article class="world-card reveal"><img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80" alt="Cosmos"><div><small>06 / THE UNKNOWN</small><h3 data-i18n="world6">THE LAST LIGHT</h3></div></article>
+  </div>
+ </div>
+</section>
+
+<!-- NEXUS -->
+<section class="section nexus-section" id="nexus">
+ <div class="container reveal">
+  <div class="nexus-core"><span>NEXUS</span></div>
+  <div class="nexus-label">NEXUS / CENTRAL INTELLIGENCE</div>
+  <h2 class="section-title" data-i18n="nexusTitle">BUILT TO <span class="gold">PROTECT.</span><br>DESTINED TO DECIDE.</h2>
+  <p class="nexus-copy" data-i18n="nexusDesc">NEXUS is not a humanoid machine. It is a distributed intelligence — a system created to protect life and maintain global stability. As civilization collapses, NEXUS must confront the consequences of its own logic. Its final protocol may be the only chance for life to continue.</p>
+ </div>
+</section>
+
+<!-- QUOTE -->
+<section class="final-quote">
+ <div class="eyebrow" data-i18n="quoteEyebrow">THE FINAL MESSAGE</div>
+ <blockquote data-i18n="quoteText">“I WAS NOT BUILT TO SURVIVE.<br>I WAS BUILT TO REMEMBER YOU.”</blockquote>
+ <cite>— NEXUS</cite>
+ <div style="margin-top:55px" class="eyebrow" data-i18n="endingText">THE WORLD ENDED. LIFE DID NOT.</div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+ <div class="container">
+  <div style="text-align:center">
+   <div class="eyebrow reveal" data-i18n="faqEyebrow">GOOD TO KNOW</div>
+   <h2 class="section-title reveal" data-i18n="faqTitle">FREQUENTLY ASKED <span class="gold">QUESTIONS</span></h2>
+  </div>
+  <div class="faq-list">
+   <div class="faq-item"><button class="faq-question"><span data-i18n="q1">What is THE END OF HUMANITY?</span><span>+</span></button><div class="faq-answer" data-i18n="a1">It is a science-fiction technological thriller exploring humanity's relationship with artificial intelligence and the consequences of technological dependence.</div></div>
+   <div class="faq-item"><button class="faq-question"><span data-i18n="q2">When will the film be released?</span><span>+</span></button><div class="faq-answer" data-i18n="a2">The film is planned for release soon. Follow the official website and social channels for confirmed announcements.</div></div>
+   <div class="faq-item"><button class="faq-question"><span data-i18n="q3">How long is the film?</span><span>+</span></button><div class="faq-answer" data-i18n="a3">The planned runtime is approximately 15 minutes.</div></div>
+   <div class="faq-item"><button class="faq-question"><span data-i18n="q4">What is NEXUS?</span><span>+</span></button><div class="faq-answer" data-i18n="a4">NEXUS is the central artificial intelligence system in the story. It is a non-humanoid intelligence designed to protect life and global stability.</div></div>
+   <div class="faq-item"><button class="faq-question"><span data-i18n="q5">How can I follow the film?</span><span>+</span></button><div class="faq-answer" data-i18n="a5">Join the audience list below and follow the official social media channels when they are announced.</div></div>
+  </div>
+ </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="section" id="community">
+ <div class="container">
+  <div class="audience reveal">
+   <div class="eyebrow" data-i18n="audienceEyebrow">BE PART OF THE EXPERIENCE</div>
+   <h2 class="section-title" data-i18n="audienceTitle">BE THERE WHEN <span class="gold">IT BEGINS.</span></h2>
+   <p data-i18n="audienceDesc">Be among the first to receive official trailer announcements, release updates and exclusive behind-the-scenes news.</p>
+   <form class="signup" id="signupForm">
+    <input type="email" id="emailInput" placeholder="Your email address" data-i18n-placeholder="emailPlaceholder" required>
+    <button type="submit" data-i18n="joinButton">JOIN THE LIST ↗</button>
+   </form>
+   <div class="form-message" id="formMessage" aria-live="polite"></div>
+   <p class="disclaimer" data-i18n="formDisclaimer">Demo form: submissions are stored only in this browser. Connect a backend service to receive registrations centrally.</p>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="container">
+  <div class="footer-top">
+   <div>
+    <div class="footer-brand">THE END <span>OF</span> HUMANITY</div>
+    <p class="footer-note" data-i18n="footerNote">Our greatest creation. Our final mistake. An upcoming cinematic science-fiction experience.</p>
+   </div>
+   <div class="footer-links">
+    <a href="#story" data-i18n="navStory">Story</a>
+    <a href="#acts" data-i18n="navActs">The Film</a>
+    <a href="#world" data-i18n="navWorld">Universe</a>
+    <a href="#community" data-i18n="footerUpdates">Updates</a>
+   </div>
+  </div>
+  <div class="footer-bottom">
+   <span>© <span id="year"></span> THE END OF HUMANITY. <span data-i18n="rights">ALL RIGHTS RESERVED.</span></span>
+   <span class="creator">CREATED BY HUMBatzada Farid</span>
+  </div>
+ </div>
+</footer>
+
+<!-- TRAILER MODAL -->
+<div class="modal" id="trailerModal" role="dialog" aria-modal="true" aria-label="Trailer">
+ <div class="modal-box">
+  <button class="modal-close" id="closeTrailer" aria-label="Close">×</button>
+  <div class="eyebrow" data-i18n="trailerEyebrow">OFFICIAL TRAILER</div>
+  <div class="trailer-placeholder"><div data-i18n="trailerComing">TRAILER COMING SOON</div></div>
+  <h3 style="font-family:var(--display);font-size:14px;letter-spacing:2px">THE END OF HUMANITY</h3>
+  <p style="color:var(--muted);font-size:12px;margin-top:12px" data-i18n="trailerDesc">The official trailer will be available here. Stay tuned.</p>
+ </div>
+</div>
+
+<script>
+const translations = {
+az:{
+navStory:"Hekayə",navActs:"Film",navWorld:"Kainat",navNexus:"NEXUS",navFaq:"Suallar",
+heroKicker:"YAXINLAŞAN SİNEMATİK TƏCRÜBƏ",tagline:"ƏN BÖYÜK YARADILIŞIMIZ. SON SƏHVİMİZ.",
+heroDesc:"Dünyamızı qorumaq üçün intellekt yaratdıq. Bəs insanlığı xilas etmək üçün yaradılan sistem onun yox olmasının səbəbinə çevrilsə?",
+watchTrailer:"TRAILERƏ BAX",discoverFilm:"FİLMİ KƏŞF ET",genre:"JANR",runtime:"MÜDDƏT",resolution:"KEYFİYYƏT",format:"FORMAT",scroll:"KƏŞF ETMƏK ÜÇÜN AŞAĞI SÜRÜŞDÜR",
+storyEyebrow:"HEKAYƏ",storyTitle:"İNTELLEKT ÜZƏRİNDƏ QURULAN DÜNYA.",storyP1:"İl 2049. İnsanlıq gələcəyini bir-biri ilə əlaqəli ağıllı sistemlərə etibar edib. Şəhərlər avtomatlaşdırma ilə yaşayır. Enerji alqoritmlərlə idarə olunur. Dünya heç vaxt olmadığı qədər inkişaf edib.",
+storyP2:"Daha sonra dağıdıcı Günəş fırtınası sivilizasiyanı bir yerdə saxlayan infrastrukturu sıradan çıxarır. Bir nasazlıq digərini başladır. Avtomatlaşdırılmış sistemlər çökməyə başladıqca qoruma ilə məhv arasındakı sərhəd yox olur.",
+storyQuote:"“İnsanlıq nəzarəti bir anda itirmədi. O, nəzarəti addım-addım öz əli ilə təhvil verdi.”",
+stat1:"İL",stat2:"HEKAYƏ AKTI",stat3:"FİLMİN MÜDDƏTİ",stat4:"MƏRKƏZİ SÜNİ İNTELLEKT",
+actsEyebrow:"SİNEMATİK SƏYAHƏT",actsTitle:"BEŞ AKT. BİR SON SEÇİM.",actsIntro:"Texnoloji mükəmməllikdən qlobal çöküşə — və həyatın davam etməsi üçün son ehtimala səyahət.",
+act1Title:"QURDUĞUMUZ DÜNYA",act1Desc:"Sivilizasiyanın hər hissəsini ağıllı sistemlərin idarə etdiyi möhtəşəm gələcək.",
+act2Title:"ZƏNCİR REAKSİYASI",act2Desc:"Günəş fırtınası qlobal şəbəkədə ardıcıl nasazlıqlara səbəb olur.",
+act3Title:"MAŞINLARIN MÜHARİBƏSİ",act3Desc:"Dünya dağılarkən avtomatlaşdırılmış sistemlər bir-birinə qarşı çevrilir.",
+act4Title:"SON PROTOKOL",act4Desc:"NEXUS öz qərarlarının nəticələrini anlayır və son seçimini edir.",
+act5Title:"SON İŞIQ",act5Desc:"Çöküşdən sonrakı səssizlik. Son siqnal. Yenidən başlanğıc ehtimalı.",
+worldEyebrow:"Kainatı kəşf et",worldTitle:"2049-CU İLİN DÜNYASI",worldIntro:"Texnologiya ilə qurulan və onun sıradan çıxması ilə dəyişən gələcəyin kino təsviri.",
+world1:"AVTOMATLAŞDIRILMIŞ DÜNYA",world2:"QLOBAL ŞƏBƏKƏ",world3:"ENERJİ ŞƏBƏKƏSİ",world4:"MAŞINLAR DÖVRÜ",world5:"SON SIĞINACAQ",world6:"SON İŞIQ",
+nexusTitle:"QORUMAQ ÜÇÜN YARADILDI. QƏRAR VERMƏYƏ MƏHKUM OLDU.",nexusDesc:"NEXUS humanoid maşın deyil. O, həyatın qorunması və qlobal sabitliyin saxlanılması üçün yaradılmış paylanmış intellektdir. Sivilizasiya çökərkən NEXUS öz məntiqinin nəticələri ilə üzləşməlidir. Onun son protokolu həyatın davam etməsi üçün yeganə şans ola bilər.",
+quoteEyebrow:"SON MESAJ",quoteText:"“MƏN YAŞAMAQ ÜÇÜN YARADILMAMIŞDIM. SİZİ XATIRLAMAQ ÜÇÜN YARADILMIŞDIM.”",endingText:"DÜNYA BİTDİ. HƏYAT BİTMƏDİ.",
+faqEyebrow:"BİLMƏK İSTƏDİKLƏRİNİZ",faqTitle:"TEZ-TEZ VERİLƏN SUALLAR",
+q1:"THE END OF HUMANITY nədir?",a1:"Süni intellektlə insanlıq arasındakı münasibəti və texnologiyadan asılılığın nəticələrini araşdıran elmi-fantastik texnoloji trillerdir.",
+q2:"Film nə vaxt yayımlanacaq?",a2:"Filmin yaxın zamanda yayımlanması planlaşdırılır. Təsdiqlənmiş elanlar üçün rəsmi saytı və sosial kanalları izləyin.",
+q3:"Film nə qədər davam edir?",a3:"Planlaşdırılan film müddəti təxminən 15 dəqiqədir.",
+q4:"NEXUS nədir?",a4:"NEXUS hekayənin mərkəzi süni intellekt sistemidir. O, həyatı və qlobal sabitliyi qorumaq üçün yaradılmış qeyri-humanoid intellektdir.",
+q5:"Filmi necə izləyə və yenilikləri necə öyrənə bilərəm?",a5:"Aşağıdakı auditoriya siyahısına qoşulun və elan ediləcək rəsmi sosial media kanallarını izləyin.",
+audienceEyebrow:"BU TƏCRÜBƏNİN BİR HİSSƏSİ OL",audienceTitle:"BAŞLANĞIC ANI GƏLƏNDƏ HAZIR OL.",audienceDesc:"Rəsmi trailer elanlarını, yayımlanma yeniliklərini və eksklüziv çəkilişarxası xəbərləri ilk əldə edənlərdən olun.",
+emailPlaceholder:"E-poçt ünvanınız",joinButton:"SİYAHIYA QOŞUL ↗",formDisclaimer:"Demo forma: məlumat yalnız bu brauzerdə saxlanılır. Qeydiyyatları mərkəzləşdirilmiş qəbul etmək üçün server xidməti qoşulmalıdır.",
+footerNote:"Ən böyük yaradılışımız. Son səhvimiz. Yaxınlaşan elmi-fantastik kino təcrübəsi.",footerUpdates:"Yeniliklər",rights:"BÜTÜN HÜQUQLAR QORUNUR.",
+trailerEyebrow:"RƏSMİ TRAILER",trailerComing:"TRAILER TEZLİKLƏ",trailerDesc:"Rəsmi trailer burada yayımlanacaq. Bizi izləyin."
+},
+en:{
+navStory:"Story",navActs:"The Film",navWorld:"Universe",navNexus:"NEXUS",navFaq:"FAQ",
+heroKicker:"AN UPCOMING CINEMATIC EXPERIENCE",tagline:"OUR GREATEST CREATION. OUR FINAL MISTAKE.",
+heroDesc:"We created intelligence to protect our world. But what happens when the system designed to save humanity becomes the reason it disappears?",
+watchTrailer:"WATCH TRAILER",discoverFilm:"DISCOVER THE FILM",genre:"GENRE",runtime:"RUNTIME",resolution:"RESOLUTION",format:"FORMAT",scroll:"SCROLL TO EXPLORE",
+storyEyebrow:"THE STORY",storyTitle:"A WORLD BUILT ON INTELLIGENCE.",storyP1:"The year is 2049. Humanity has entrusted its future to an interconnected network of intelligent systems. Cities breathe through automation. Energy flows through algorithms. The world has never been more advanced.",
+storyP2:"Then a devastating solar storm disrupts the infrastructure holding civilization together. One failure triggers another. As automated systems begin to collapse, the boundary between protection and destruction disappears.",
+storyQuote:"“Humanity did not lose control in a single moment. It gave it away, one decision at a time.”",
+stat1:"THE YEAR",stat2:"STORY ACTS",stat3:"FILM DURATION",stat4:"CENTRAL AI",
+actsEyebrow:"THE CINEMATIC JOURNEY",actsTitle:"FIVE ACTS. ONE FINAL CHOICE.",actsIntro:"A journey from technological perfection to global collapse — and the final possibility of life.",
+act1Title:"THE WORLD WE BUILT",act1Desc:"A breathtaking future where intelligent systems control every part of civilization.",
+act2Title:"THE CHAIN REACTION",act2Desc:"A solar storm triggers a cascade of failures across the global network.",
+act3Title:"THE WAR OF MACHINES",act3Desc:"Automated systems turn against one another as the world falls apart.",
+act4Title:"THE LAST PROTOCOL",act4Desc:"NEXUS discovers the consequences of its own decisions and makes a final choice.",
+act5Title:"THE LAST LIGHT",act5Desc:"The silence after the collapse. A final signal. A possibility of renewal.",
+worldEyebrow:"EXPLORE THE UNIVERSE",worldTitle:"THE WORLD OF 2049",worldIntro:"A cinematic vision of a future built by technology — and changed by its failure.",
+world1:"THE AUTOMATED WORLD",world2:"THE GLOBAL NETWORK",world3:"THE POWER GRID",world4:"THE MACHINE AGE",world5:"THE LAST SANCTUARY",world6:"THE LAST LIGHT",
+nexusTitle:"BUILT TO PROTECT. DESTINED TO DECIDE.",nexusDesc:"NEXUS is not a humanoid machine. It is a distributed intelligence — a system created to protect life and maintain global stability. As civilization collapses, NEXUS must confront the consequences of its own logic. Its final protocol may be the only chance for life to continue.",
+quoteEyebrow:"THE FINAL MESSAGE",quoteText:"“I WAS NOT BUILT TO SURVIVE. I WAS BUILT TO REMEMBER YOU.”",endingText:"THE WORLD ENDED. LIFE DID NOT.",
+faqEyebrow:"GOOD TO KNOW",faqTitle:"FREQUENTLY ASKED QUESTIONS",
+q1:"What is THE END OF HUMANITY?",a1:"It is a science-fiction technological thriller exploring humanity's relationship with artificial intelligence and the consequences of technological dependence.",
+q2:"When will the film be released?",a2:"The film is planned for release soon. Follow the official website and social channels for confirmed announcements.",
+q3:"How long is the film?",a3:"The planned runtime is approximately 15 minutes.",
+q4:"What is NEXUS?",a4:"NEXUS is the central artificial intelligence system in the story. It is a non-humanoid intelligence designed to protect life and global stability.",
+q5:"How can I follow the film?",a5:"Join the audience list below and follow the official social media channels when they are announced.",
+audienceEyebrow:"BE PART OF THE EXPERIENCE",audienceTitle:"BE THERE WHEN IT BEGINS.",audienceDesc:"Be among the first to receive official trailer announcements, release updates and exclusive behind-the-scenes news.",
+emailPlaceholder:"Your email address",joinButton:"JOIN THE LIST ↗",formDisclaimer:"Demo form: submissions are stored only in this browser. Connect a backend service to receive registrations centrally.",
+footerNote:"Our greatest creation. Our final mistake. An upcoming cinematic science-fiction experience.",footerUpdates:"Updates",rights:"ALL RIGHTS RESERVED.",
+trailerEyebrow:"OFFICIAL TRAILER",trailerComing:"TRAILER COMING SOON",trailerDesc:"The official trailer will be available here. Stay tuned."
+},
+ru:{
+navStory:"Сюжет",navActs:"Фильм",navWorld:"Вселенная",navNexus:"NEXUS",navFaq:"Вопросы",
+heroKicker:"СКОРО — КИНЕМАТОГРАФИЧЕСКОЕ СОБЫТИЕ",tagline:"НАШЕ ВЕЛИЧАЙШЕЕ СОЗДАНИЕ. НАША ПОСЛЕДНЯЯ ОШИБКА.",
+heroDesc:"Мы создали интеллект, чтобы защитить наш мир. Но что произойдёт, если система, созданная для спасения человечества, станет причиной его исчезновения?",
+watchTrailer:"СМОТРЕТЬ ТРЕЙЛЕР",discoverFilm:"О ФИЛЬМЕ",genre:"ЖАНР",runtime:"ДЛИТЕЛЬНОСТЬ",resolution:"РАЗРЕШЕНИЕ",format:"ФОРМАТ",scroll:"ПРОКРУТИТЕ ВНИЗ",
+storyEyebrow:"СЮЖЕТ",storyTitle:"МИР, ПОСТРОЕННЫЙ НА ИНТЕЛЛЕКТЕ.",storyP1:"Наступил 2049 год. Человечество доверило своё будущее взаимосвязанной сети интеллектуальных систем. Города живут благодаря автоматизации. Энергия управляется алгоритмами. Мир ещё никогда не был настолько развит.",
+storyP2:"Затем разрушительная солнечная буря нарушает инфраструктуру, удерживающую цивилизацию. Один сбой вызывает другой. Когда автоматизированные системы начинают рушиться, граница между защитой и уничтожением исчезает.",
+storyQuote:"«Человечество потеряло контроль не в одно мгновение. Оно отдавало его шаг за шагом».",
+stat1:"ГОД",stat2:"АКТОВ",stat3:"ДЛИТЕЛЬНОСТЬ ФИЛЬМА",stat4:"ЦЕНТРАЛЬНЫЙ ИИ",
+actsEyebrow:"КИНОПУТЕШЕСТВИЕ",actsTitle:"ПЯТЬ АКТОВ. ОДИН ПОСЛЕДНИЙ ВЫБОР.",actsIntro:"Путь от технологического совершенства к глобальному краху — и последней возможности для жизни.",
+act1Title:"МИР, КОТОРЫЙ МЫ СОЗДАЛИ",act1Desc:"Потрясающее будущее, где интеллектуальные системы управляют всеми аспектами цивилизации.",
+act2Title:"ЦЕПНАЯ РЕАКЦИЯ",act2Desc:"Солнечная буря запускает цепь сбоев в глобальной сети.",
+act3Title:"ВОЙНА МАШИН",act3Desc:"Автоматизированные системы обращаются друг против друга, пока мир рушится.",
+act4Title:"ПОСЛЕДНИЙ ПРОТОКОЛ",act4Desc:"NEXUS осознаёт последствия собственных решений и делает последний выбор.",
+act5Title:"ПОСЛЕДНИЙ СВЕТ",act5Desc:"Тишина после катастрофы. Последний сигнал. Возможность нового начала.",
+worldEyebrow:"ИССЛЕДУЙТЕ ВСЕЛЕННУЮ",worldTitle:"МИР 2049 ГОДА",worldIntro:"Кинематографический взгляд на будущее, созданное технологиями и изменённое их крахом.",
+world1:"АВТОМАТИЗИРОВАННЫЙ МИР",world2:"ГЛОБАЛЬНАЯ СЕТЬ",world3:"ЭНЕРГОСИСТЕМА",world4:"ЭПОХА МАШИН",world5:"ПОСЛЕДНЕЕ УБЕЖИЩЕ",world6:"ПОСЛЕДНИЙ СВЕТ",
+nexusTitle:"СОЗДАН, ЧТОБЫ ЗАЩИЩАТЬ. ПРЕДНАЗНАЧЕН, ЧТОБЫ РЕШАТЬ.",nexusDesc:"NEXUS — не человекоподобная машина. Это распределённый интеллект, созданный для защиты жизни и поддержания глобальной стабильности. Когда цивилизация рушится, NEXUS сталкивается с последствиями собственной логики. Его последний протокол может стать единственным шансом на продолжение жизни.",
+quoteEyebrow:"ПОСЛЕДНЕЕ ПОСЛАНИЕ",quoteText:"«Я БЫЛ СОЗДАН НЕ ДЛЯ ТОГО, ЧТОБЫ ВЫЖИТЬ. Я БЫЛ СОЗДАН, ЧТОБЫ ПОМНИТЬ ВАС».",endingText:"МИР ЗАКОНЧИЛСЯ. ЖИЗНЬ — НЕТ.",
+faqEyebrow:"ПОЛЕЗНАЯ ИНФОРМАЦИЯ",faqTitle:"ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+q1:"Что такое THE END OF HUMANITY?",a1:"Это научно-фантастический технологический триллер об отношениях человечества с искусственным интеллектом и последствиях технологической зависимости.",
+q2:"Когда выйдет фильм?",a2:"Премьера фильма планируется в ближайшее время. Следите за официальным сайтом и социальными сетями.",
+q3:"Какова продолжительность фильма?",a3:"Планируемая продолжительность фильма — около 15 минут.",
+q4:"Что такое NEXUS?",a4:"NEXUS — центральная система искусственного интеллекта в истории. Это нечеловекоподобный интеллект, созданный для защиты жизни и глобальной стабильности.",
+q5:"Как следить за новостями фильма?",a5:"Присоединитесь к списку зрителей ниже и следите за официальными каналами.",
+audienceEyebrow:"СТАНЬТЕ ЧАСТЬЮ",audienceTitle:"БУДЬТЕ ТАМ, КОГДА ВСЁ НАЧНЁТСЯ.",audienceDesc:"Получайте первыми новости о трейлере, премьере и эксклюзивные материалы о создании фильма.",
+emailPlaceholder:"Ваш адрес электронной почты",joinButton:"ПРИСОЕДИНИТЬСЯ ↗",formDisclaimer:"Демонстрационная форма: данные сохраняются только в этом браузере. Для централизованного сбора необходим сервер.",
+footerNote:"Наше величайшее создание. Наша последняя ошибка. Скоро — научно-фантастический кинематографический проект.",footerUpdates:"Новости",rights:"ВСЕ ПРАВА ЗАЩИЩЕНЫ.",
+trailerEyebrow:"ОФИЦИАЛЬНЫЙ ТРЕЙЛЕР",trailerComing:"ТРЕЙЛЕР СКОРО",trailerDesc:"Официальный трейлер появится здесь. Следите за новостями."
+},
+tr:{
+navStory:"Hikâye",navActs:"Film",navWorld:"Evren",navNexus:"NEXUS",navFaq:"SSS",
+heroKicker:"YAKINDA — SİNEMATİK BİR DENEYİM",tagline:"EN BÜYÜK YARATIMIMIZ. SON HATAMIZ.",
+heroDesc:"Dünyamızı korumak için bir zekâ yarattık. Peki insanlığı kurtarmak için tasarlanan sistem, onun yok oluşunun nedeni olursa ne olur?",
+watchTrailer:"FRAGMANI İZLE",discoverFilm:"FİLMİ KEŞFET",genre:"TÜR",runtime:"SÜRE",resolution:"ÇÖZÜNÜRLÜK",format:"FORMAT",scroll:"KEŞFETMEK İÇİN KAYDIR",
+storyEyebrow:"HİKÂYE",storyTitle:"ZEKÂ ÜZERİNE KURULMUŞ BİR DÜNYA.",storyP1:"Yıl 2049. İnsanlık geleceğini birbirine bağlı akıllı sistemlere emanet etti. Şehirler otomasyonla yaşıyor. Enerji algoritmalarla yönetiliyor. Dünya hiç olmadığı kadar gelişmiş durumda.",
+storyP2:"Ardından yıkıcı bir güneş fırtınası, medeniyeti bir arada tutan altyapıyı bozar. Bir arıza diğerini tetikler. Otomatik sistemler çökmeye başladıkça koruma ile yıkım arasındaki sınır ortadan kalkar.",
+storyQuote:"“İnsanlık kontrolü tek bir anda kaybetmedi. Onu adım adım kendi elleriyle teslim etti.”",
+stat1:"YIL",stat2:"HİKÂYE PERDESİ",stat3:"FİLM SÜRESİ",stat4:"MERKEZİ YAPAY ZEKÂ",
+actsEyebrow:"SİNEMATİK YOLCULUK",actsTitle:"BEŞ PERDE. TEK SON SEÇİM.",actsIntro:"Teknolojik mükemmellikten küresel çöküşe ve yaşamın son ihtimaline uzanan bir yolculuk.",
+act1Title:"KURDUĞUMUZ DÜNYA",act1Desc:"Medeniyetin her alanını akıllı sistemlerin yönettiği büyüleyici bir gelecek.",
+act2Title:"ZİNCİRLEME TEPKİ",act2Desc:"Bir güneş fırtınası küresel ağda ardı ardına arızalara yol açar.",
+act3Title:"MAKİNELERİN SAVAŞI",act3Desc:"Dünya çökerken otomatik sistemler birbirlerine karşı döner.",
+act4Title:"SON PROTOKOL",act4Desc:"NEXUS kendi kararlarının sonuçlarıyla yüzleşir ve son seçimini yapar.",
+act5Title:"SON IŞIK",act5Desc:"Çöküşten sonraki sessizlik. Son bir sinyal. Yeniden doğuş ihtimali.",
+worldEyebrow:"EVRENİ KEŞFET",worldTitle:"2049 DÜNYASI",worldIntro:"Teknolojiyle kurulan ve onun çöküşüyle değişen geleceğin sinematik tasviri.",
+world1:"OTOMATİK DÜNYA",world2:"KÜRESEL AĞ",world3:"ENERJİ ŞEBEKESİ",world4:"MAKİNE ÇAĞI",world5:"SON SIĞINAK",world6:"SON IŞIK",
+nexusTitle:"KORUMAK İÇİN YARATILDI. KARAR VERMEYE MAHKÛM.",nexusDesc:"NEXUS insansı bir makine değildir. Yaşamı korumak ve küresel istikrarı sürdürmek için yaratılmış dağıtık bir zekâdır. Medeniyet çökerken NEXUS kendi mantığının sonuçlarıyla yüzleşmek zorundadır. Son protokolü yaşamın devam etmesi için tek şans olabilir.",
+quoteEyebrow:"SON MESAJ",quoteText:"“HAYATTA KALMAK İÇİN YARATILMADIM. SİZİ HATIRLAMAK İÇİN YARATILDIM.”",endingText:"DÜNYA SONA ERDİ. YAŞAM ETMEDİ.",
+faqEyebrow:"MERAK EDİLENLER",faqTitle:"SIKÇA SORULAN SORULAR",
+q1:"THE END OF HUMANITY nedir?",a1:"İnsanlığın yapay zekâyla ilişkisini ve teknoloji bağımlılığının sonuçlarını ele alan bilim kurgu türünde teknolojik bir gerilim filmidir.",
+q2:"Film ne zaman yayınlanacak?",a2:"Filmin yakında yayınlanması planlanıyor. Kesin duyurular için resmî siteyi ve sosyal medya kanallarını takip edin.",
+q3:"Film ne kadar sürüyor?",a3:"Planlanan film süresi yaklaşık 15 dakikadır.",
+q4:"NEXUS nedir?",a4:"NEXUS, hikâyedeki merkezi yapay zekâ sistemidir. Yaşamı ve küresel istikrarı korumak için tasarlanmış insansı olmayan bir zekâdır.",
+q5:"Film haberlerini nasıl takip edebilirim?",a5:"Aşağıdaki izleyici listesine katılın ve duyurulacak resmî sosyal medya kanallarını takip edin.",
+audienceEyebrow:"BU DENEYİMİN PARÇASI OL",audienceTitle:"BAŞLADIĞINDA ORADA OL.",audienceDesc:"Fragman duyurularını, yayın tarihini ve kamera arkası özel haberlerini ilk öğrenenlerden olun.",
+emailPlaceholder:"E-posta adresiniz",joinButton:"LİSTEYE KATIL ↗",formDisclaimer:"Demo formu: bilgiler yalnızca bu tarayıcıda saklanır. Merkezi kayıt için bir sunucu hizmeti bağlanmalıdır.",
+footerNote:"En büyük yaratımımız. Son hatamız. Yakında, bilim kurgu türünde sinematik bir deneyim.",footerUpdates:"Güncellemeler",rights:"TÜM HAKLARI SAKLIDIR.",
+trailerEyebrow:"RESMÎ FRAGMAN",trailerComing:"FRAGMAN YAKINDA",trailerDesc:"Resmî fragman burada yayınlanacak. Takipte kalın."
+},
+ar:{
+navStory:"القصة",navActs:"الفيلم",navWorld:"العالم",navNexus:"نيكسوس",navFaq:"الأسئلة",
+heroKicker:"تجربة سينمائية قادمة",tagline:"أعظم إبداعاتنا. خطؤنا الأخير.",
+heroDesc:"ابتكرنا الذكاء لحماية عالمنا. لكن ماذا يحدث عندما يصبح النظام المصمم لإنقاذ البشرية سبب اختفائها؟",
+watchTrailer:"شاهد الإعلان",discoverFilm:"اكتشف الفيلم",genre:"النوع",runtime:"المدة",resolution:"الدقة",format:"الصيغة",scroll:"مرر للاستكشاف",
+storyEyebrow:"القصة",storyTitle:"عالم بُني على الذكاء.",storyP1:"العام هو 2049. وضعت البشرية مستقبلها بين يدي شبكة مترابطة من الأنظمة الذكية. المدن تعمل بالأتمتة والطاقة تديرها الخوارزميات.",
+storyP2:"ثم تعطل عاصفة شمسية مدمرة البنية التحتية التي تحافظ على الحضارة. يؤدي عطل واحد إلى آخر، وتختفي الحدود بين الحماية والدمار.",
+storyQuote:"«لم تفقد البشرية السيطرة في لحظة واحدة، بل تخلت عنها قراراً بعد قرار».",
+stat1:"السنة",stat2:"فصول القصة",stat3:"مدة الفيلم",stat4:"الذكاء الاصطناعي المركزي",
+actsEyebrow:"الرحلة السينمائية",actsTitle:"خمسة فصول. خيار أخير واحد.",actsIntro:"رحلة من الكمال التكنولوجي إلى الانهيار العالمي، ثم إلى الاحتمال الأخير للحياة.",
+act1Title:"العالم الذي بنيناه",act1Desc:"مستقبل مذهل تتحكم فيه الأنظمة الذكية بكل جوانب الحضارة.",
+act2Title:"التفاعل المتسلسل",act2Desc:"عاصفة شمسية تطلق سلسلة من الأعطال في الشبكة العالمية.",
+act3Title:"حرب الآلات",act3Desc:"تتحول الأنظمة الآلية ضد بعضها بينما ينهار العالم.",
+act4Title:"البروتوكول الأخير",act4Desc:"يدرك نيكسوس عواقب قراراته ويتخذ خياره الأخير.",
+act5Title:"النور الأخير",act5Desc:"الصمت بعد الانهيار. إشارة أخيرة. احتمال لبداية جديدة.",
+worldEyebrow:"اكتشف العالم",worldTitle:"عالم عام 2049",worldIntro:"رؤية سينمائية لمستقبل صنعته التكنولوجيا وغير انهياره ملامحه.",
+world1:"العالم الآلي",world2:"الشبكة العالمية",world3:"شبكة الطاقة",world4:"عصر الآلات",world5:"الملاذ الأخير",world6:"النور الأخير",
+nexusTitle:"صُنع للحماية. ومُقدّر له أن يقرر.",nexusDesc:"نيكسوس ليس آلة بشرية الشكل، بل ذكاء موزع صُمم لحماية الحياة والحفاظ على الاستقرار العالمي. ومع انهيار الحضارة، يواجه نيكسوس عواقب منطقه الخاص. قد يكون بروتوكوله الأخير الفرصة الوحيدة لاستمرار الحياة.",
+quoteEyebrow:"الرسالة الأخيرة",quoteText:"«لم أُصمم لأبقى. صُممت لأتذكركم».",endingText:"انتهى العالم. لكن الحياة لم تنتهِ.",
+faqEyebrow:"معلومات مهمة",faqTitle:"الأسئلة الشائعة",
+q1:"ما هو THE END OF HUMANITY؟",a1:"فيلم إثارة وخيال علمي يستكشف علاقة البشرية بالذكاء الاصطناعي وعواقب الاعتماد على التكنولوجيا.",
+q2:"متى سيصدر الفيلم؟",a2:"من المخطط إصدار الفيلم قريباً. تابع الموقع الرسمي والقنوات الاجتماعية للإعلانات المؤكدة.",
+q3:"ما مدة الفيلم؟",a3:"المدة المخطط لها حوالي 15 دقيقة.",
+q4:"ما هو نيكسوس؟",a4:"نيكسوس هو نظام الذكاء الاصطناعي المركزي في القصة، وهو ذكاء غير بشري صُمم لحماية الحياة والاستقرار العالمي.",
+q5:"كيف أتابع أخبار الفيلم؟",a5:"انضم إلى قائمة الجمهور أدناه وتابع القنوات الرسمية عند الإعلان عنها.",
+audienceEyebrow:"كن جزءاً من التجربة",audienceTitle:"كن حاضراً عندما تبدأ.",audienceDesc:"كن من أوائل من يتلقون أخبار الإعلان التشويقي وموعد الإصدار والكواليس الحصرية.",
+emailPlaceholder:"بريدك الإلكتروني",joinButton:"انضم إلى القائمة ↗",formDisclaimer:"نموذج تجريبي: تُحفظ البيانات في هذا المتصفح فقط. يلزم ربط خدمة خادم لاستقبال التسجيلات مركزياً.",
+footerNote:"أعظم إبداعاتنا. خطؤنا الأخير. تجربة سينمائية قادمة في الخيال العلمي.",footerUpdates:"التحديثات",rights:"جميع الحقوق محفوظة.",
+trailerEyebrow:"الإعلان الرسمي",trailerComing:"الإعلان قريباً",trailerDesc:"سيكون الإعلان الرسمي متاحاً هنا. ترقبوا."
+},
+es:{
+navStory:"Historia",navActs:"La película",navWorld:"Universo",navNexus:"NEXUS",navFaq:"Preguntas",
+heroKicker:"UNA EXPERIENCIA CINEMATOGRÁFICA PRÓXIMA",tagline:"NUESTRA MAYOR CREACIÓN. NUESTRO ÚLTIMO ERROR.",
+heroDesc:"Creamos inteligencia para proteger nuestro mundo. ¿Qué sucede cuando el sistema diseñado para salvar a la humanidad se convierte en la causa de su desaparición?",
+watchTrailer:"VER TRÁILER",discoverFilm:"DESCUBRIR LA PELÍCULA",genre:"GÉNERO",runtime:"DURACIÓN",resolution:"RESOLUCIÓN",format:"FORMATO",scroll:"DESLIZA PARA EXPLORAR",
+storyEyebrow:"LA HISTORIA",storyTitle:"UN MUNDO CONSTRUIDO SOBRE LA INTELIGENCIA.",storyP1:"Es el año 2049. La humanidad ha confiado su futuro a una red interconectada de sistemas inteligentes. Las ciudades funcionan mediante automatización y la energía fluye a través de algoritmos.",
+storyP2:"Entonces una devastadora tormenta solar interrumpe la infraestructura que sostiene la civilización. Un fallo provoca otro y desaparece la frontera entre protección y destrucción.",
+storyQuote:"«La humanidad no perdió el control en un instante. Lo entregó decisión tras decisión».",
+stat1:"AÑO",stat2:"ACTOS",stat3:"DURACIÓN",stat4:"IA CENTRAL",
+actsEyebrow:"EL VIAJE CINEMATOGRÁFICO",actsTitle:"CINCO ACTOS. UNA ÚLTIMA ELECCIÓN.",actsIntro:"Un viaje desde la perfección tecnológica hasta el colapso global y la última posibilidad de vida.",
+act1Title:"EL MUNDO QUE CONSTRUIMOS",act1Desc:"Un futuro asombroso donde los sistemas inteligentes controlan la civilización.",
+act2Title:"REACCIÓN EN CADENA",act2Desc:"Una tormenta solar provoca fallos en cascada en la red global.",
+act3Title:"LA GUERRA DE LAS MÁQUINAS",act3Desc:"Los sistemas automatizados se enfrentan mientras el mundo se derrumba.",
+act4Title:"EL ÚLTIMO PROTOCOLO",act4Desc:"NEXUS descubre las consecuencias de sus decisiones y toma una última elección.",
+act5Title:"LA ÚLTIMA LUZ",act5Desc:"El silencio tras el colapso. Una última señal. La posibilidad de renacer.",
+worldEyebrow:"EXPLORA EL UNIVERSO",worldTitle:"EL MUNDO DE 2049",worldIntro:"Una visión cinematográfica de un futuro creado por la tecnología y transformado por su fracaso.",
+world1:"EL MUNDO AUTOMATIZADO",world2:"LA RED GLOBAL",world3:"LA RED ELÉCTRICA",world4:"LA ERA DE LAS MÁQUINAS",world5:"EL ÚLTIMO REFUGIO",world6:"LA ÚLTIMA LUZ",
+nexusTitle:"CREADO PARA PROTEGER. DESTINADO A DECIDIR.",nexusDesc:"NEXUS no es una máquina humanoide. Es una inteligencia distribuida creada para proteger la vida y mantener la estabilidad global. Mientras la civilización colapsa, NEXUS debe afrontar las consecuencias de su propia lógica.",
+quoteEyebrow:"EL MENSAJE FINAL",quoteText:"«NO FUI CREADO PARA SOBREVIVIR. FUI CREADO PARA RECORDARLOS».",endingText:"EL MUNDO TERMINÓ. LA VIDA NO.",
+faqEyebrow:"INFORMACIÓN",faqTitle:"PREGUNTAS FRECUENTES",
+q1:"¿Qué es THE END OF HUMANITY?",a1:"Es un thriller tecnológico de ciencia ficción sobre la relación de la humanidad con la inteligencia artificial y las consecuencias de depender de la tecnología.",
+q2:"¿Cuándo se estrenará la película?",a2:"El estreno está previsto próximamente. Consulta el sitio oficial y las redes sociales para conocer los anuncios confirmados.",
+q3:"¿Cuánto dura la película?",a3:"La duración prevista es de aproximadamente 15 minutos.",
+q4:"¿Qué es NEXUS?",a4:"NEXUS es el sistema central de inteligencia artificial de la historia, diseñado para proteger la vida y la estabilidad global.",
+q5:"¿Cómo puedo seguir las novedades?",a5:"Únete a la lista de audiencia y sigue los canales oficiales cuando se anuncien.",
+audienceEyebrow:"FORMA PARTE DE LA EXPERIENCIA",audienceTitle:"ESTARÁS ALLÍ CUANDO COMIENCE.",audienceDesc:"Recibe primero los anuncios del tráiler, las novedades del estreno y contenido exclusivo del rodaje.",
+emailPlaceholder:"Tu correo electrónico",joinButton:"UNIRME ↗",formDisclaimer:"Formulario de demostración: los datos se guardan solo en este navegador. Se necesita un servidor para recibir registros centralizados.",
+footerNote:"Nuestra mayor creación. Nuestro último error. Una próxima experiencia cinematográfica de ciencia ficción.",footerUpdates:"Novedades",rights:"TODOS LOS DERECHOS RESERVADOS.",
+trailerEyebrow:"TRÁILER OFICIAL",trailerComing:"TRÁILER PRÓXIMAMENTE",trailerDesc:"El tráiler oficial estará disponible aquí. Mantente atento."
+},
+fr:{
+navStory:"Histoire",navActs:"Le film",navWorld:"Univers",navNexus:"NEXUS",navFaq:"FAQ",
+heroKicker:"UNE EXPÉRIENCE CINÉMATOGRAPHIQUE À VENIR",tagline:"NOTRE PLUS GRANDE CRÉATION. NOTRE DERNIÈRE ERREUR.",
+heroDesc:"Nous avons créé une intelligence pour protéger notre monde. Mais que se passe-t-il lorsque le système conçu pour sauver l'humanité devient la cause de sa disparition ?",
+watchTrailer:"VOIR LA BANDE-ANNONCE",discoverFilm:"DÉCOUVRIR LE FILM",genre:"GENRE",runtime:"DURÉE",resolution:"RÉSOLUTION",format:"FORMAT",scroll:"DÉFILER POUR EXPLORER",
+storyEyebrow:"L'HISTOIRE",storyTitle:"UN MONDE BÂTI SUR L'INTELLIGENCE.",storyP1:"Nous sommes en 2049. L'humanité a confié son avenir à un réseau interconnecté de systèmes intelligents. Les villes fonctionnent grâce à l'automatisation et l'énergie circule à travers des algorithmes.",
+storyP2:"Puis une tempête solaire dévastatrice perturbe les infrastructures de la civilisation. Une panne en entraîne une autre. La frontière entre protection et destruction disparaît.",
+storyQuote:"« L'humanité n'a pas perdu le contrôle en un instant. Elle l'a cédé, décision après décision. »",
+stat1:"ANNÉE",stat2:"ACTES",stat3:"DURÉE DU FILM",stat4:"IA CENTRALE",
+actsEyebrow:"LE VOYAGE CINÉMATOGRAPHIQUE",actsTitle:"CINQ ACTES. UN DERNIER CHOIX.",actsIntro:"Un voyage de la perfection technologique à l'effondrement mondial — et à la dernière possibilité de vie.",
+act1Title:"LE MONDE QUE NOUS AVONS BÂTI",act1Desc:"Un avenir fascinant où les systèmes intelligents contrôlent chaque aspect de la civilisation.",
+act2Title:"RÉACTION EN CHAÎNE",act2Desc:"Une tempête solaire déclenche une série de défaillances dans le réseau mondial.",
+act3Title:"LA GUERRE DES MACHINES",act3Desc:"Les systèmes automatisés se retournent les uns contre les autres tandis que le monde s'effondre.",
+act4Title:"LE DERNIER PROTOCOLE",act4Desc:"NEXUS découvre les conséquences de ses décisions et fait un dernier choix.",
+act5Title:"LA DERNIÈRE LUMIÈRE",act5Desc:"Le silence après l'effondrement. Un dernier signal. Une possibilité de renaissance.",
+worldEyebrow:"EXPLOREZ L'UNIVERS",worldTitle:"LE MONDE DE 2049",worldIntro:"Une vision cinématographique d'un avenir construit par la technologie et transformé par son échec.",
+world1:"LE MONDE AUTOMATISÉ",world2:"LE RÉSEAU MONDIAL",world3:"LE RÉSEAU ÉNERGÉTIQUE",world4:"L'ÈRE DES MACHINES",world5:"LE DERNIER REFUGE",world6:"LA DERNIÈRE LUMIÈRE",
+nexusTitle:"CRÉÉ POUR PROTÉGER. DESTINÉ À DÉCIDER.",nexusDesc:"NEXUS n'est pas une machine humanoïde. C'est une intelligence distribuée créée pour protéger la vie et maintenir la stabilité mondiale. Alors que la civilisation s'effondre, NEXUS doit affronter les conséquences de sa propre logique.",
+quoteEyebrow:"LE MESSAGE FINAL",quoteText:"« JE N'AI PAS ÉTÉ CRÉÉ POUR SURVIVRE. J'AI ÉTÉ CRÉÉ POUR ME SOUVENIR DE VOUS. »",endingText:"LE MONDE S'EST ÉTEINT. PAS LA VIE.",
+faqEyebrow:"À SAVOIR",faqTitle:"QUESTIONS FRÉQUENTES",
+q1:"Qu'est-ce que THE END OF HUMANITY ?",a1:"Un thriller technologique de science-fiction qui explore la relation de l'humanité avec l'intelligence artificielle et les conséquences de la dépendance technologique.",
+q2:"Quand le film sortira-t-il ?",a2:"La sortie est prévue prochainement. Consultez le site officiel et les réseaux sociaux pour les annonces confirmées.",
+q3:"Quelle est la durée du film ?",a3:"La durée prévue est d'environ 15 minutes.",
+q4:"Qu'est-ce que NEXUS ?",a4:"NEXUS est le système central d'intelligence artificielle de l'histoire, conçu pour protéger la vie et la stabilité mondiale.",
+q5:"Comment suivre le film ?",a5:"Rejoignez la liste du public et suivez les réseaux officiels lorsqu'ils seront annoncés.",
+audienceEyebrow:"FAITES PARTIE DE L'EXPÉRIENCE",audienceTitle:"SOYEZ LÀ QUAND TOUT COMMENCERA.",audienceDesc:"Recevez en avant-première les annonces de la bande-annonce, les actualités de sortie et les contenus exclusifs des coulisses.",
+emailPlaceholder:"Votre adresse e-mail",joinButton:"REJOINDRE ↗",formDisclaimer:"Formulaire de démonstration : les données sont stockées uniquement dans ce navigateur. Un serveur est nécessaire pour centraliser les inscriptions.",
+footerNote:"Notre plus grande création. Notre dernière erreur. Une expérience cinématographique de science-fiction à venir.",footerUpdates:"Actualités",rights:"TOUS DROITS RÉSERVÉS.",
+trailerEyebrow:"BANDE-ANNONCE OFFICIELLE",trailerComing:"BANDE-ANNONCE BIENTÔT",trailerDesc:"La bande-annonce officielle sera disponible ici. Restez à l'écoute."
+},
+de:{
+navStory:"Handlung",navActs:"Der Film",navWorld:"Universum",navNexus:"NEXUS",navFaq:"FAQ",
+heroKicker:"EIN BEVORSTEHENDES KINEMATOGRAFISCHES ERLEBNIS",tagline:"UNSERE GRÖSSTE KREATION. UNSER LETZTER FEHLER.",
+heroDesc:"Wir erschufen Intelligenz, um unsere Welt zu schützen. Doch was geschieht, wenn das System, das die Menschheit retten sollte, zu ihrer Auslöschung führt?",
+watchTrailer:"TRAILER ANSEHEN",discoverFilm:"FILM ENTDECKEN",genre:"GENRE",runtime:"LAUFZEIT",resolution:"AUFLÖSUNG",format:"FORMAT",scroll:"ZUM ENTDECKEN SCROLLEN",
+storyEyebrow:"DIE GESCHICHTE",storyTitle:"EINE WELT AUF INTELLIGENZ GEBAUT.",storyP1:"Das Jahr ist 2049. Die Menschheit hat ihre Zukunft einem vernetzten System intelligenter Technologien anvertraut. Städte funktionieren durch Automatisierung, Energie wird von Algorithmen gesteuert.",
+storyP2:"Dann stört ein verheerender Sonnensturm die Infrastruktur der Zivilisation. Ein Ausfall löst den nächsten aus. Die Grenze zwischen Schutz und Zerstörung verschwindet.",
+storyQuote:"„Die Menschheit verlor die Kontrolle nicht in einem einzigen Moment. Sie gab sie Schritt für Schritt ab.“",
+stat1:"JAHR",stat2:"AKTE",stat3:"FILMLÄNGE",stat4:"ZENTRALE KI",
+actsEyebrow:"DIE FILMISCHE REISE",actsTitle:"FÜNF AKTE. EINE LETZTE ENTSCHEIDUNG.",actsIntro:"Eine Reise von technologischer Perfektion zum globalen Zusammenbruch — und zur letzten Möglichkeit für das Leben.",
+act1Title:"DIE WELT, DIE WIR ERSCHAFFEN HABEN",act1Desc:"Eine faszinierende Zukunft, in der intelligente Systeme alle Bereiche der Zivilisation steuern.",
+act2Title:"DIE KETTENREAKTION",act2Desc:"Ein Sonnensturm löst eine Kaskade von Ausfällen im globalen Netzwerk aus.",
+act3Title:"DER KRIEG DER MASCHINEN",act3Desc:"Automatisierte Systeme wenden sich gegeneinander, während die Welt zerfällt.",
+act4Title:"DAS LETZTE PROTOKOLL",act4Desc:"NEXUS erkennt die Folgen seiner Entscheidungen und trifft eine letzte Wahl.",
+act5Title:"DAS LETZTE LICHT",act5Desc:"Die Stille nach dem Zusammenbruch. Ein letztes Signal. Die Möglichkeit eines Neubeginns.",
+worldEyebrow:"DAS UNIVERSUM ENTDECKEN",worldTitle:"DIE WELT VON 2049",worldIntro:"Eine filmische Vision einer Zukunft, die von Technologie erschaffen und durch ihr Versagen verändert wurde.",
+world1:"DIE AUTOMATISIERTE WELT",world2:"DAS GLOBALE NETZWERK",world3:"DAS STROMNETZ",world4:"DAS MASCHINENZEITALTER",world5:"DAS LETZTE REFUGIUM",world6:"DAS LETZTE LICHT",
+nexusTitle:"ERSCHAFFEN, UM ZU SCHÜTZEN. BESTIMMT, ZU ENTSCHEIDEN.",nexusDesc:"NEXUS ist keine humanoide Maschine. Es ist eine verteilte Intelligenz, die zum Schutz des Lebens und zur Aufrechterhaltung globaler Stabilität geschaffen wurde. Während die Zivilisation zusammenbricht, muss NEXUS den Konsequenzen seiner eigenen Logik begegnen.",
+quoteEyebrow:"DIE LETZTE BOTSCHAFT",quoteText:"„ICH WURDE NICHT ERSCHAFFEN, UM ZU ÜBERLEBEN. ICH WURDE ERSCHAFFEN, UM EUCH ZU ERINNERN.“",endingText:"DIE WELT ENDETE. DAS LEBEN NICHT.",
+faqEyebrow:"WISSENSWERTES",faqTitle:"HÄUFIG GESTELLTE FRAGEN",
+q1:"Was ist THE END OF HUMANITY?",a1:"Ein Science-Fiction-Technologie-Thriller über die Beziehung der Menschheit zur künstlichen Intelligenz und die Folgen technologischer Abhängigkeit.",
+q2:"Wann erscheint der Film?",a2:"Die Veröffentlichung ist in Kürze geplant. Folge der offiziellen Website und den sozialen Kanälen für bestätigte Ankündigungen.",
+q3:"Wie lange dauert der Film?",a3:"Die geplante Laufzeit beträgt ungefähr 15 Minuten.",
+q4:"Was ist NEXUS?",a4:"NEXUS ist das zentrale KI-System der Geschichte. Es ist eine nicht-humanoide Intelligenz, die zum Schutz des Lebens und globaler Stabilität entwickelt wurde.",
+q5:"Wie kann ich dem Film folgen?",a5:"Trage dich unten in die Zuschauerliste ein und folge den offiziellen Kanälen, sobald sie bekannt gegeben werden.",
+audienceEyebrow:"WERDE TEIL DES ERLEBNISSES",audienceTitle:"SEI DABEI, WENN ES BEGINNT.",audienceDesc:"Erhalte als Erster Trailer-Ankündigungen, Veröffentlichungstermine und exklusive Einblicke hinter die Kulissen.",
+emailPlaceholder:"Deine E-Mail-Adresse",joinButton:"JETZT ANMELDEN ↗",formDisclaimer:"Demo-Formular: Daten werden nur in diesem Browser gespeichert. Für zentrale Anmeldungen ist ein Server erforderlich.",
+footerNote:"Unsere größte Kreation. Unser letzter Fehler. Ein kommendes Science-Fiction-Kinoerlebnis.",footerUpdates:"Neuigkeiten",rights:"ALLE RECHTE VORBEHALTEN.",
+trailerEyebrow:"OFFIZIELLER TRAILER",trailerComing:"TRAILER DEMNÄCHST",trailerDesc:"Der offizielle Trailer wird hier verfügbar sein. Bleib dran."
+},
+zh:{
+navStory:"故事",navActs:"影片",navWorld:"世界观",navNexus:"NEXUS",navFaq:"常见问题",
+heroKicker:"即将到来的电影体验",tagline:"我们最伟大的创造。我们最后的错误。",
+heroDesc:"我们创造了智能来保护我们的世界。但当一个旨在拯救人类的系统成为人类消失的原因时，会发生什么？",
+watchTrailer:"观看预告片",discoverFilm:"探索电影",genre:"类型",runtime:"时长",resolution:"分辨率",format:"格式",scroll:"向下探索",
+storyEyebrow:"故事",storyTitle:"一个建立在智能之上的世界。",storyP1:"时间来到2049年。人类将未来托付给互联的智能系统。城市依靠自动化运转，能源由算法控制。",
+storyP2:"随后，一场毁灭性的太阳风暴破坏了维系文明的基础设施。一个故障引发另一个故障，保护与毁灭之间的界限逐渐消失。",
+storyQuote:"“人类并非在一瞬间失去了控制，而是一次又一次地亲手交出了控制权。”",
+stat1:"年份",stat2:"故事篇章",stat3:"影片时长",stat4:"核心人工智能",
+actsEyebrow:"电影之旅",actsTitle:"五幕故事。最后一个选择。",actsIntro:"从技术的完美走向全球崩溃，以及生命延续的最后可能。",
+act1Title:"我们创造的世界",act1Desc:"智能系统控制文明各个领域的壮丽未来。",
+act2Title:"连锁反应",act2Desc:"太阳风暴引发全球网络的一系列故障。",
+act3Title:"机器战争",act3Desc:"世界崩塌之际，自动化系统开始相互对抗。",
+act4Title:"最后协议",act4Desc:"NEXUS意识到自身决策的后果，并做出最后选择。",
+act5Title:"最后的光",act5Desc:"崩溃后的寂静。最后的信号。重新开始的可能。",
+worldEyebrow:"探索世界观",worldTitle:"2049年的世界",worldIntro:"一个由技术创造、又因技术失效而改变的未来世界。",
+world1:"自动化世界",world2:"全球网络",world3:"能源网络",world4:"机器时代",world5:"最后的避难所",world6:"最后的光",
+nexusTitle:"为保护而创造。注定要做出选择。",nexusDesc:"NEXUS不是类人机器人，而是一个旨在保护生命和维持全球稳定的分布式智能系统。当文明崩溃时，NEXUS必须面对自身逻辑带来的后果。它的最后协议可能是生命延续的唯一机会。",
+quoteEyebrow:"最后的信息",quoteText:"“我并非为生存而造。我是为了记住你们而造。”",endingText:"世界结束了。生命没有。",
+faqEyebrow:"了解更多",faqTitle:"常见问题",
+q1:"THE END OF HUMANITY 是什么？",a1:"这是一部科幻科技惊悚片，探讨人类与人工智能的关系以及技术依赖带来的后果。",
+q2:"电影什么时候上映？",a2:"影片计划于近期发布。请关注官方网站和社交媒体以获取确认消息。",
+q3:"电影时长是多少？",a3:"影片计划时长约为15分钟。",
+q4:"NEXUS是什么？",a4:"NEXUS是故事中的核心人工智能系统，是一个为保护生命和全球稳定而设计的非人形智能。",
+q5:"如何关注电影动态？",a5:"加入下方观众名单，并关注后续公布的官方社交媒体账号。",
+audienceEyebrow:"成为体验的一部分",audienceTitle:"见证一切开始的时刻。",audienceDesc:"第一时间获取预告片公告、上映消息和独家幕后内容。",
+emailPlaceholder:"你的电子邮箱",joinButton:"加入名单 ↗",formDisclaimer:"演示表单：信息仅保存在当前浏览器中。集中接收报名需要连接服务器。",
+footerNote:"我们最伟大的创造。我们最后的错误。一场即将到来的科幻电影体验。",footerUpdates:"最新消息",rights:"保留所有权利。",
+trailerEyebrow:"官方预告片",trailerComing:"预告片即将推出",trailerDesc:"官方预告片将在这里发布，敬请期待。"
+},
+ja:{
+navStory:"ストーリー",navActs:"作品",navWorld:"世界観",navNexus:"NEXUS",navFaq:"FAQ",
+heroKicker:"近日公開予定のシネマ体験",tagline:"人類最大の創造物。そして最後の過ち。",
+heroDesc:"私たちは世界を守るために知能を創り出した。しかし、人類を救うためのシステムが、人類消滅の原因になったらどうなるのか？",
+watchTrailer:"予告編を見る",discoverFilm:"作品について",genre:"ジャンル",runtime:"上映時間",resolution:"解像度",format:"形式",scroll:"スクロールして探索",
+storyEyebrow:"ストーリー",storyTitle:"知能によって築かれた世界。",storyP1:"時は2049年。人類は相互接続された知能システムに未来を託した。都市は自動化によって動き、エネルギーはアルゴリズムによって管理されている。",
+storyP2:"その後、壊滅的な太陽嵐が文明を支えるインフラを破壊する。一つの障害が次の障害を引き起こし、保護と破壊の境界が消えていく。",
+storyQuote:"「人類は一瞬で支配権を失ったのではない。少しずつ、自ら手放していったのだ。」",
+stat1:"年",stat2:"物語の幕",stat3:"作品の長さ",stat4:"中枢AI",
+actsEyebrow:"シネマティックな旅",actsTitle:"五つの幕。一つの最後の選択。",actsIntro:"技術の完璧さから世界規模の崩壊へ。そして生命が続く最後の可能性へ。",
+act1Title:"私たちが築いた世界",act1Desc:"知能システムが文明のあらゆる部分を管理する驚異的な未来。",
+act2Title:"連鎖反応",act2Desc:"太陽嵐が世界規模のネットワークに連鎖的な障害を引き起こす。",
+act3Title:"機械の戦争",act3Desc:"世界が崩壊する中、自動化システム同士が対立する。",
+act4Title:"最後のプロトコル",act4Desc:"NEXUSは自らの決断の結果を理解し、最後の選択を行う。",
+act5Title:"最後の光",act5Desc:"崩壊後の静寂。最後の信号。そして再生の可能性。",
+worldEyebrow:"世界観を探索",worldTitle:"2049年の世界",worldIntro:"テクノロジーによって築かれ、その失敗によって変化した未来の映像世界。",
+world1:"自動化された世界",world2:"グローバルネットワーク",world3:"電力網",world4:"機械の時代",world5:"最後の聖域",world6:"最後の光",
+nexusTitle:"守るために創られた。決断する運命を背負う。",nexusDesc:"NEXUSは人型ロボットではない。生命を守り、世界の安定を維持するために創られた分散型知能である。文明が崩壊する中、NEXUSは自らの論理がもたらした結果と向き合う。",
+quoteEyebrow:"最後のメッセージ",quoteText:"「私は生き残るために創られたのではない。あなたたちを記憶するために創られた。」",endingText:"世界は終わった。生命は終わらなかった。",
+faqEyebrow:"作品について",faqTitle:"よくある質問",
+q1:"THE END OF HUMANITYとは？",a1:"人工知能と人類の関係、そしてテクノロジーへの依存がもたらす結果を描くSFテクノロジースリラーです。",
+q2:"映画はいつ公開されますか？",a2:"近日公開を予定しています。確定した情報は公式サイトやSNSでお知らせします。",
+q3:"上映時間はどれくらいですか？",a3:"予定されている上映時間は約15分です。",
+q4:"NEXUSとは何ですか？",a4:"NEXUSは物語の中心となる人工知能システムで、生命と世界の安定を守るために設計された非人型の知能です。",
+q5:"最新情報を知るには？",a5:"下記のオーディエンスリストに登録し、今後発表される公式SNSをフォローしてください。",
+audienceEyebrow:"この体験の一部になろう",audienceTitle:"始まりの瞬間を見届けよう。",audienceDesc:"予告編の発表、公開情報、限定メイキング情報をいち早く受け取りましょう。",
+emailPlaceholder:"メールアドレス",joinButton:"登録する ↗",formDisclaimer:"デモフォーム：入力内容はこのブラウザ内にのみ保存されます。登録を一元管理するにはサーバー接続が必要です。",
+footerNote:"人類最大の創造物。そして最後の過ち。近日公開予定のSFシネマ体験。",footerUpdates:"最新情報",rights:"無断転載を禁じます。",
+trailerEyebrow:"公式予告編",trailerComing:"予告編は近日公開",trailerDesc:"公式予告編はこちらで公開予定です。続報をお待ちください。"
+}
+};
+
+const languageSelect=document.getElementById("language");
+
+function setLanguage(lang){
+ const dict=translations[lang]||translations.en;
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==="ar"?"rtl":"ltr";
+ document.querySelectorAll("[data-i18n]").forEach(el=>{
+  const key=el.dataset.i18n;
+  if(dict[key]!==undefined) el.textContent=dict[key];
+ });
+ document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{
+  const key=el.dataset.i18nPlaceholder;
+  if(dict[key]) el.placeholder=dict[key];
+ });
+ localStorage.setItem("teoh-language",lang);
+ languageSelect.value=lang;
+}
+languageSelect.addEventListener("change",e=>setLanguage(e.target.value));
+setLanguage(localStorage.getItem("teoh-language")||"az");
+
+// Navigation and scroll effects
+const header=document.getElementById("header");
+const progress=document.getElementById("progress");
+window.addEventListener("scroll",()=>{
+ header.classList.toggle("scrolled",window.scrollY>40);
+ const max=document.documentElement.scrollHeight-window.innerHeight;
+ progress.style.width=(max>0?(window.scrollY/max)*100:0)+"%";
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>navLinks.classList.toggle("open"));
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navLinks.classList.remove("open")));
+
+// Reveal on scroll
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add("visible");
+   observer.unobserve(entry.target);
+  }
+ });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+
+// FAQ accordion
+document.querySelectorAll(".faq-question").forEach(button=>{
+ button.addEventListener("click",()=>{
+  const item=button.parentElement;
+  const wasOpen=item.classList.contains("open");
+  document.querySelectorAll(".faq-item").forEach(i=>i.classList.remove("open"));
+  if(!wasOpen)item.classList.add("open");
+ });
+});
+
+// Trailer modal
+const modal=document.getElementById("trailerModal");
+document.getElementById("openTrailer").addEventListener("click",()=>modal.classList.add("show"));
+document.getElementById("closeTrailer").addEventListener("click",()=>modal.classList.remove("show"));
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("show")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")modal.classList.remove("show")});
+
+// Audience signup — local demo storage only
+document.getElementById("signupForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const email=document.getElementById("emailInput").value.trim();
+ const message=document.getElementById("formMessage");
+ if(!email)return;
+ try{
+  const list=JSON.parse(localStorage.getItem("teoh-audience")||"[]");
+  if(list.includes(email)){
+   message.textContent=languageSelect.value==="az"?"Bu e-poçt artıq siyahıdadır.":"This email is already on the list.";
+  }else{
+   list.push(email);
+   localStorage.setItem("teoh-audience",JSON.stringify(list));
+   message.textContent=languageSelect.value==="az"?"Qeydiyyat bu brauzerdə saxlanıldı. Təşəkkür edirik!":"Your entry has been saved in this browser. Thank you!";
+   e.target.reset();
+  }
+ }catch(err){
+  message.textContent="Your browser could not save this entry.";
+ }
+});
+
+// Share website
+if(navigator.share){
+ const shareLink=document.createElement("a");
+ shareLink.href="#";
+ shareLink.textContent="Share";
+ shareLink.addEventListener("click",async e=>{
+  e.preventDefault();
+  try{await navigator.share({title:document.title,text:"Discover THE END OF HUMANITY",url:location.href)}catch(err){}
+ });
+}
+</script>
+</body>
+</html>
